@@ -1,0 +1,28 @@
+# Maintainer: Hay (Jin Asanami) <fmuchikawa777@yahoo.co.jp>
+
+pkgname=akibaeiso
+pkgver=22.05.a
+pkgrel=1
+pkgdesc='Tools for creating Akibae OS live and install iso images'
+arch=('any')
+url='https://github.com/Jin-Asanami/akibaeiso'
+license=('GPL3')
+depends=('arch-install-scripts' 'bash' 'dosfstools' 'libisoburn' 'mtools'
+'squashfs-tools')
+makedepends=('git')
+checkdepends=('shellcheck')
+optdepends=(
+  'edk2-ovmf: for emulating UEFI with run_archiso'
+  'erofs-utils: for EROFS based airootfs image'
+  'e2fsprogs: for dm-snapshot based airootfs image'
+  'qemu: for run_archiso'
+)
+conflicts=("${pkgname}")
+source=("git+https://github.com/Jin-Asanami/${pkgname}.git")
+sha512sums=('SKIP')
+
+
+package() {
+  cd "${pkgname}"
+  make DESTDIR="${pkgdir}/" PREFIX='/usr' install
+}
