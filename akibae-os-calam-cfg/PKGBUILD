@@ -1,0 +1,21 @@
+# Maintainer: Hay/Radio New Japan
+pkgname=akibae-os-calam-cfg
+destname="/etc"
+pkgver=22.05
+pkgrel=1
+pkgdesc="Calamares config for Akibae OS"
+arch=('any')
+url="https://github.com/Jin-Asanami"
+license=('GPL3')
+makedepends=('git')
+depends=()
+conflicts=()
+provides=("${pkgname}")
+options=(!strip !emptydirs)
+source=(${pkgname}::"git+${url}/${pkgname}")
+sha256sums=('SKIP')
+package() {
+	install -dm755 ${pkgdir}${destname}
+	cp -r ${srcdir}/${pkgname}${destname}/* ${pkgdir}${destname}
+	chmod 755 ${pkgdir}/etc/calamares/launch.sh
+}
