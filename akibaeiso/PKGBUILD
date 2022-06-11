@@ -1,7 +1,7 @@
 # Maintainer: Hay (Jin Asanami) <fmuchikawa777@yahoo.co.jp>
 
 pkgname=akibaeiso
-pkgver=0.9.1.b
+pkgver=0.9.2.b
 pkgrel=1
 pkgdesc='Tools for creating Akibae OS live and install iso images'
 arch=('any')
