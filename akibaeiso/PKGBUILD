@@ -1,11 +1,11 @@
 # Maintainer: Hay (Jin Asanami) <fmuchikawa777@yahoo.co.jp>
 
-pkgname=akibaeiso
-pkgver=0.9.2.b
+pkgname=univalent-iso
+pkgver=1.0
 pkgrel=1
-pkgdesc='Tools for creating Akibae OS live and install iso images'
+pkgdesc='Tools for creating UVGL live and install iso images'
 arch=('any')
-url='https://github.com/Jin-Asanami/akibaeiso'
+url='https://github.com/Jin-Asanami/univalent-iso'
 license=('GPL3')
 depends=('arch-install-scripts' 'bash' 'dosfstools' 'libisoburn' 'mtools'
 'squashfs-tools')
