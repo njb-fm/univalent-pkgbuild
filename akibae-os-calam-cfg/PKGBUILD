@@ -1,9 +1,9 @@
 # Maintainer: Hay/Radio New Japan
-pkgname=akibae-os-calam-cfg
+pkgname=uvgl-calam-cfg
 destname="/etc"
-pkgver=22.05
+pkgver=22.06
 pkgrel=1
-pkgdesc="Calamares config for Akibae OS"
+pkgdesc="Calamares config for UVGL"
 arch=('any')
 url="https://github.com/Jin-Asanami"
 license=('GPL3')
