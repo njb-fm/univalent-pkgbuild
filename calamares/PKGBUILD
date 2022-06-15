@@ -16,7 +16,7 @@ backup=('usr/share/calamares/modules/bootloader.conf'
         'usr/share/calamares/modules/unpackfs.conf')
 
 source=("$pkgname-$pkgver-$pkgrel.tar.gz::$url/v$pkgver/calamares-$pkgver.tar.gz")
-sha256sums=('44c6dc6ee9c803802100f7c988a4ccb6a43b8de6e0841a0cc3c1797df9ffe3c6')
+sha256sums=('55adef250613e80a868f2aa3d1e57bdae5b769387d91decf0fe2b64e3605574f')
 
 prepare() {
 	cd ${srcdir}/calamares-${pkgver}
