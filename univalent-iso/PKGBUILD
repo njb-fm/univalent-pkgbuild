@@ -2,7 +2,7 @@
 
 pkgname=univalent-iso
 pkgver=1.0
-pkgrel=1
+pkgrel=2
 pkgdesc='Tools for creating UVGL live and install iso images'
 arch=('any')
 url='https://github.com/Jin-Asanami/univalent-iso'
