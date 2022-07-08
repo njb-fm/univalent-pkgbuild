@@ -1,7 +1,7 @@
 # Maintainer: Hay/Radio New Japan
 pkgname=uvgl-calam-cfg
 destname="/etc"
-pkgver=22.06
+pkgver=22.07
 pkgrel=1
 pkgdesc="Calamares config for UVGL"
 arch=('any')
