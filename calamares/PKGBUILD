@@ -1,5 +1,5 @@
 pkgname=calamares
-pkgver=3.2.59
+pkgver=3.2.60
 pkgrel=1
 pkgdesc='Distribution-independent installer framework'
 arch=('x86_64')
@@ -16,20 +16,12 @@ backup=('usr/share/calamares/modules/bootloader.conf'
         'usr/share/calamares/modules/unpackfs.conf')
 
 source=("$pkgname-$pkgver-$pkgrel.tar.gz::$url/v$pkgver/calamares-$pkgver.tar.gz")
-sha256sums=('44c6dc6ee9c803802100f7c988a4ccb6a43b8de6e0841a0cc3c1797df9ffe3c6')
+sha256sums=('9ec6c49f4e2316cd3058d402c2ab65efff02e3f09a0028d50f0359e5154e6c8c')
 
 prepare() {
 	cd ${srcdir}/calamares-${pkgver}
 	sed -i -e 's/"Install configuration files" OFF/"Install configuration files" ON/' CMakeLists.txt
 	sed -i -e 's/# DEBUG_FILESYSTEMS/DEBUG_FILESYSTEMS/' "$srcdir/${pkgname}-${pkgver}/CMakeLists.txt"
-
-	# modify desktop file
-	sed -i -e 's#Exec=sh.*#Exec=sh -c "/etc/calamares/launch.sh"#g' "$srcdir/${pkgname}-${pkgver}/calamares.desktop"
-	sed -i -e 's#Name=.*#Name=Install Univalent#g' "$srcdir/${pkgname}-${pkgver}/calamares.desktop"
-	sed -i -e 's#GenericName=.*#GenericName=System Installer#g' "$srcdir/${pkgname}-${pkgver}/calamares.desktop"
-	sed -i -e 's#Icon=.*#Icon=install-debian#g' "$srcdir/${pkgname}-${pkgver}/calamares.desktop"
-	sed -i -e 's#Comment=.*#Comment=Arch Linux Installer#g' "$srcdir/${pkgname}-${pkgver}/calamares.desktop"
-
 
 	# patches here
 
