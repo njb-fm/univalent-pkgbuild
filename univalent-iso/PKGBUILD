@@ -15,7 +15,7 @@ optdepends=(
   'edk2-ovmf: for emulating UEFI with run_archiso'
   'erofs-utils: for EROFS based airootfs image'
   'e2fsprogs: for dm-snapshot based airootfs image'
-  'qemu: for run_archiso'
+  'qemu: for run_univaiso'
 )
 conflicts=("${pkgname}")
 source=("git+https://github.com/Jin-Asanami/${pkgname}.git")
