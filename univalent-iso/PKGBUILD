@@ -1,8 +1,8 @@
 # Maintainer: Hay (Jin Asanami) <fmuchikawa777@yahoo.co.jp>
 
 pkgname=univalent-iso
-pkgver=1.1
-pkgrel=3
+pkgver=1.2
+pkgrel=1
 pkgdesc='Tools for creating UVGL live and install iso images'
 arch=('any')
 url='https://github.com/Jin-Asanami/univalent-iso'
