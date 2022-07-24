@@ -7,8 +7,7 @@ pkgdesc='Installer for restricted extra packages'
 arch=('any')
 url='https://github.com/Jin-Asanami/univag-restricted-extras'
 license=('GPL3')
-depends=('libdvdread' 'libdvdcss' 'libdvdnav' 'ttf-ms-fonts' 'mpg123'
-'libmpeg2' 'icedtea-web' "icedtea-web-doc" "ffmpeg" "libmp4v2")
+depends=('libdvdread' 'libdvdcss' 'libdvdnav' 'ttf-ms-fonts' 'icedtea-web' "icedtea-web-doc" "libmp4v2")
 makedepends=('git')
 checkdepends=('shellcheck')
 
