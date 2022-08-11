@@ -1,5 +1,5 @@
 # Maintainer: Hay/Radio New Japan
-pkgname=uvgl-wine-lxqt
+pkgname=uvgl-wine
 destname="/usr"
 pkgver=22.08
 pkgrel=1
