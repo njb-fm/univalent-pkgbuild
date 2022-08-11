@@ -1,0 +1,21 @@
+# Maintainer: Hay/Radio New Japan
+pkgname=uvgl-wine-xfce
+destname="/usr"
+pkgver=22.08
+pkgrel=1
+pkgdesc="Wine Installer for UVGL Xfce Edition"
+arch=('x86_64')
+url="https://github.com/Jin-Asanami"
+license=('GPL3')
+depends=('wine' 'wine-mono' 'wine-gecko' 'lib32-alsa-lib' 'lib32-alsa-plugins' 'lib32-libpulse' 'lib32-alsa-oss' 'lib32-openal' 'lib32-libxml2' 'lib32-mpg123' 'lib32-lcms2' 'lib32-giflib' 'lib32-libpng' 'lib32-gnutls' 'gst-plugins-base' 'gst-plugins-good' 'gst-plugins-bad' 'gst-plugins-ugly' 'lib32-gst-plugins-base' 'lib32-gst-plugins-good')
+makedepends=('git')
+depends=()
+conflicts=()
+provides=("${pkgname}")
+options=(!strip !emptydirs)
+source=(${pkgname}::"git+${url}/${pkgname}")
+sha256sums=('SKIP')
+package() {
+	install -dm755 ${pkgdir}${destname}
+	cp -r ${srcdir}/${pkgname}${destname}/* ${pkgdir}${destname}
+}
