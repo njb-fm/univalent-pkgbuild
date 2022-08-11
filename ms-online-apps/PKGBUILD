@@ -1,0 +1,14 @@
+pkgname=ms-online-apps
+pkgver=1.0
+pkgrel=1
+pkgdesc="Quick access to Microsoft Online Apps"
+arch=('x86_64')
+url='https://sourceforge.net/projects/microsoftonlineapps'
+license=('GPL3' 'CC')
+source=("microsoft-online-apps.deb::https://sourceforge.net/projects/microsoftonlineapps/files/v1.0.0/microsoft_online_apps.deb/download")
+sha1sums=('8e770d3ce395332b330740a795fe104b4f78544b')
+
+package() {
+  tar xvf data.tar.xz -C "${pkgdir}"
+}
+# vim:set ts=2 sw=2 et:
