@@ -1,9 +1,9 @@
 # Maintainer: Hay/Radio New Japan
-pkgname=uvgl-calam-cfg
-destname="/etc"
+pkgname=univalent-logo
+destname="/usr"
 pkgver=22.09
 pkgrel=1
-pkgdesc="Calamares config for UVGL"
+pkgdesc="UVGL's Logo"
 arch=('any')
 url="https://github.com/Jin-Asanami"
 license=('GPL3')
@@ -17,5 +17,4 @@ sha256sums=('SKIP')
 package() {
 	install -dm755 ${pkgdir}${destname}
 	cp -r ${srcdir}/${pkgname}${destname}/* ${pkgdir}${destname}
-	chmod 755 ${pkgdir}/etc/calamares/launch.sh
 }
