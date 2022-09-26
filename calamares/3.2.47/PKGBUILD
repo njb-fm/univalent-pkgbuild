@@ -27,11 +27,6 @@ prepare() {
 
 	# modify desktop file
 	sed -i -e 's#Exec=sh.*#Exec=sh -c "/etc/calamares/launch.sh"#g' "$srcdir/${pkgname}-${pkgver}/calamares.desktop"
-	sed -i -e 's#Name=.*#Name=Install Arch Linux#g' "$srcdir/${pkgname}-${pkgver}/calamares.desktop"
-	sed -i -e 's#GenericName=.*#GenericName=Arch Linux Installer#g' "$srcdir/${pkgname}-${pkgver}/calamares.desktop"
-	sed -i -e 's#Icon=.*#Icon=archlinux-logo#g' "$srcdir/${pkgname}-${pkgver}/calamares.desktop"
-	sed -i -e 's#Comment=.*#Comment=Arch Linux Installer#g' "$srcdir/${pkgname}-${pkgver}/calamares.desktop"
-
 
 	# patches here
 
