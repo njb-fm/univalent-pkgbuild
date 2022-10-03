@@ -10,7 +10,7 @@ makedepends=('git')
 checkdepends=('shellcheck')
 conflicts=("${pkgname}")
 source=("${url}/downloads/77849/${pkgname}-${pkgver}.tar.gz")
-sha512sums=('12029d4da9754f68ce22758e017a589e96adc8c1874536714049ca8e13534be3b004282dcbcaa8cb7f17e23f6d394795ae4ce41782bae95c4eeec814eb047f8b')
+sha512sums=('6279abea39820a6e58b9d1263a1abb34781f503485e4b61bd19d86ac5c33f9feb0f977458407b5895281f5a85d7a305feced78828fd8164dc83e625b961594ef')
 
 package() {
   cd "${srcdir}/${pkgname}-${pkgver}/"
