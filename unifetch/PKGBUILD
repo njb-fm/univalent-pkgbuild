@@ -1,19 +1,19 @@
 pkgname=unifetch
-pkgver=1.1
+pkgver=1.0.1
 pkgrel=1
-pkgdesc="A CLI system information tool written in BASH that supports displaying images."
-arch=('x86_64')
+pkgdesc="An unofficial fork of neofetch."
+arch=('any')
 url="https://github.com/jin-asanami/${pkgname}"
 license=('MIT')
 depends=('bash')
 makedepends=('git')
 checkdepends=('shellcheck')
 conflicts=("${pkgname}")
-source=("git+https://github.com/Jin-Asanami/${pkgname}.git")
+source=("${pkgname}::git+${url}.git#tag=${pkgver}")
 sha512sums=('SKIP')
 
 package() {
-  cd "${srcdir}/${pkgname}/"
+  cd "${pkgname}/"
   make DESTDIR="$pkgdir" install
   install -D -m644 LICENSE.md "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE.md"
 }
