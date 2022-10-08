@@ -1,7 +1,7 @@
 # Maintainer: Hay/Radio New Japan
 pkgname=univalent-logo
 destname="/usr"
-pkgver=22.09
+pkgver=22.10
 pkgrel=1
 pkgdesc="UVGL's Logo"
 arch=('any')
