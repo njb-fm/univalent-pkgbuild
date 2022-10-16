@@ -2,7 +2,7 @@
 pkgname=unifetch-git
 _pkgname=unifetch
 pkgver=22.10
-pkgrel=12
+pkgrel=16
 pkgdesc="An unofficial fork of neofetch, fresh version."
 arch=('any')
 url="https://github.com/jin-asanami/"
