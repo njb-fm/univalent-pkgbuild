@@ -1,13 +1,13 @@
-# Maintainer: Hay (Jin Asanami) <fmuchikawa777@yahoo.co.jp>
+# Maintainer: Hayyate Nakamura <is01.njb@gmail.com>
 
 pkgname=univag-restricted-extras
-pkgver=1.0
+pkgver=1.1
 pkgrel=1
 pkgdesc='Installer for restricted extra packages'
 arch=('any')
 url='https://github.com/Jin-Asanami/univag-restricted-extras'
 license=('GPL3')
-depends=('libdvdread' 'libdvdcss' 'libdvdnav' 'ttf-ms-fonts' 'icedtea-web' "icedtea-web-doc" "libmp4v2")
+depends=('libdvdread' 'libdvdcss' 'libdvdnav' 'ttf-ms-fonts' 'gst-libav' "gst-plugins-ugly" "unrar")
 makedepends=('git')
 checkdepends=('shellcheck')
 
