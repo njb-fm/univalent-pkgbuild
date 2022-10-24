@@ -1,0 +1,22 @@
+# Maintainer: Hayate Nakamura <is01.njb at gmail dot com>
+
+pkgname=univalent-tools
+pkgver=1.0
+pkgrel=1
+pkgdesc='System setting tools written in bash, inspired by Alter Linux i3wm'
+arch=('any')
+url='https://github.com/Jin-Asanami'
+license=('GPL3')
+depends=('arandr' 'networkmanager' 'ntp' 'pavucontrol' 'yay' 'univalent-logo')
+makedepends=('git')
+checkdepends=('shellcheck')
+
+conflicts=("${pkgname}")
+source=("git+${url}/${pkgname}.git")
+sha512sums=('SKIP')
+
+
+package() {
+  cd "${pkgname}"
+  make DESTDIR="${pkgdir}/" PREFIX='/usr' install
+}

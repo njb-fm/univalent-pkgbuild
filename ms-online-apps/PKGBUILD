@@ -1,11 +1,12 @@
+#Maintainer: Hayate Nakamura (is01.njb at gmail dot com)
 pkgname=ms-online-apps
 pkgver=1.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Quick access to Microsoft Online Apps"
-arch=('x86_64')
-url='https://sourceforge.net/projects/microsoftonlineapps'
+arch=('any')
+url="https://osdn.net/projects/univalentgnulinux"
 license=('GPL3' 'CC')
-source=("microsoft-online-apps.deb::https://sourceforge.net/projects/microsoftonlineapps/files/v1.0.0/microsoft_online_apps.deb/download")
+source=("${url}/storage/aur/ms-online-apps/microsoft_online_apps.deb")
 sha1sums=('8e770d3ce395332b330740a795fe104b4f78544b')
 
 package() {
