@@ -17,6 +17,6 @@ sha512sums=('SKIP')
 
 
 package() {
-  cd "${pkgname}"
-  make DESTDIR="${pkgdir}/" PREFIX='/usr' install
+	install -dm755 ${pkgdir}${destname}
+	cp -r ${srcdir}/${pkgname}${destname}/* ${pkgdir}${destname}
 }
