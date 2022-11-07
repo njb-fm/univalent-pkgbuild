@@ -2,7 +2,7 @@
 
 pkgname=univalent-tools
 pkgver=1.0
-pkgrel=4
+pkgrel=5
 pkgdesc='System setting tools written in bash, inspired by Alter Linux i3wm'
 arch=('any')
 url='https://github.com/Jin-Asanami'
@@ -12,11 +12,11 @@ makedepends=('git')
 checkdepends=('shellcheck')
 
 conflicts=("${pkgname}")
-source=("git+${url}/${pkgname}.git")
+source=("${pkgname}::git+${url}/${pkgname}.git")
 sha512sums=('SKIP')
 
 
 package() {
 	install -dm755 ${pkgdir}${destname}
-	cp -r ${srcdir}/${pkgname}${destname}/* ${pkgdir}${destname}
+	cp -r ${srcdir}/${pkgname}${destname}/usr ${pkgdir}${destname}
 }
