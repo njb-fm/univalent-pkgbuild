@@ -1,0 +1,27 @@
+# Maintainer: Hayate Nakamura (is01.njb at gmail dot com)
+pkgname=("uvgl-skel-cinnamon-ja")
+destname="/etc"
+pkgver=22.11.05.a
+pkgrel=2
+pkgdesc="Settings for Cunivalent GNU/Linux"
+arch=('x86_64')
+url="https://github.com/jin-asanami"
+license=('GPL3')
+makedepends=('git')
+
+depends=('gnome-terminal' 'nemo')
+
+optdepends=('yay: an AUR helper'
+            'unifetch: screenfetch utility'
+            'cups: printing support'
+            'system-config-printer: CUPS status applet')
+conflicts=()
+provides=("${pkgname}")
+options=(!strip !emptydirs)
+source=(uvgl-skel::"git+${url}/uvgl-skel")
+sha256sums=('SKIP')
+
+package() {
+	install -dm755 ${pkgdir}${destname}
+	cp -r ${srcdir}/uvgl-skel/cinnamon/ja${destname}/* ${pkgdir}${destname}
+}

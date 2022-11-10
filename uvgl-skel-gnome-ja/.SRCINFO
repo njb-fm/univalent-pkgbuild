@@ -1,0 +1,21 @@
+pkgbase = uvgl-skel-gnome-ja
+	pkgdesc = Settings for Gunivalent GNU/Linux
+	pkgver = 22.11.07.a
+	pkgrel = 1
+	url = https://github.com/jin-asanami
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	depends = gnome-terminal
+	depends = nautilus
+	optdepends = yay: an AUR helper
+	optdepends = unifetch: screenfetch utility
+	optdepends = cups: printing support
+	optdepends = system-config-printer: CUPS status applet
+	provides = uvgl-skel-gnome-ja
+	options = !strip
+	options = !emptydirs
+	source = uvgl-skel::git+https://github.com/jin-asanami/uvgl-skel
+	sha256sums = SKIP
+
+pkgname = uvgl-skel-gnome-ja
