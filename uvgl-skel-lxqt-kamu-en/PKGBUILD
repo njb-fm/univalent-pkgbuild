@@ -2,7 +2,7 @@
 pkgname=("uvgl-skel-lxqt-kamu-en")
 destname="/etc"
 pkgver=22.11
-pkgrel=1
+pkgrel=2
 pkgdesc="Settings for Kamuvalent GNU/Linux"
 arch=('x86_64')
 url="https://github.com/jin-asanami"

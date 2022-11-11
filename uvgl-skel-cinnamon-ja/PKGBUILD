@@ -1,7 +1,7 @@
 # Maintainer: Hayate Nakamura (is01.njb at gmail dot com)
 pkgname=("uvgl-skel-cinnamon-ja")
 destname="/etc"
-pkgver=22.11.05.a
+pkgver=22.11
 pkgrel=2
 pkgdesc="Settings for Cunivalent GNU/Linux"
 arch=('x86_64')

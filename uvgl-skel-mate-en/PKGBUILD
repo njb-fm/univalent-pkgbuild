@@ -1,8 +1,8 @@
 # Maintainer: Hayate Nakamura (is01.njb at gmail dot com)
 pkgname=("uvgl-skel-mate-en")
 destname="/etc"
-pkgver=22.11.10.a
-pkgrel=1
+pkgver=22.11
+pkgrel=2
 pkgdesc="Settings for Munivalent GNU/Linux"
 arch=('x86_64')
 url="https://github.com/jin-asanami"
