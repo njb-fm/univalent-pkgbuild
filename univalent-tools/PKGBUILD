@@ -2,12 +2,12 @@
 
 pkgname=univalent-tools
 pkgver=1.0
-pkgrel=5
+pkgrel=6
 pkgdesc='System setting tools written in bash, inspired by Alter Linux i3wm'
 arch=('any')
 url='https://github.com/Jin-Asanami'
 license=('GPL3')
-depends=('arandr' 'networkmanager' 'ntp' 'pavucontrol' 'univalent-logo')
+depends=('arandr' 'networkmanager' 'ntp' 'pavucontrol')
 makedepends=('git')
 checkdepends=('shellcheck')
 
