@@ -1,7 +1,7 @@
 pkgbase = uvgl-skel-cinnamon-en
 	pkgdesc = Settings for Cunivalent GNU/Linux
-	pkgver = 22.11.05.a
-	pkgrel = 2
+	pkgver = 22.11
+	pkgrel = 3
 	url = https://github.com/jin-asanami
 	arch = x86_64
 	license = GPL3

@@ -1,7 +1,7 @@
 pkgbase = uvgl-skel-gnome-ja
 	pkgdesc = Settings for Gunivalent GNU/Linux
-	pkgver = 22.11.07.a
-	pkgrel = 1
+	pkgver = 22.11
+	pkgrel = 3
 	url = https://github.com/jin-asanami
 	arch = x86_64
 	license = GPL3

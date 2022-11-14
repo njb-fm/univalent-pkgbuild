@@ -1,6 +1,6 @@
 pkgbase = uvgl-skel-i3wm-en
 	pkgdesc = Settings for Uni3valent GNU/Linux
-	pkgver = 22.11.05.a
+	pkgver = 22.11
 	pkgrel = 3
 	url = https://github.com/jin-asanami
 	arch = x86_64
