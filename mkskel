@@ -1,0 +1,45 @@
+#!/bin/sh
+cd uvgl-skel-cinnamon-en
+extra-x86_64-build
+cd ../uvgl-skel-cinnamon-ja
+extra-x86_64-build
+cd ../uvgl-skel-gnome-en
+extra-x86_64-build
+cd ../uvgl-skel-gnome-ja
+extra-x86_64-build
+cd ../uvgl-skel-i3wm-en
+extra-x86_64-build
+cd ../uvgl-skel-i3wm-ja
+extra-x86_64-build
+cd ../uvgl-skel-kylin-en
+extra-x86_64-build
+cd ../uvgl-skel-kylin-ja
+extra-x86_64-build
+cd ../uvgl-skel-lxqt-en
+extra-x86_64-build
+cd ../uvgl-skel-lxqt-ja
+extra-x86_64-build
+cd ../uvgl-skel-lxqt-kamu-en
+extra-x86_64-build
+cd ../uvgl-skel-lxqt-kamu-ja
+extra-x86_64-build
+cd ../uvgl-skel-lxqt-moe-en
+extra-x86_64-build
+cd ../uvgl-skel-lxqt-moe-ja
+extra-x86_64-build
+cd ../uvgl-skel-mate-en
+extra-x86_64-build
+cd ../uvgl-skel-mate-ja
+extra-x86_64-build
+cd ../uvgl-skel-plasma-en
+extra-x86_64-build
+cd ../uvgl-skel-plasma-ja
+extra-x86_64-build
+cd ../uvgl-skel-xfce-en
+extra-x86_64-build
+cd ../uvgl-skel-xfce-ja
+extra-x86_64-build
+cd ..
+rm -rf uvgl-skel-skel *.log
+mkdir zst
+mv */*.zst /zst
