@@ -1,7 +1,7 @@
 pkgbase = uvgl-skel-plasma-ja
 	pkgdesc = Settings for Punivalent GNU/Linux
 	pkgver = 22.11
-	pkgrel = 3
+	pkgrel = 4
 	url = https://github.com/jin-asanami
 	arch = x86_64
 	license = GPL3

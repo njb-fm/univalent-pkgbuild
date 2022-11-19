@@ -40,6 +40,6 @@ extra-x86_64-build
 cd ../uvgl-skel-xfce-ja
 extra-x86_64-build
 cd ..
-rm -rf uvgl-skel-skel *.log
+rm -rf */{uvgl-skel,*.log}
 mkdir zst
-mv */*.zst /zst
+mv */*.zst zst/
