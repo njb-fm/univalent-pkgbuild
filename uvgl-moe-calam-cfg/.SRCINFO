@@ -1,7 +1,7 @@
 pkgbase = uvgl-moe-calam-cfg
 	pkgdesc = Calamares config for MVGL
 	pkgver = 22.11
-	pkgrel = 2
+	pkgrel = 3
 	url = https://github.com/Jin-Asanami
 	arch = any
 	license = GPL3
