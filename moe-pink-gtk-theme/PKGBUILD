@@ -1,0 +1,23 @@
+# Maintainer: Hayate Nakamura (is01.njb at gmail dot com)pkgname=yaru
+pkgname=moe-pink-bh-gtk-theme
+pkgver=15
+pkgrel=1
+pkgdesc="Moe default moebuntu theme"
+arch=(any)
+_url="https://osdn.net/projects/univalentgnulinux/storage/aur/moepink"
+url="https://moebuntu.web.fc2.com/"
+license=('GPL3')
+
+depends=('gtk2' 'gtk3')
+optdepends=('moe-pink-icons: Moe Pink icon themes'
+            'moe-pink-bh-lxqt-theme: Moe Pink LXQt themes'
+              )
+
+source=("${_url}/Moe-Pink${pkgver}BH.tar.xz")
+sha256sums=('2026da11911c2176fbcb91e3add3193acdafe41484b7c849fe727448d73bfb8e')
+
+package() {
+	cd ${srcdir}/Moe-Pink${pkgver}BH
+  install -dm755 "${pkgdir}/usr/share/themes/Moe-Pink${pkgver}BH"
+  cp -a --no-preserve='ownership' * "${pkgdir}/usr/share/themes/Moe-Pink${pkgver}BH"
+}
