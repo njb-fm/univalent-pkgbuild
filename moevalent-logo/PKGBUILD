@@ -2,7 +2,7 @@
 pkgname=moevalent-logo
 destname="/usr"
 pkgver=22.11
-pkgrel=1
+pkgrel=2
 pkgdesc="UVGL's Moe Logo"
 arch=('any')
 url="https://github.com/Jin-Asanami"
