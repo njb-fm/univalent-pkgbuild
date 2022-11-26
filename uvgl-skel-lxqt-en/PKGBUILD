@@ -2,7 +2,7 @@
 pkgname=("uvgl-skel-lxqt-en")
 destname="/etc"
 pkgver=22.11
-pkgrel=5
+pkgrel=6
 pkgdesc="Settings for Univalent GNU/Linux"
 arch=('x86_64')
 url="https://github.com/jin-asanami"

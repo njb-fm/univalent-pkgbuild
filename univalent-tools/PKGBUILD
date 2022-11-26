@@ -2,7 +2,7 @@
 
 pkgname=univalent-tools
 pkgver=1.1
-pkgrel=1
+pkgrel=2
 pkgdesc='System setting tools written in bash, inspired by Alter Linux i3wm'
 arch=('any')
 url='https://github.com/Jin-Asanami'
