@@ -1,8 +1,8 @@
-# Maintainer: Hayate Nakamura (is01.njb at gmail dot com)
+# Maintainer: Hayate Nakamura <is01.njb at gmail dot com>
 
 pkgname=calamares
 pkgver=3.2.61
-pkgrel=6
+pkgrel=7
 pkgdesc='Distribution-independent installer framework'
 arch=('i686' 'x86_64')
 license=(GPL)
@@ -19,12 +19,11 @@ backup=('usr/share/calamares/modules/bootloader.conf'
         'usr/share/calamares/modules/unpackfs.conf')
 
 source=("$pkgname-$pkgver::$url/download/v$pkgver/$pkgname-$pkgver.tar.gz"
-	"calamares_polkit"
-	"49-nopasswd-calamares.rules")
+	"calamares.desktop"
+	)
 
 sha256sums=('7591b9b60738bdba7b9de2b8da5462ab21006db06a006f0dd21ac5b832711dd2'
-            'c176b28007bd1c1f23d8dbb2c936fa54d0c01bacfb67290ddad597606c129df3'
-            '56d85ff6bf860b9559b8c9f997ad9b1002f3fccc782073760eca505e3bddd176')
+            'f23d511e7b7e9436564d5872bef4cb86808d63d4e15179d28f0526cd2d443055')
 
 pkgver() {
 	cd ${srcdir}/$pkgname-$pkgver
@@ -70,7 +69,5 @@ build() {
 package() {
 	cd ${pkgname}-${pkgver}/build
 	make DESTDIR="$pkgdir" install
-	install -Dm755 "${srcdir}/calamares_polkit" "$pkgdir/usr/bin/calamares_polkit"
-	install -Dm644 "${srcdir}/49-nopasswd-calamares.rules" "$pkgdir/etc/polkit-1/rules.d/49-nopasswd-calamares.rules"
-	chmod 750 "$pkgdir"/etc/polkit-1/rules.d
+	install -Dm755 "${srcdir}/calamares.desktop" "$pkgdir/usr/share/applications/calamares.desktop"
 }
