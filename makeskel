@@ -1,0 +1,9 @@
+#!/bin/sh
+cd uvgl-skel-i3wm-en
+extra-x86_64-build
+cd ../uvgl-skel-i3wm-ja
+extra-x86_64-build
+cd ..
+rm -rf */{uvgl-skel,*.log}
+mkdir zst
+mv */*.zst zst/
