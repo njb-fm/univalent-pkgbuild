@@ -24,4 +24,5 @@ sha256sums=('SKIP')
 package() {
 	install -dm755 ${pkgdir}${destname}
 	cp -r ${srcdir}/uvgl-skel/i3wm/en${destname}/* ${pkgdir}${destname}
+	chmod 755 ${pkgdir}${destname}/skel/polybar/launch.sh
 }
