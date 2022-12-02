@@ -9,7 +9,7 @@ url="https://github.com/jin-asanami"
 license=('GPL3')
 makedepends=('git')
 
-depends=('lxterminal' 'pcmanfm')
+depends=('xfce4-terminal' 'pcmanfm')
 
 optdepends=('yay: an AUR helper'
             'unifetch: screenfetch utility'
