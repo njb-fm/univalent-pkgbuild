@@ -2,14 +2,14 @@
 pkgname=("uvgl-skel-i3wm-en")
 destname="/etc"
 pkgver=22.12
-pkgrel=4
+pkgrel=5
 pkgdesc="Settings for Uni3valent GNU/Linux"
 arch=('x86_64')
 url="https://github.com/jin-asanami"
 license=('GPL3')
 makedepends=('git')
 
-depends=('xfce4-terminal' 'pcmanfm-qt')
+depends=('xfce4-terminal' 'pcmanfm-qt' 'lightdm')
 
 optdepends=('yay: an AUR helper'
             'unifetch: screenfetch utility'
