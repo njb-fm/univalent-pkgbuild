@@ -1,27 +1,25 @@
 # Maintainer: Hayate Nakamura <is01.njb at gmail dot com>
 
-pkgname=plymouth-theme-uvgl-logo
-_themename=uvgl-logo
+pkgname=plymouth-theme-mvgl-logo
+_themename=mvgl-logo
 
 pkgver=1.0
 pkgrel=1
-pkgdesc="A plymouth theme for Univalent GNU/Linux"
+pkgdesc="A plymouth theme for Moevalent GNU/Linux"
 arch=('any')
 url=https://osdn.net/projects/univalentgnulinux
-_url=https://osdn.net/projects/univalentgnulinux/storage/aur/plymouth-theme-uvgl-logo
+_url=https://osdn.net/projects/univalentgnulinux/storage/aur/plymouth-theme-mvgl-logo
 license=('GPL')
 depends=('plymouth')
 optdepends=()
 source=("${_url}/${pkgname}-${pkgver}.tar.gz")
-sha512sums=('af4e451fcb82bdd432f2e826c931e1a8ff49433275dabd8c7f0efb7668828c6b8e383514bd5ca99c88fd37fb2939c4ce9f1612557ce7e4c96994f127739e4093')
+sha512sums=('2105ec071f2a13adf77e822d73e79db2ae09d6f7005e2e090ea056638d11e3eb1caaad46a91e4ae04cfead95151e3d9700199b377e647afdde831f2d3a24d57f')
 conflicts=("${pkgname}-git")
 
 
 build () {
     cd "${srcdir}"
     mkdir -p usr/share/plymouth/themes/${_themename}/
-    cp -r ${pkgname}/${_themename}/intro/* usr/share/plymouth/themes/${_themename}/
-    cp -r ${pkgname}/${_themename}/loop/* usr/share/plymouth/themes/${_themename}/
     cp -r ${pkgname}/${_themename}/misc/* usr/share/plymouth/themes/${_themename}/
 
     rm -rf ${_themename}
