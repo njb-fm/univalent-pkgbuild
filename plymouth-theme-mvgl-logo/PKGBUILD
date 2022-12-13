@@ -21,11 +21,10 @@ build () {
     cd "${srcdir}"
     mkdir -p usr/share/plymouth/themes/${_themename}/
     cp -r ${pkgname}/${_themename}/misc/* usr/share/plymouth/themes/${_themename}/
-
     rm -rf ${_themename}
 }
 
 package() {
     mkdir -p "$pkgdir"
-    cp -r * "$pkgdir"
+    cp -r usr "$pkgdir"
 }

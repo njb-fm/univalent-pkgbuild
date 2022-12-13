@@ -29,5 +29,5 @@ build () {
 
 package() {
     mkdir -p "$pkgdir"
-    cp -r * "$pkgdir"
+    cp -r usr "$pkgdir"
 }

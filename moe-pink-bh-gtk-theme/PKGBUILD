@@ -1,23 +1,23 @@
 # Maintainer: Hayate Nakamura (is01.njb at gmail dot com)pkgname=yaru
-pkgname=moe-pink-gtk-theme
-pkgver=16
-pkgrel=1
+pkgname=moe-pink-bh-gtk-theme
+pkgver=15
+pkgrel=2
 pkgdesc="Moe default moebuntu theme"
 arch=(any)
 _url="https://osdn.net/projects/univalentgnulinux/storage/aur/moepink"
 url="https://moebuntu.web.fc2.com/"
 license=('GPL3')
-conflicts=('moe-pink-bh-gtk-theme')
-depends=('gtk2' 'gtk3' 'gtk4')
+
+depends=('gtk2' 'gtk3')
 optdepends=('moe-pink-icons: Moe Pink icon themes'
             'moe-pink-lxqt-theme: Moe Pink LXQt themes'
               )
-
-source=("${_url}/Moe-Pink${pkgver}.tar.xz")
-sha256sums=('8bfed6019cba770304982d178293e10579f33e7474414c5c33671b13c430fc9c')
+conflicts=('moe-pink-gtk-theme')
+source=("${_url}/Moe-Pink${pkgver}BH.tar.xz")
+sha256sums=('2026da11911c2176fbcb91e3add3193acdafe41484b7c849fe727448d73bfb8e')
 
 package() {
-	cd ${srcdir}/Moe-Pink${pkgver}
+	cd ${srcdir}/Moe-Pink${pkgver}BH
   install -dm755 "${pkgdir}/usr/share/themes/Moe-Pink${pkgver}BH"
   cp -a --no-preserve='ownership' * "${pkgdir}/usr/share/themes/Moe-Pink${pkgver}BH"
 }
