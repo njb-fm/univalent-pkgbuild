@@ -3,7 +3,7 @@
 pkgname=plymouth-theme-uvgl-logo
 _themename=uvgl-logo
 
-pkgver=1.0
+pkgver=1.1
 pkgrel=1
 pkgdesc="A plymouth theme for Univalent GNU/Linux"
 arch=('any')
@@ -13,7 +13,7 @@ license=('GPL')
 depends=('plymouth')
 optdepends=()
 source=("${_url}/${pkgname}-${pkgver}.tar.gz")
-sha512sums=('af4e451fcb82bdd432f2e826c931e1a8ff49433275dabd8c7f0efb7668828c6b8e383514bd5ca99c88fd37fb2939c4ce9f1612557ce7e4c96994f127739e4093')
+sha512sums=('733f322eb7320d8ce89a56e79d459534a2c026ea46276d11933bb5888b92d7f2caff34b43992de2bf896ce6830d71233f9ebe6676eb0763757c8b5f54e796c38')
 conflicts=("${pkgname}-git")
 
 
