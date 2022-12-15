@@ -3,16 +3,13 @@
 _pkgname=test-moepink
 pkgname=moe-pink-lxqt-theme
 pkgver=1.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Moe Pink theme for the LXQt Desktop"
 arch=('any')
 _url="https://osdn.net/projects/univalentgnulinux/storage/aur/moepink"
 url="https://moebuntu.web.fc2.com/"
 license=('GPL3')
-
-optdepends=('moe-pink-icons: Moe Pink icon themes'
-            'moe-pink-bh-gtk-theme: Moe Pink GTK themes with big heart'
-              )
+depends=('lxqt-panel')
 provides=("${pkgname}=${pkgver}")
 source=("${_url}/Test-MoePink.tar.gz")
 md5sums=('8115da9ac365b030bab775a6d644434e')
