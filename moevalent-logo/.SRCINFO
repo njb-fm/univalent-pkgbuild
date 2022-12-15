@@ -1,0 +1,15 @@
+pkgbase = moevalent-logo
+	pkgdesc = UVGL's Moe Logo
+	pkgver = 22.11
+	pkgrel = 3
+	url = https://github.com/Jin-Asanami
+	arch = any
+	license = GPL3
+	makedepends = git
+	provides = moevalent-logo
+	options = !strip
+	options = !emptydirs
+	source = moevalent-logo::git+https://github.com/Jin-Asanami/moevalent-logo
+	sha256sums = SKIP
+
+pkgname = moevalent-logo

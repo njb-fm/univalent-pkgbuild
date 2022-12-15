@@ -1,0 +1,20 @@
+pkgbase = univalent-tools
+	pkgdesc = System setting tools written in bash, inspired by Alter Linux i3wm
+	pkgver = 1.2
+	pkgrel = 1
+	url = https://github.com/Jin-Asanami
+	arch = any
+	license = GPL3
+	checkdepends = shellcheck
+	makedepends = git
+	depends = arandr
+	depends = networkmanager
+	depends = ntp
+	depends = pavucontrol
+	optdepends = unifetch: show system info
+	optdepends = univalent-logo: univalent icon
+	conflicts = univalent-tools
+	source = univalent-tools::git+https://github.com/Jin-Asanami/univalent-tools.git
+	sha512sums = SKIP
+
+pkgname = univalent-tools

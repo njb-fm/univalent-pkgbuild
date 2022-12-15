@@ -1,0 +1,22 @@
+pkgbase = uvgl-skel-i3wm-en
+	pkgdesc = Settings for Uni3valent GNU/Linux
+	pkgver = 22.12
+	pkgrel = 7
+	url = https://github.com/jin-asanami
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	depends = xfce4-terminal
+	depends = pcmanfm-qt
+	depends = lightdm
+	optdepends = yay: an AUR helper
+	optdepends = unifetch: screenfetch utility
+	optdepends = cups: printing support
+	optdepends = system-config-printer: CUPS status applet
+	provides = uvgl-skel-i3wm-en
+	options = !strip
+	options = !emptydirs
+	source = uvgl-skel::git+https://github.com/jin-asanami/uvgl-skel
+	sha256sums = SKIP
+
+pkgname = uvgl-skel-i3wm-en

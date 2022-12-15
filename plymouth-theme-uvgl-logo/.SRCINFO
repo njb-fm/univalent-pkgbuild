@@ -1,0 +1,13 @@
+pkgbase = plymouth-theme-uvgl-logo
+	pkgdesc = A plymouth theme for Univalent GNU/Linux
+	pkgver = 1.1
+	pkgrel = 1
+	url = https://osdn.net/projects/univalentgnulinux
+	arch = any
+	license = GPL
+	depends = plymouth
+	conflicts = plymouth-theme-uvgl-logo-git
+	source = https://osdn.net/projects/univalentgnulinux/storage/aur/plymouth-theme-uvgl-logo/plymouth-theme-uvgl-logo-1.1.tar.gz
+	sha512sums = 733f322eb7320d8ce89a56e79d459534a2c026ea46276d11933bb5888b92d7f2caff34b43992de2bf896ce6830d71233f9ebe6676eb0763757c8b5f54e796c38
+
+pkgname = plymouth-theme-uvgl-logo

@@ -1,0 +1,21 @@
+pkgbase = uvgl-skel-cinnamon-en
+	pkgdesc = Settings for Cunivalent GNU/Linux
+	pkgver = 22.12
+	pkgrel = 1
+	url = https://github.com/jin-asanami
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	depends = gnome-terminal
+	depends = nemo
+	optdepends = yay: an AUR helper
+	optdepends = unifetch: screenfetch utility
+	optdepends = cups: printing support
+	optdepends = system-config-printer: CUPS status applet
+	provides = uvgl-skel-cinnamon-en
+	options = !strip
+	options = !emptydirs
+	source = uvgl-skel::git+https://github.com/jin-asanami/uvgl-skel
+	sha256sums = SKIP
+
+pkgname = uvgl-skel-cinnamon-en

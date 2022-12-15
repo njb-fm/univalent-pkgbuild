@@ -1,0 +1,13 @@
+pkgbase = moe-pink-lxqt-theme
+	pkgdesc = Moe Pink theme for the LXQt Desktop
+	pkgver = 1.0
+	pkgrel = 2
+	url = https://moebuntu.web.fc2.com/
+	arch = any
+	license = GPL3
+	depends = lxqt-panel
+	provides = moe-pink-lxqt-theme=1.0
+	source = https://osdn.net/projects/univalentgnulinux/storage/aur/moepink/Test-MoePink.tar.gz
+	md5sums = 8115da9ac365b030bab775a6d644434e
+
+pkgname = moe-pink-lxqt-theme
