@@ -1,0 +1,20 @@
+# Maintainer : Hayate Nakamura <is01.njb at gmail dot com>
+
+pkgname=univalent-keyring
+pkgver=20221215
+pkgrel=1
+pkgdesc='Univalent PGP keyring'
+arch=('any')
+license=('GPL3')
+url='https://njb-fm.github.io'
+_url=https://github.com/Jin-Asanami
+license=('GPL')
+validgpgkeys=('AE52F7371BD896A8345C490E048E45A1EC694BCE')
+install="${pkgname}.install"
+source=("git+${_url}/${pkgname}.git")
+makedepends=('git')
+sha256sums=('SKIP')
+package() {
+    cd "${srcdir}/${pkgname}"
+    make PREFIX=/usr DESTDIR=${pkgdir} install
+}
