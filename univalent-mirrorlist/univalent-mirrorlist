@@ -5,11 +5,11 @@
 #
 
 # OSDN
-Server = https://ftp.iij.ad.jp/pub/osdn.jp/storage/g/u/un/univalentgnulinux/repo/$repo
-Server = https://ftp.jaist.ac.jp/pub/sourceforge.jp/storage/g/u/un/univalentgnulinux/repo/$repo
-Server = https://osdn.dl.osdn.net/storage/g/u/un/univalentgnulinux/repo/$repo
-Server = https://ftp.halifax.rwth-aachen.de/osdn/storage/g/u/un/univalentgnulinux/repo/$repo
-Server = https://mirror.gigenet.com/osdn/storage/g/u/un/univalentgnulinux/repo/$repo
-Server = https://acc.dl.osdn.jp/storage/g/u/un/univalentgnulinux/repo/$repo
-Server = https://osdn.mirror.liquidtelecom.com/storage/g/u/un/univalentgnulinux/repo/$repo
+Server = https://ftp.iij.ad.jp/pub/osdn.jp/storage/g/u/un/univalentgnulinux/repo/$repo/$arch
+Server = https://ftp.jaist.ac.jp/pub/sourceforge.jp/storage/g/u/un/univalentgnulinux/repo/$repo/$arch
+Server = https://osdn.dl.osdn.net/storage/g/u/un/univalentgnulinux/repo/$repo/$arch
+Server = https://ftp.halifax.rwth-aachen.de/osdn/storage/g/u/un/univalentgnulinux/repo/$repo/$arch
+Server = https://mirror.gigenet.com/osdn/storage/g/u/un/univalentgnulinux/repo/$repo/$arch
+Server = https://acc.dl.osdn.jp/storage/g/u/un/univalentgnulinux/repo/$repo/$arch
+Server = https://osdn.mirror.liquidtelecom.com/storage/g/u/un/univalentgnulinux/repo/$repo/$arch
 
