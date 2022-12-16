@@ -1,12 +1,13 @@
 pkgbase = uvgl-calam-cfg
 	pkgdesc = Calamares config for UVGL
 	pkgver = 22.12
-	pkgrel = 3
+	pkgrel = 4
 	url = https://github.com/Jin-Asanami
 	arch = any
 	license = GPL3
 	makedepends = git
 	provides = uvgl-calam-cfg
+	conflicts = uvgl-moe-calam-cfg
 	options = !strip
 	options = !emptydirs
 	source = uvgl-calam-cfg::git+https://github.com/Jin-Asanami/uvgl-calam-cfg

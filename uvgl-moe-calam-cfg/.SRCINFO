@@ -1,12 +1,13 @@
 pkgbase = uvgl-moe-calam-cfg
 	pkgdesc = Calamares config for MVGL
 	pkgver = 22.12
-	pkgrel = 3
+	pkgrel = 4
 	url = https://github.com/Jin-Asanami
 	arch = any
 	license = GPL3
 	makedepends = git
 	provides = uvgl-moe-calam-cfg
+	conflicts = uvgl-calam-cfg
 	options = !strip
 	options = !emptydirs
 	source = uvgl-moe-calam-cfg::git+https://github.com/Jin-Asanami/uvgl-moe-calam-cfg
