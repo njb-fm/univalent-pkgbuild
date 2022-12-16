@@ -7,7 +7,7 @@ license=('GPL3')
 arch=('any')
 url='https://njb-fm.github.io'
 source=("univalent-mirrorlist")
-sha256sums=('4162d6b67b61d9574243073c51a4a685c0d1f21338a94de788b04231404c830a')
+sha256sums=('009cc9e17835c8c93b86e42e6f63dff59a5cd3173ff930b315c4beed80d04e38')
 package() {
     cd "${srcdir}"
     install -Dm644 "${srcdir}/univalent-mirrorlist" "${pkgdir}/etc/pacman.d/univalent-mirrorlist"
