@@ -2,7 +2,7 @@
 pkgname=uvgl-moe-calam-cfg
 destname="/etc"
 pkgver=22.12
-pkgrel=4
+pkgrel=5
 pkgdesc="Calamares config for MVGL"
 arch=('any')
 url="https://github.com/Jin-Asanami"
