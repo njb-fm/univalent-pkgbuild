@@ -2,7 +2,7 @@
 pkgname=("uvgl-skel-lxqt-moe-en")
 destname="/etc"
 pkgver=22.12
-pkgrel=6
+pkgrel=7
 pkgdesc="Settings for Moevalent GNU/Linux"
 arch=('x86_64')
 url="https://github.com/jin-asanami"
