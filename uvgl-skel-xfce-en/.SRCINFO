@@ -1,7 +1,7 @@
 pkgbase = uvgl-skel-xfce-en
 	pkgdesc = Settings for Xunivalent GNU/Linux
 	pkgver = 22.12
-	pkgrel = 2
+	pkgrel = 3
 	url = https://github.com/jin-asanami
 	arch = x86_64
 	license = GPL3
