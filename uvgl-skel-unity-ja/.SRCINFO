@@ -1,7 +1,7 @@
 pkgbase = uvgl-skel-unity-ja
 	pkgdesc = Settings for Unitylent GNU/Linux
 	pkgver = 22.12
-	pkgrel = 5
+	pkgrel = 6
 	url = https://github.com/jin-asanami
 	arch = x86_64
 	license = GPL3
