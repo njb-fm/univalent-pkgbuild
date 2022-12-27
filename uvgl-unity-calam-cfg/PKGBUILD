@@ -2,7 +2,7 @@
 pkgname=uvgl-unity-calam-cfg
 destname="/etc"
 pkgver=22.12
-pkgrel=1
+pkgrel=2
 pkgdesc="Calamares config for UVGL Unity flavour"
 arch=('any')
 url="https://github.com/Jin-Asanami"

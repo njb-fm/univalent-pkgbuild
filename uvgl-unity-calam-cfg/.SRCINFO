@@ -1,7 +1,7 @@
 pkgbase = uvgl-unity-calam-cfg
 	pkgdesc = Calamares config for UVGL Unity flavour
 	pkgver = 22.12
-	pkgrel = 1
+	pkgrel = 2
 	url = https://github.com/Jin-Asanami
 	arch = any
 	license = GPL3

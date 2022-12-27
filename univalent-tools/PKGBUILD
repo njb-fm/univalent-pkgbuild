@@ -1,7 +1,7 @@
 # Maintainer: Hayate Nakamura <is01.njb at gmail dot com>
 
 pkgname=univalent-tools
-pkgver=1.3
+pkgver=1.3.1
 pkgrel=1
 pkgdesc='System setting tools written in bash, inspired by Alter Linux i3wm'
 arch=('any')
@@ -15,7 +15,7 @@ checkdepends=('shellcheck')
 
 conflicts=("${pkgname}")
 source=("${url}/archive/refs/tags/${pkgver}.tar.gz")
-sha512sums=('ddadf8f1780c521e8c89ac57a58d2f65c2248000895cf824b5f9a3848f95533f94a6ea98cb73eb4784fd19fca8c2fc33388794b226d2c5c4cdf5853cd04e963d')
+sha512sums=('367b8877ace8f04dcdec9206a4a9bd6039656136597f081a5aa10a8c6349f0328e9f5f959ad451aa53a96466b1946f7b8320eeb1be0809b0332b52d05a24ef2a')
 
 package() {
   cd "${srcdir}/${pkgname}-${pkgver}/"
