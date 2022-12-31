@@ -1,9 +1,9 @@
 pkgbase = uvgl-skel-xfce-ja
 	pkgdesc = Settings for Xunivalent GNU/Linux
-	pkgver = 22.12
-	pkgrel = 4
+	pkgver = 23.01
+	pkgrel = 1
 	url = https://github.com/jin-asanami
-	arch = x86_64
+	arch = any
 	license = GPL3
 	makedepends = git
 	depends = xfce4-terminal

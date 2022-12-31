@@ -1,10 +1,10 @@
 # Maintainer: Hayate Nakamura (is01.njb at gmail dot com)
 pkgname=("uvgl-skel-kylin-ja")
 destname="/etc"
-pkgver=22.12
+pkgver=23.01
 pkgrel=1
 pkgdesc="Settings for Kunivalent GNU/Linux"
-arch=('x86_64')
+arch=('any')
 url="https://github.com/jin-asanami"
 license=('GPL3')
 makedepends=('git')

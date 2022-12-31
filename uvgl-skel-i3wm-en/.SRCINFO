@@ -1,9 +1,9 @@
 pkgbase = uvgl-skel-i3wm-en
 	pkgdesc = Settings for Uni3valent GNU/Linux
-	pkgver = 22.12
-	pkgrel = 8
+	pkgver = 23.01
+	pkgrel = 1
 	url = https://github.com/jin-asanami
-	arch = x86_64
+	arch = any
 	license = GPL3
 	makedepends = git
 	depends = xfce4-terminal
