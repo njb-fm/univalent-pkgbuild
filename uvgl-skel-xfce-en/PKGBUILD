@@ -2,7 +2,7 @@
 pkgname=("uvgl-skel-xfce-en")
 destname="/etc"
 pkgver=23.01
-pkgrel=2
+pkgrel=4
 pkgdesc="Settings for Xunivalent GNU/Linux"
 arch=('any')
 url="https://github.com/jin-asanami"

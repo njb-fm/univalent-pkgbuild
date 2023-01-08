@@ -1,7 +1,7 @@
 pkgbase = uvgl-skel-lxqt-kamu-ja
 	pkgdesc = Settings for Kamuvalent GNU/Linux
 	pkgver = 23.01
-	pkgrel = 3
+	pkgrel = 4
 	url = https://github.com/jin-asanami
 	arch = any
 	license = GPL3
