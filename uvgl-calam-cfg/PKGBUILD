@@ -2,7 +2,7 @@
 pkgname=uvgl-calam-cfg
 destname="/etc"
 pkgver=22.12
-pkgrel=6
+pkgrel=7
 pkgdesc="Calamares config for UVGL"
 arch=('any')
 url="https://github.com/Jin-Asanami"
@@ -15,6 +15,6 @@ source=(${pkgname}::"git+${url}/${pkgname}")
 sha256sums=('SKIP')
 package() {
 	install -dm755 ${pkgdir}${destname}
-	cp -r ${srcdir}/${pkgname}${destname}/* ${pkgdir}${destname}
+	cp -r ${srcdir}/${pkgname}/old${destname}/* ${pkgdir}${destname}
 	chmod 755 ${pkgdir}/etc/calamares/launch.sh
 }

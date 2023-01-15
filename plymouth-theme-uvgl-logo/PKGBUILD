@@ -3,7 +3,7 @@
 pkgname=plymouth-theme-uvgl-logo
 _themename=uvgl-logo
 
-pkgver=1.1
+pkgver=1.2
 pkgrel=1
 pkgdesc="A plymouth theme for Univalent GNU/Linux"
 arch=('any')
@@ -13,17 +13,17 @@ license=('GPL')
 depends=('plymouth')
 optdepends=()
 source=("${_url}/${pkgname}-${pkgver}.tar.gz")
-sha512sums=('733f322eb7320d8ce89a56e79d459534a2c026ea46276d11933bb5888b92d7f2caff34b43992de2bf896ce6830d71233f9ebe6676eb0763757c8b5f54e796c38')
+sha512sums=('40cb25879cf3383ed6a6860bbacc5cc6bd1c97017d6ae96dce6267614ddc77eb60043d3fae325b98a99407fddff023496be8e53bc2b4ad36319d5fd4ff1d0fe8')
 conflicts=("${pkgname}-git")
 
 
 build () {
     cd "${srcdir}"
     mkdir -p usr/share/plymouth/themes/${_themename}/
-    cp -r ${pkgname}/${_themename}/intro/* usr/share/plymouth/themes/${_themename}/
-    cp -r ${pkgname}/${_themename}/loop/* usr/share/plymouth/themes/${_themename}/
-    cp -r ${pkgname}/${_themename}/misc/* usr/share/plymouth/themes/${_themename}/
-
+#    cp -r ${pkgname}/${_themename}/intro/* usr/share/plymouth/themes/${_themename}/
+#    cp -r ${pkgname}/${_themename}/loop/* usr/share/plymouth/themes/${_themename}/
+#    cp -r ${pkgname}/${_themename}/misc/* usr/share/plymouth/themes/${_themename}/
+    cp -r ${pkgname}/${_themename}/* usr/share/plymouth/themes/${_themename}/
     rm -rf ${_themename}
 }
 
