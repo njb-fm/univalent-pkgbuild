@@ -1,7 +1,7 @@
 pkgbase = uvgl-calam-cfg
 	pkgdesc = Calamares config for UVGL
-	pkgver = 23.01
-	pkgrel = 1
+	pkgver = 22.12
+	pkgrel = 7
 	url = https://github.com/Jin-Asanami
 	arch = any
 	license = GPL3
