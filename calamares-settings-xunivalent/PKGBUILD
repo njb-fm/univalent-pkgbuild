@@ -1,21 +1,20 @@
 # Maintainer: Hayate Nakamura (is01.njb at gmail dot com)
-pkgname=calamares-settings-univalent
+pkgname=calamares-settings-xunivalent
 _pkgname=uvgl-calam-cfg
 destname="/etc"
 pkgver=23.01
-pkgrel=2
+pkgrel=1
 pkgdesc="Univalent Calamares Settings anf Branding"
 arch=('any')
 url="https://github.com/Jin-Asanami/uvgl-calam-cfg"
 license=('GPL3')
 makedepends=('git')
-conflicts=('uvgl-moe-calam-cfg')
 provides=("${_pkgname}")
 options=(!strip !emptydirs)
 source=(${_pkgname}::"git+${url}.git")
 sha256sums=('SKIP')
 package() {
 	install -dm755 ${pkgdir}${destname}
-	cp -r ${srcdir}/${_pkgname}/lxqt${destname}/* ${pkgdir}${destname}
+	cp -r ${srcdir}/${_pkgname}/xfce${destname}/* ${pkgdir}${destname}
 	chmod 755 ${pkgdir}/etc/calamares/launch.sh
 }
