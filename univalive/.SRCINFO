@@ -1,0 +1,14 @@
+pkgbase = univalive
+	pkgdesc = Copy calamares icon
+	pkgver = 23.02
+	pkgrel = 1
+	url = https://univalentgnulinux.osdn.jp/
+	arch = any
+	license = LGPL
+	depends = calamares
+	source = univalent-calamares-desktop
+	source = univalent-calamares-desktop.desktop
+	sha256sums = 9f40d45517ff9898dca502372c9abdb3a2a8c4cb268547805b45c8fa6b8f2581
+	sha256sums = 91ede66df0718d93449460e85f28d3804b1207a4ef41d7424cbce175cabe1598
+
+pkgname = univalive
