@@ -2,7 +2,7 @@
 pkgname=("uvgl-skel-plasma-en")
 destname="/etc"
 pkgver=23.01
-pkgrel=4
+pkgrel=5
 pkgdesc="Settings for Punivalent GNU/Linux"
 arch=('any')
 url="https://github.com/jin-asanami"
