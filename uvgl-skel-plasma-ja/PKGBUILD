@@ -2,17 +2,16 @@
 pkgname=("uvgl-skel-plasma-ja")
 destname="/etc"
 pkgver=23.01
-pkgrel=5
+pkgrel=6
 pkgdesc="Settings for Punivalent GNU/Linux"
 arch=('any')
 url="https://github.com/jin-asanami"
 license=('GPL3')
 makedepends=('git')
 
-depends=('konsole')
+depends=('konsole' 'dolphin')
 
-optdepends=('pcmanfm-qt: default file manager of Univalent Plasma Flavour'
-            'yay: an AUR helper'
+optdepends=('yay: an AUR helper'
             'unifetch: screenfetch utility'
             'cups: printing support'
             'system-config-printer: CUPS status applet')

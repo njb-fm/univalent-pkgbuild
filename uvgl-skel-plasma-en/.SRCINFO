@@ -1,13 +1,13 @@
 pkgbase = uvgl-skel-plasma-en
 	pkgdesc = Settings for Punivalent GNU/Linux
 	pkgver = 23.01
-	pkgrel = 5
+	pkgrel = 6
 	url = https://github.com/jin-asanami
 	arch = any
 	license = GPL3
 	makedepends = git
 	depends = konsole
-	optdepends = pcmanfm-qt: default file manager of Univalent Plasma Flavour
+	depends = dolphin
 	optdepends = yay: an AUR helper
 	optdepends = unifetch: screenfetch utility
 	optdepends = cups: printing support
