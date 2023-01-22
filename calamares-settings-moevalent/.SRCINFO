@@ -1,0 +1,16 @@
+pkgbase = calamares-settings-moevalent
+	pkgdesc = Punivalent Calamares Settings anf Branding
+	pkgver = 23.01
+	pkgrel = 1
+	url = https://github.com/Jin-Asanami/uvgl-calam-cfg
+	arch = any
+	license = GPL3
+	makedepends = git
+	conflicts = uvgl-calam-cfg
+	replaces = uvgl-moe-calam-cfg
+	options = !strip
+	options = !emptydirs
+	source = uvgl-calam-cfg::git+https://github.com/Jin-Asanami/uvgl-calam-cfg.git
+	sha256sums = SKIP
+
+pkgname = calamares-settings-moevalent
