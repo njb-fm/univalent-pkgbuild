@@ -1,0 +1,19 @@
+# Maintainer: Hayate Nakamura <is01.njb at gmail dot com>
+
+pkgname=wps-office-mui-ja-jp
+pkgver=11.1.0.9080
+pkgrel=2
+pkgdesc="Japanese mui traduction for WPS Office"
+arch=(any)
+url="https://github.com/wachin/Backup-WPS-Office-MUI-packages"
+license=(GPL3)
+depends=(wps-office)
+conflicts=()
+source=(wps-mui-ja-jp.7z::${url}/releases/download/${pkgver}-${pkgrel}/ja_JP.7z)
+sha256sums=('a837cb5e637774bbd8c40fda49606d617ad2817dd060a638cb14b179cb82c331')
+
+package() {
+	mkdir -p "$pkgdir"/usr/lib/office6/mui
+	cp -r "$srcdir"/ja_JP "$pkgdir"/usr/lib/office6/mui/
+}
+
