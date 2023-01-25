@@ -2,7 +2,7 @@
 
 pkgname=calamares
 pkgver=3.2.61
-pkgrel=7
+pkgrel=5
 pkgdesc='Distribution-independent installer framework'
 arch=('i686' 'x86_64')
 license=(GPL)
@@ -18,7 +18,7 @@ backup=('usr/share/calamares/modules/bootloader.conf'
         'usr/share/calamares/modules/initcpio.conf'
         'usr/share/calamares/modules/unpackfs.conf')
 
-source=("$pkgname-$pkgver::$url/download/v$pkgver/$pkgname-$pkgver.tar.gz"
+source=("${pkgname}-${pkgver}::$url/download/v${pkgver}/${pkgname}-${pkgver}.tar.gz"
 	"calamares.desktop"
 	)
 
@@ -26,7 +26,7 @@ sha256sums=('7591b9b60738bdba7b9de2b8da5462ab21006db06a006f0dd21ac5b832711dd2'
             'f23d511e7b7e9436564d5872bef4cb86808d63d4e15179d28f0526cd2d443055')
 
 pkgver() {
-	cd ${srcdir}/$pkgname-$pkgver
+	cd ${srcdir}/${pkgname}-${pkgver}
 	_ver="$(cat CMakeLists.txt | grep -m3 -e "  VERSION" | grep -o "[[:digit:]]*" | xargs | sed s'/ /./g')"
 	_git=".r$(git rev-list --count HEAD).$(git rev-parse --short HEAD)"
 	printf '%s%s' "${_ver}" #"${_git}"
@@ -46,7 +46,7 @@ prepare() {
 }
 
 build() {
-	cd $pkgname-$pkgver
+	cd ${pkgname}-${pkgver}
 
 	mkdir -p build
 	cd build
