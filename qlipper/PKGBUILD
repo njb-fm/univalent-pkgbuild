@@ -1,16 +1,17 @@
-# Maintainet: Hayate Nakamura <is01.njb at gmail dot com>
+# Maintainer: Hayate Nakamura <is01.njb at gmail dot com>
 # Contributor: e5ten <e5ten.arch@gmail.com>
 # Contributor: sxe <sxxe@gmx.de>
 pkgname='qlipper'
-pkgver=5.1.2
-pkgrel=1.2univalent1
+pkgver=5.1.2.1univalent1
+_pkgver=5.1.2
+pkgrel=1.2
 pkgdesc='Lightweight & cross-platform clipboard history applet based on qt'
 arch=('i686' 'x86_64')
 url="https://github.com/pvanek/${pkgname}"
 license=('GPL2')
 depends=('qt5-base')
 makedepends=('cmake' 'ninja' 'qt5-tools' 'git')
-source=("git+https://github.com/pvanek/${pkgname}#tag=${pkgver}"
+source=("git+https://github.com/pvanek/${pkgname}#tag=${_pkgver}"
 	"lxqt-qlipper-autostart.desktop")
 sha256sums=('SKIP'
 	'de197c66b4ac926d138150c397b97993b9ab675a205761c5616c934b15cdcaf6')
