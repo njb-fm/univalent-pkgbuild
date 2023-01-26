@@ -2,7 +2,7 @@
 pkgname=uvgl-calam-cfg
 destname="/etc"
 pkgver=23.01
-pkgrel=2
+pkgrel=3
 pkgdesc="Calamares config for UVGL"
 arch=('any')
 url="https://github.com/Jin-Asanami"
