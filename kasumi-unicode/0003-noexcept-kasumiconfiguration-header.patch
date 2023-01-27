@@ -1,0 +1,25 @@
+--- kasumi-unicode-2.6/KasumiConfiguration.hxx	2021-07-14 14:52:57.000000000 +0900
++++ kasumi-unicode-2.6-patch/KasumiConfiguration.hxx	2023-01-27 21:39:05.843547732 +0900
+@@ -38,16 +38,16 @@
+   map<string, string> config;
+   string ConfFileName;
+   
+-  void loadDefaultProperties() throw(KasumiException);
+-  void loadConfigurationFile() throw (KasumiException);
++  void loadDefaultProperties() noexcept(false);
++  void loadConfigurationFile() noexcept(false);
+   void loadConfigurationFromArgument(int argc, char *argv[])
+-    throw(KasumiException);
+-  void saveConfiguration() throw (KasumiException);
++    noexcept(false);
++  void saveConfiguration() noexcept(false);
+ 
+   void setPropertyValue(const string &name, const string &value);
+-  void checkValidity() throw(KasumiException);
++  void checkValidity() noexcept(false);
+ public:
+-  KasumiConfiguration(int argc, char *argv[]) throw (KasumiException);
++  KasumiConfiguration(int argc, char *argv[]) noexcept(false);
+   ~KasumiConfiguration();
+   string getPropertyValue(const string &name);
+   int getPropertyValueByInt(const string &name);  

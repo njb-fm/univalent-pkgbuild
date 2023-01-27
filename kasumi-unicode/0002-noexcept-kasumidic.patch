@@ -1,0 +1,29 @@
+--- kasumi-unicode-2.6/KasumiDic.cxx	2021-07-14 14:52:57.000000000 +0900
++++ kasumi-unicode-2.6-patch/KasumiDic.cxx	2023-01-27 21:45:36.590777948 +0900
+@@ -47,7 +47,7 @@
+ #define BUFFER_SIZE (255)
+ 
+ KasumiDic::KasumiDic(KasumiConfiguration *conf)
+-  throw(KasumiException){
++  noexcept(false){
+ 
+   try{
+     load(conf);
+@@ -69,7 +69,7 @@
+ }
+ 
+ void KasumiDic::load(KasumiConfiguration *conf)
+-    throw(KasumiException){
++    noexcept(false){
+ 
+   const int FREQ_LBOUND = conf->getPropertyValueByInt("MinFrequency");  
+   const int FREQ_UBOUND = conf->getPropertyValueByInt("MaxFrequency");
+@@ -176,7 +176,7 @@
+ }
+ 
+ void KasumiDic::store()
+-    throw(KasumiException)
++    noexcept(false)
+ {
+     list<KasumiWord*>::iterator p = mWordList.begin();
+ 
