@@ -1,0 +1,11 @@
+# remove from airootfs!
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = fcitx5
+
+[Action]
+Description = updating /etc/environment...
+When = PostTransaction
+Exec = /bin/sh -c "sed -i 's|ibus|fcitx5|g' /etc/environment"

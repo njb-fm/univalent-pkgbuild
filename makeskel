@@ -1,0 +1,50 @@
+#!/bin/sh
+cd *lxqt-en
+makepkg --printsrcinfo > .SRCINFO && sudo extra-x86_64-build && gpg --detach-sign -u EC694BCE uvgl-skel-lxqt-en-23.02-1-any.pkg.tar.zst
+cd ../*lxqt-ja
+makepkg --printsrcinfo > .SRCINFO && sudo extra-x86_64-build && gpg --detach-sign -u EC694BCE uvgl-skel-lxqt-ja-23.02-1-any.pkg.tar.zst
+cd ../*kamu-en
+makepkg --printsrcinfo > .SRCINFO && sudo extra-x86_64-build && gpg --detach-sign -u EC694BCE uvgl-skel-lxqt-kamu-en-23.02-1-any.pkg.tar.zst
+cd ../*kamu-ja
+makepkg --printsrcinfo > .SRCINFO && sudo extra-x86_64-build && gpg --detach-sign -u EC694BCE uvgl-skel-lxqt-kamu-ja-23.02-1-any.pkg.tar.zst
+cd ../*moe-en
+makepkg --printsrcinfo > .SRCINFO && sudo extra-x86_64-build && gpg --detach-sign -u EC694BCE uvgl-skel-lxqt-moe-en-23.02-1-any.pkg.tar.zst
+cd ../*moe-ja
+makepkg --printsrcinfo > .SRCINFO && sudo extra-x86_64-build && gpg --detach-sign -u EC694BCE uvgl-skel-lxqt-moe-ja-23.02-1-any.pkg.tar.zst
+cd ../*xfce-en
+makepkg --printsrcinfo > .SRCINFO && sudo extra-x86_64-build && gpg --detach-sign -u EC694BCE uvgl-skel-xfce-en-23.02-1-any.pkg.tar.zst
+cd ../*xfce-ja
+makepkg --printsrcinfo > .SRCINFO && sudo extra-x86_64-build && gpg --detach-sign -u EC694BCE uvgl-skel-xfce-ja-23.02-1-any.pkg.tar.zst
+cd ../*plasma-en
+makepkg --printsrcinfo > .SRCINFO && sudo extra-x86_64-build && gpg --detach-sign -u EC694BCE uvgl-skel-plasma-en-23.02-1-any.pkg.tar.zst
+cd ../*plasma-ja
+makepkg --printsrcinfo > .SRCINFO && sudo extra-x86_64-build && gpg --detach-sign -u EC694BCE uvgl-skel-plasma-ja-23.02-1-any.pkg.tar.zst
+cd ../*i3wm-en
+makepkg --printsrcinfo > .SRCINFO && sudo extra-x86_64-build && gpg --detach-sign -u EC694BCE uvgl-skel-i3wm-en-23.02-1-any.pkg.tar.zst
+cd ../*i3wm-ja
+makepkg --printsrcinfo > .SRCINFO && sudo extra-x86_64-build && gpg --detach-sign -u EC694BCE uvgl-skel-i3wm-ja-23.02-1-any.pkg.tar.zst
+cd ../*cinnamon-en
+makepkg --printsrcinfo > .SRCINFO && sudo extra-x86_64-build && gpg --detach-sign -u EC694BCE uvgl-skel-cinnamon-en-23.02-1-any.pkg.tar.zst
+cd ../*cinnamon-ja
+makepkg --printsrcinfo > .SRCINFO && sudo extra-x86_64-build && gpg --detach-sign -u EC694BCE uvgl-skel-cinnamon-ja-23.02-1-any.pkg.tar.zst
+cd ../*gnome-en
+makepkg --printsrcinfo > .SRCINFO && sudo extra-x86_64-build && gpg --detach-sign -u EC694BCE uvgl-skel-gnome-en-23.02-1-any.pkg.tar.zst
+cd ../*gnome-ja
+makepkg --printsrcinfo > .SRCINFO && sudo extra-x86_64-build && gpg --detach-sign -u EC694BCE uvgl-skel-gnome-ja-23.02-1-any.pkg.tar.zst
+cd ../*mate-en
+makepkg --printsrcinfo > .SRCINFO && sudo extra-x86_64-build && gpg --detach-sign -u EC694BCE uvgl-skel-mate-en-23.02-1-any.pkg.tar.zst
+cd ../*mate-ja
+makepkg --printsrcinfo > .SRCINFO && sudo extra-x86_64-build && gpg --detach-sign -u EC694BCE uvgl-skel-mate-ja-23.02-1-any.pkg.tar.zst
+cd ../*unity-en
+makepkg --printsrcinfo > .SRCINFO && sudo extra-x86_64-build && gpg --detach-sign -u EC694BCE uvgl-skel-unity-en-23.02-1-any.pkg.tar.zst
+cd ../*unity-ja
+makepkg --printsrcinfo > .SRCINFO && sudo extra-x86_64-build && gpg --detach-sign -u EC694BCE uvgl-skel-unity-ja-23.02-1-any.pkg.tar.zst
+#cd ../*kylin-en
+#makepkg --printsrcinfo > .SRCINFO && sudo extra-x86_64-build && gpg --detach-sign -u EC694BCE uvgl-skel-kylin-en-23.02-1-any.pkg.tar.zst
+#cd ../*kylin-ja
+#makepkg --printsrcinfo > .SRCINFO && sudo extra-x86_64-build && gpg --detach-sign -u EC694BCE uvgl-skel-kylin-ja-23.02-1-any.pkg.tar.zst
+cd ..
+mkdir zst
+mv uvgl-skel-*/*.zst zst/
+mv uvgl-skel-*/*.sig zst/
+rm -rf uvgl-skel-*/{uvgl-skel,*.log}

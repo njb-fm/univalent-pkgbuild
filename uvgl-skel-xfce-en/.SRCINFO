@@ -1,13 +1,14 @@
 pkgbase = uvgl-skel-xfce-en
 	pkgdesc = Settings for Xunivalent GNU/Linux
-	pkgver = 23.01
-	pkgrel = 5
+	pkgver = 23.02
+	pkgrel = 1
 	url = https://github.com/jin-asanami
 	arch = any
 	license = GPL3
 	makedepends = git
 	depends = xfce4-terminal
 	depends = thunar
+	depends = fcitx5
 	optdepends = yay: an AUR helper
 	optdepends = unifetch: screenfetch utility
 	optdepends = cups: printing support
