@@ -23,5 +23,5 @@ sha256sums=('f22f37fbca520e6876623e597fae2feab44de83e5f71776e4a2f2531398a57b5')
 
 package() {
 	install -dm755 ${pkgdir}${destname}
-	cp -r ${srcdir}/${_pkgname}-${pkgver}/uvgl-skel/mate/en${destname}/* ${pkgdir}${destname}
+	cp -r ${srcdir}/${_pkgname}-${pkgver}/mate/en${destname}/* ${pkgdir}${destname}
 }

@@ -9,7 +9,7 @@ arch=('any')
 url="https://github.com/jin-asanami/uvgl-skel"
 license=('GPL3')
 
-depends=('gnome-terminal' 'nemo' 'fcitx5')
+depends=('xfce4-terminal' 'pcmanfm-qt' 'lightdm' 'fcitx5')
 
 optdepends=('yay: an AUR helper'
             'unifetch: screenfetch utility'
@@ -23,6 +23,6 @@ sha256sums=('f22f37fbca520e6876623e597fae2feab44de83e5f71776e4a2f2531398a57b5')
 
 package() {
 	install -dm755 ${pkgdir}${destname}
-	cp -r ${srcdir}/${_pkgname}-${pkgver}/uvgl-skel/i3wm/en${destname}/* ${pkgdir}${destname}
+	cp -r ${srcdir}/${_pkgname}-${pkgver}/i3wm/en${destname}/* ${pkgdir}${destname}
 	chmod 755 ${pkgdir}${destname}/skel/.config/polybar/launch.sh
 }
