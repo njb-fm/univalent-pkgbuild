@@ -3,13 +3,13 @@ pkgname=("uvgl-skel-i3wm-ja")
 _pkgname=("uvgl-skel")
 destname="/etc"
 pkgver=23.02
-pkgrel=2
+pkgrel=2.1
 pkgdesc="Settings for Uni3valent GNU/Linux"
 arch=('any')
 url="https://github.com/jin-asanami/uvgl-skel"
 license=('GPL3')
 
-depends=('xfce4-terminal' 'pcmanfm-qt' 'lightdm' 'fcitx5')
+depends=('xfce4-terminal' 'pcmanfm-qt' 'lightdm')
 
 optdepends=('yay: an AUR helper'
             'unifetch: screenfetch utility'

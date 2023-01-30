@@ -1,13 +1,12 @@
 pkgbase = uvgl-skel-cinnamon-en
 	pkgdesc = Settings for Cunivalent GNU/Linux
 	pkgver = 23.02
-	pkgrel = 2
+	pkgrel = 2.1
 	url = https://github.com/jin-asanami/uvgl-skel
 	arch = any
 	license = GPL3
 	depends = gnome-terminal
 	depends = nemo
-	depends = fcitx5
 	optdepends = yay: an AUR helper
 	optdepends = unifetch: screenfetch utility
 	optdepends = cups: printing support
