@@ -1,7 +1,7 @@
 pkgbase = uvgl-skel-plasma-ja
 	pkgdesc = Settings for Punivalent GNU/Linux
 	pkgver = 23.02
-	pkgrel = 1
+	pkgrel = 2
 	url = https://github.com/jin-asanami/uvgl-skel
 	arch = any
 	license = GPL3
@@ -16,6 +16,6 @@ pkgbase = uvgl-skel-plasma-ja
 	options = !strip
 	options = !emptydirs
 	source = uvgl-skel-23.02.tar.gz::https://github.com/jin-asanami/uvgl-skel/archive/refs/tags/23.02.tar.gz
-	sha256sums = f22f37fbca520e6876623e597fae2feab44de83e5f71776e4a2f2531398a57b5
+	sha256sums = 08cf7f8d660998f33f9b9d477e43b4626e1a78ec6d24fa9e750bbb4fc4bc10c5
 
 pkgname = uvgl-skel-plasma-ja

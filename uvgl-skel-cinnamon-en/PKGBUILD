@@ -3,7 +3,7 @@ pkgname=("uvgl-skel-cinnamon-en")
 _pkgname=("uvgl-skel")
 destname="/etc"
 pkgver=23.02
-pkgrel=1
+pkgrel=2
 pkgdesc="Settings for Cunivalent GNU/Linux"
 arch=('any')
 url="https://github.com/jin-asanami/uvgl-skel"
@@ -19,7 +19,7 @@ conflicts=()
 provides=("${pkgname}")
 options=(!strip !emptydirs)
 source=(${_pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz)
-sha256sums=('f22f37fbca520e6876623e597fae2feab44de83e5f71776e4a2f2531398a57b5')
+sha256sums=('08cf7f8d660998f33f9b9d477e43b4626e1a78ec6d24fa9e750bbb4fc4bc10c5')
 
 package() {
 	install -dm755 ${pkgdir}${destname}
