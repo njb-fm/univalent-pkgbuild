@@ -1,7 +1,7 @@
 pkgbase = moevalent-logo
 	pkgdesc = UVGL's Moe Logo
 	pkgver = 22.12.1
-	pkgrel = 1
+	pkgrel = 2
 	url = https://github.com/Jin-Asanami
 	arch = any
 	license = GPL3
