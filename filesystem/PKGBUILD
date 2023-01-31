@@ -1,5 +1,4 @@
-# Maintainer: Sébastien Luttringer
-# Contributor: Tom Gundersen <teg@jklm.no>
+# Maintainer: Hayate Nakamura <is01.njb@gmail.com>
 
 pkgname=filesystem
 pkgver=2023.01.31univalent23.02
