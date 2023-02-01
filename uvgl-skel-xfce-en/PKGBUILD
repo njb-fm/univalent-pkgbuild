@@ -3,7 +3,7 @@ pkgname=("uvgl-skel-xfce-en")
 _pkgname=("uvgl-skel")
 destname="/etc"
 pkgver=23.02
-pkgrel=2.1
+pkgrel=2.2
 pkgdesc="Settings for Xunivalent GNU/Linux"
 arch=('any')
 url="https://github.com/jin-asanami/uvgl-skel"
@@ -24,5 +24,5 @@ sha256sums=('08cf7f8d660998f33f9b9d477e43b4626e1a78ec6d24fa9e750bbb4fc4bc10c5')
 
 package() {
 	install -dm755 ${pkgdir}${destname}
-	cp -r ${srcdir}/${_pkgname}-${pkgver}/cinnamon/en${destname}/* ${pkgdir}${destname}
+	cp -r ${srcdir}/${_pkgname}-${pkgver}/xfce/en${destname}/* ${pkgdir}${destname}
 }

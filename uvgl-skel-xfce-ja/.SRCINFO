@@ -1,7 +1,7 @@
 pkgbase = uvgl-skel-xfce-ja
 	pkgdesc = Settings for Xunivalent GNU/Linux
 	pkgver = 23.02
-	pkgrel = 2.1
+	pkgrel = 2.2
 	url = https://github.com/jin-asanami/uvgl-skel
 	arch = any
 	license = GPL3
