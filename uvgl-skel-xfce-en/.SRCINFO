@@ -16,6 +16,6 @@ pkgbase = uvgl-skel-xfce-en
 	options = !strip
 	options = !emptydirs
 	source = uvgl-skel-23.02.tar.gz::https://github.com/jin-asanami/uvgl-skel/archive/refs/tags/23.02.tar.gz
-	sha256sums = 08cf7f8d660998f33f9b9d477e43b4626e1a78ec6d24fa9e750bbb4fc4bc10c5
+	sha256sums = 4b31e691f261cd1006d641504238bab759f8813efeb83c90baf928dbf22654d7
 
 pkgname = uvgl-skel-xfce-en
