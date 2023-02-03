@@ -2,40 +2,20 @@
 
 pkgname=kasumi-unicode
 pkgver=2.6
-pkgrel=1
+pkgrel=3
 pkgdesc='Dictionary management tool for anthy-unicode'
 arch=('x86_64')
 url='https://github.com/fujiwarat/kasumi-unicode'
 license=('LGPL' 'GPL')
-source=("${url}/releases/download/${pkgver}/${pkgname}-${pkgver}.tar.gz"
-	"0001-noexcept-kasumidic-header.patch"
-	"0002-noexcept-kasumidic.patch"
-	"0003-noexcept-kasumiconfiguration-header.patch"
-	"0004-noexcept-kasumiconfiguration.patch"
-	"0005-noexcept-kasumiword-header.patch"
-	"0006-noexcept-kasumiword.patch")
-sha512sums=('fa97e3ca6199b2736135741ef7f627c999c5da86d2cb5b3698b1f29508867fb7511e1e54465387ca47755f97275c0535c1f5decf8fbe5446a4de527637464269'
-	'a34a35265b6e2f76db8575fe784597a8099b366b329990d96200f6f1d82c95081472616f5c7cd4b89807c9deb94a803d9998e8b7a234714f132c37cb44310f73'
-	'5be364b41f18f3fca86cd8c45a34838d5467e23ad761387d43474e1633bb6ecf7a4ac4bf4332ce3433394d403b9fd11bfa27847140a57e3486091ad1c392695e'
-	'2a4c7b714a2720d0489e8de0f06aaad27bc92f31715169b3b8e06af4f94a85e316d30d4f1b0ad9519b516afe54708ddc4a59ad0ca5ea0c4abeec68c40a3984c6'
-	'25913e03113bb948e69d8d4f8a1b10d30e649053b0e96ec34e10b679695ae28e51f502f025f23c43aec644a543d0abfbedd3534b4a7ff938870d44f5c54b7e6b'
-	'9a6bd1b8a83b47ab2a8eb255e8ceae9f11a9986fd1c6330746e5ae8107ab0265a22a777346df7beae3eb56efccb19c135bf8c7e103b74a23a094465e2dec7376'
-	'c4d0daa09c3767a5bf134ea384978aaca61e6fdd33e484d693026fc7e327a9c78fa597f5340f5d8dafb27a00342c5c81ae1057a4215f5a2ad32a2acd507a7772')
+source=("${url}/releases/download/${pkgver}/${pkgname}-${pkgver}.tar.gz")
+sha512sums=('fa97e3ca6199b2736135741ef7f627c999c5da86d2cb5b3698b1f29508867fb7511e1e54465387ca47755f97275c0535c1f5decf8fbe5446a4de527637464269')
 depends=('anthy' 'gtk3')
-provides=('kasumi')
+makedepends=('gcc11')
+provides=('kasumi-unicode')
 conflicts=('kasumi')
-prepare() {
-	cd "${srcdir}/${pkgname}-${pkgver}"
-
-	patch -p1 -i ../0001-noexcept-kasumidic-header.patch
-	patch -p1 -i ../0002-noexcept-kasumidic.patch
-	patch -p1 -i ../0003-noexcept-kasumiconfiguration-header.patch
-	patch -p1 -i ../0004-noexcept-kasumiconfiguration.patch
-	patch -p1 -i ../0005-noexcept-kasumiword-header.patch
-	patch -p1 -i ../0006-noexcept-kasumiword.patch
-}
 
 build() {
+	export CXXFLAGS='-std=c++11'
 	cd "${srcdir}/${pkgname}-${pkgver}"
  ./configure --prefix=/usr
 	make

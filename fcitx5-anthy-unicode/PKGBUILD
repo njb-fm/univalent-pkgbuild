@@ -1,0 +1,27 @@
+# Maintainer: Hayate Nakamura <is01.njb at gmail dot com>
+
+pkgname=fcitx5-anthy-unicode
+_pkgname=fcitx5-anthy
+pkgver=5.0.13
+pkgrel=1
+pkgdesc="Anthy Unicode Wrapper for Fcitx5"
+arch=('x86_64')
+url="https://github.com/fcitx/fcitx5-anthy"
+license=('GPL')
+depends=('fcitx5' 'anthy-unicode')
+makedepends=('extra-cmake-modules' 'ninja')
+conflicts=('fcitx5-anthy' 'fcitx-anthy' 'fcitx-anthy-unicode')
+source=("https://download.fcitx-im.org/fcitx5/fcitx5-anthy/fcitx5-anthy-${pkgver}.tar.xz")
+sha512sums=('b5968779ba62e069cf0354807caa0568d7312b15338541c9939d86f53cefa81159061f6a02cc906322794662f77d4aa19df35e277d1014447554aeef5a3f941b')
+
+build(){
+  cd ${_pkgname}-${pkgver}
+
+  cmake -GNinja -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_INSTALL_LIBDIR=/usr/lib .
+  ninja
+}
+
+package() {
+  cd ${_pkgname}-${pkgver}
+  DESTDIR="$pkgdir" ninja install
+}

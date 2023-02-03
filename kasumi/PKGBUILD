@@ -1,0 +1,25 @@
+# Maintainer: Hayate Nakamura <is01.njb@gmail.com>
+
+pkgname=kasumi
+pkgver=2.5
+pkgrel=1
+pkgdesc="A dictionary management tool for Anthy"
+arch=('i686' 'x86_64')
+url="http://osdn.net/projects/kasumi"
+license=('GPL2')
+depends=('gtk2' 'anthy')
+makedepends=('pkgconfig' 'gcc11')
+source=(http://ftp.jaist.ac.jp/pub/sourceforge.jp/kasumi/41436/kasumi-2.5.tar.gz)
+md5sums=('f49d010cf1fa5672b4515502b961b8c8')
+
+build() {
+  export CXXFLAGS='-std=c++11'
+  cd ${srcdir}/${pkgname}-${pkgver}
+  ./configure --prefix=/usr
+  make
+}
+
+package() {
+  cd ${srcdir}/${pkgname}-${pkgver}
+  make DESTDIR=${pkgdir} install
+}

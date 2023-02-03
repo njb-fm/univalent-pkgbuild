@@ -1,0 +1,27 @@
+# Maintainer: Hayate Nakamura <is01.njb at gmail dot com>
+
+pkgname=fcitx-anthy-unicode
+_pkgname=fcitx-anthy
+pkgver=0.2.4
+pkgrel=1
+pkgdesc="Fcitx Wrapper for anthy-unicode."
+arch=('x86_64')
+url="https://github.com/fcitx/fcitx-anthy"
+license=('GPL')
+depends=('fcitx' 'anthy-unicode')
+makedepends=('cmake' 'intltool')
+conflicts=('fcitx-anthy')
+source=("https://download.fcitx-im.org/${_pkgname}/${_pkgname}-${pkgver}.tar.xz")
+sha512sums=('31865bed5ff58c36e0360f002e7bfe21a6874d046746d8c781d59df7f48b11dc0b749b825ce0ab26d9a7bdf2c08decac27e14530eff5d1af33dfb25dfd0a90cb')
+
+build(){
+  cd ${_pkgname}-${pkgver}
+
+  cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release .
+  make
+}
+
+package() {
+  cd ${_pkgname}-${pkgver}
+  make DESTDIR="$pkgdir" install
+}
