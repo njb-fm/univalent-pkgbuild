@@ -1,0 +1,43 @@
+# Maintainer: Hayate Nakamura <is01.njb at gmail dot com>
+
+pkgname=moeclock
+pkgver=1.5.1.3
+pkgrel=1
+pkgdesc="Moe clock tool written in Python"
+arch=('any')
+url="https://github.com/kaorin/moeclock"
+license=('MIT')
+depends=('python>=3.6' 'python-distro' 'python-gobject' 'gtk3' 'python-cairo')
+makedepends=('python-setuptools')
+provides=('moeclock')
+source=("${url}/releases/download/${pkgver}/python3-${pkgname}_${pkgver}-${pkgrel}_all.deb"
+	"logo.png")
+md5sums=('835ffa66eca4e02c0d9169d0aa2c739d'
+	'c11b910e58c73bf35c63df01c9b30168')
+
+package() {
+	tar xvf data.tar.xz -C "${pkgdir}"
+	cp ${srcdir}/logo.png ${pkgdir}/usr/share/moeclock/default
+	cp ${srcdir}/logo.png ${pkgdir}/usr/share/moeclock/mikunchu
+	cp ${srcdir}/logo.png ${pkgdir}/usr/share/moeclock/moeskin_blue
+	cp ${srcdir}/logo.png ${pkgdir}/usr/share/moeclock/moeskin_blue_slim
+	cp ${srcdir}/logo.png ${pkgdir}/usr/share/moeclock/moeskin_bluegreen
+	cp ${srcdir}/logo.png ${pkgdir}/usr/share/moeclock/moeskin_bluegreen_slim
+	cp ${srcdir}/logo.png ${pkgdir}/usr/share/moeclock/moeskin_green
+	cp ${srcdir}/logo.png ${pkgdir}/usr/share/moeclock/moeskin_green_slim
+	cp ${srcdir}/logo.png ${pkgdir}/usr/share/moeclock/moeskin_heart
+	cp ${srcdir}/logo.png ${pkgdir}/usr/share/moeclock/moeskin_heart02
+	cp ${srcdir}/logo.png ${pkgdir}/usr/share/moeclock/moeskin_miku
+	cp ${srcdir}/logo.png ${pkgdir}/usr/share/moeclock/moeskin_navy
+	cp ${srcdir}/logo.png ${pkgdir}/usr/share/moeclock/moeskin_navy_slim
+	cp ${srcdir}/logo.png ${pkgdir}/usr/share/moeclock/moeskin_orange
+	cp ${srcdir}/logo.png ${pkgdir}/usr/share/moeclock/moeskin_orange_slim
+	cp ${srcdir}/logo.png ${pkgdir}/usr/share/moeclock/moeskin_pink
+	cp ${srcdir}/logo.png ${pkgdir}/usr/share/moeclock/moeskin_pink_slim
+	cp ${srcdir}/logo.png ${pkgdir}/usr/share/moeclock/moeskin_purple
+	cp ${srcdir}/logo.png ${pkgdir}/usr/share/moeclock/moeskin_purple_slim
+	cp ${srcdir}/logo.png ${pkgdir}/usr/share/moeclock/moeskin_red
+	cp ${srcdir}/logo.png ${pkgdir}/usr/share/moeclock/moeskin_red_slim
+	cp ${srcdir}/logo.png ${pkgdir}/usr/share/moeclock/moeskin_yellow
+	cp ${srcdir}/logo.png ${pkgdir}/usr/share/moeclock/moeskin_yellow_slim
+}
