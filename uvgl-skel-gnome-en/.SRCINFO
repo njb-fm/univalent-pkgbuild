@@ -1,7 +1,7 @@
 pkgbase = uvgl-skel-gnome-en
 	pkgdesc = Settings for Gunivalent GNU/Linux
 	pkgver = 23.02.1
-	pkgrel = 1
+	pkgrel = 1.1
 	url = https://github.com/jin-asanami/uvgl-skel
 	arch = any
 	license = GPL3
@@ -15,6 +15,6 @@ pkgbase = uvgl-skel-gnome-en
 	options = !strip
 	options = !emptydirs
 	source = uvgl-skel-23.02.1.tar.gz::https://github.com/jin-asanami/uvgl-skel/archive/refs/tags/v23.02.1.tar.gz
-	sha256sums = bc556cf385309f0204c1a2e47d26fa3b220db3f32772209af8412d6326e704a2
+	sha256sums = 0be8c60dfbcc0cb54d5510af1172068a815a7d4e54b861cae4090bb8240392b0
 
 pkgname = uvgl-skel-gnome-en
