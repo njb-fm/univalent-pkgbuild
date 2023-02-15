@@ -1,6 +1,6 @@
 pkgbase = filesystem
 	pkgdesc = Base Univalent GNU/Linux files
-	pkgver = 2023.01.31univalent23.02
+	pkgver = 2023.02.15univalent23.02.1
 	pkgrel = 1
 	url = https://njb-fm.github.io/
 	arch = x86_64
@@ -61,7 +61,7 @@ pkgbase = filesystem
 	sha256sums = dad04a370e488aa85fb0a813a5c83cf6fd981ce01883fc59685447b092de84b5
 	sha256sums = 8ca2d8eef6fb5143c9ef7e9174ccfef59ac7ad2deee243574cd10c763156cc10
 	sha256sums = c8ee7a9faf798caab178ec51afae4146f1efd8a716b7acedf28345b6c75f9697
-	sha256sums = 104a6ab3e24d1b4c59a675bac6c9ff79990a2d1161359f815ccf4865fa367027
+	sha256sums = afb16467912fa9b1319211440c7434992b2ccfb754d43d4df2858ac78372b5ec
 	sha256sums = 5e4088ad8d0853d390fa303f6be8c3f69c33834200cba9e90f7849f1993ca8d0
 	sha256sums = 5e06477834f51abf42ea4e8dc199632afc6afbfd8c44354685a271e9a48d2c0a
 	sha256sums = 5557d8e601b17a80d1ea7de78a9869be69637cb6a02fbfe334e22fdf64e61d4c

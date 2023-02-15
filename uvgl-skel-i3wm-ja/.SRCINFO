@@ -1,7 +1,7 @@
 pkgbase = uvgl-skel-i3wm-ja
 	pkgdesc = Settings for Uni3valent GNU/Linux
 	pkgver = 23.02.1
-	pkgrel = 1.1
+	pkgrel = 2
 	url = https://github.com/jin-asanami/uvgl-skel
 	arch = any
 	license = GPL3
@@ -16,6 +16,8 @@ pkgbase = uvgl-skel-i3wm-ja
 	options = !strip
 	options = !emptydirs
 	source = uvgl-skel-23.02.1.tar.gz::https://github.com/jin-asanami/uvgl-skel/archive/refs/tags/v23.02.1.tar.gz
+	source = 0001-gnome-polkit-agent.patch
 	sha256sums = 0be8c60dfbcc0cb54d5510af1172068a815a7d4e54b861cae4090bb8240392b0
+	sha256sums = 1d754b52dc0deb993421754ec4086444db9466f4b5cf950343637a497a2605d3
 
 pkgname = uvgl-skel-i3wm-ja

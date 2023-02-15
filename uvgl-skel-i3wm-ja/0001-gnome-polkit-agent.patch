@@ -1,0 +1,12 @@
+--- uvgl-skel-23.02.1/i3wm/ja/etc/skel/.config/i3/config	2023-02-14 14:32:24.000000000 +0900
++++ uvgl-skel-23.02.1-patched/i3wm/ja/etc/skel/.config/i3/config	2023-02-15 22:13:24.311786481 +0900
+@@ -67,6 +67,9 @@
+ # Launch Udiskie
+ exec_always --no-startup-id udiskie -t
+ 
++# Launch GNOME Policykit Agent
++exec_always --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
++
+ # Launch Pamac tray
+ exec_always --no-startup-id pamac-tray
+ 
