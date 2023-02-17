@@ -1,11 +1,11 @@
 pkgbase = univalent-mirrorlist
 	pkgdesc = Univalent repository mirrorlists
-	pkgver = 20230211
+	pkgver = 20230217
 	pkgrel = 1
 	url = https://njb-fm.github.io
 	arch = any
 	license = GPL3
 	source = univalent-mirrorlist
-	md5sums = 4c4a6b233884d6ec9169dd19b25f667d
+	md5sums = 72935c538945942012494e16a84abee4
 
 pkgname = univalent-mirrorlist
