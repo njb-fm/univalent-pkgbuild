@@ -2,8 +2,8 @@
 pkgname=("uvgl-skel-lxqt-kamu-en")
 _pkgname=("uvgl-skel")
 destname="/etc"
-pkgver=23.02.1
-pkgrel=1.1
+pkgver=23.03
+pkgrel=1
 pkgdesc="Settings for Kamuriki Linux Arch Edition"
 arch=('any')
 url="https://github.com/jin-asanami/uvgl-skel"
@@ -19,7 +19,7 @@ conflicts=()
 provides=("${pkgname}")
 options=(!strip !emptydirs)
 source=(${_pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/v${pkgver}.tar.gz)
-sha256sums=('0be8c60dfbcc0cb54d5510af1172068a815a7d4e54b861cae4090bb8240392b0')
+sha256sums=('75f36f4c6f8a3707d3539561362815246bf310cc09166a47705d98ed1f6a3bdb')
 
 package() {
 	install -dm755 ${pkgdir}${destname}

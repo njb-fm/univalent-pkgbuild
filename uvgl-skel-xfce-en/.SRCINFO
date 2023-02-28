@@ -1,7 +1,7 @@
 pkgbase = uvgl-skel-xfce-en
 	pkgdesc = Settings for Xunivalent GNU/Linux
-	pkgver = 23.02.1
-	pkgrel = 1.1
+	pkgver = 23.03
+	pkgrel = 1
 	url = https://github.com/jin-asanami/uvgl-skel
 	arch = any
 	license = GPL3
@@ -15,7 +15,7 @@ pkgbase = uvgl-skel-xfce-en
 	provides = uvgl-skel-xfce-en
 	options = !strip
 	options = !emptydirs
-	source = uvgl-skel-23.02.1.tar.gz::https://github.com/jin-asanami/uvgl-skel/archive/refs/tags/v23.02.1.tar.gz
-	sha256sums = 0be8c60dfbcc0cb54d5510af1172068a815a7d4e54b861cae4090bb8240392b0
+	source = uvgl-skel-23.03.tar.gz::https://github.com/jin-asanami/uvgl-skel/archive/refs/tags/v23.03.tar.gz
+	sha256sums = 75f36f4c6f8a3707d3539561362815246bf310cc09166a47705d98ed1f6a3bdb
 
 pkgname = uvgl-skel-xfce-en
