@@ -1,7 +1,7 @@
 pkgbase = uvgl-skel-i3wm-en
 	pkgdesc = Settings for Uni3valent GNU/Linux
 	pkgver = 23.03
-	pkgrel = 2
+	pkgrel = 3
 	url = https://github.com/jin-asanami/uvgl-skel
 	arch = any
 	license = GPL3
@@ -16,6 +16,10 @@ pkgbase = uvgl-skel-i3wm-en
 	options = !strip
 	options = !emptydirs
 	source = uvgl-skel-23.03.tar.gz::https://github.com/jin-asanami/uvgl-skel/archive/refs/tags/v23.03.tar.gz
+	source = 00001-volumeicon.patch
+	source = 00002-polybar-panel.patch
 	sha256sums = 75f36f4c6f8a3707d3539561362815246bf310cc09166a47705d98ed1f6a3bdb
+	sha256sums = ab1aaab74ce180045127d3085f497d2839909af2d7ee9256898a34c77802b79e
+	sha256sums = 539d91616f5b8044e81ceb5adcfc8d6b29193a962784749621f6166ff659579f
 
 pkgname = uvgl-skel-i3wm-en

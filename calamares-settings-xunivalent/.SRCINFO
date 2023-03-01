@@ -1,7 +1,7 @@
 pkgbase = calamares-settings-xunivalent
 	pkgdesc = Xunivalent Calamares Settings anf Branding
-	pkgver = 23.01
-	pkgrel = 4
+	pkgver = 23.03
+	pkgrel = 2
 	url = https://github.com/Jin-Asanami/uvgl-calam-cfg
 	arch = any
 	license = GPL3
