@@ -18,10 +18,16 @@ optdepends=('yay: an AUR helper'
 conflicts=()
 provides=("${pkgname}")
 options=(!strip !emptydirs)
-source=(${_pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/v${pkgver}.tar.gz)
-sha256sums=('75f36f4c6f8a3707d3539561362815246bf310cc09166a47705d98ed1f6a3bdb')
+source=(${_pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/v${pkgver}.tar.gz
+	"user"
+	"applications.list")
+sha256sums=('75f36f4c6f8a3707d3539561362815246bf310cc09166a47705d98ed1f6a3bdb'
+	'4e1464255ae4906eba2c4cbc3af39451e5849578144c7a44ec4c8f107d4ad335'
+ '70d930d69d2720b16d534f7eeae220ca3d5f57791f258bd21a4c88756baa0fc7')
 
 package() {
 	install -dm755 ${pkgdir}${destname}
 	cp -r ${srcdir}/${_pkgname}-${pkgver}/mate/ja${destname}/* ${pkgdir}${destname}
+	mkdir -p ${pkgdir}${destname}/skel/.config/mate-menu
+	cp -f ${srcdir}/applications.list ${pkgdir}${destname}/skel/.config/mate-menu
 }

@@ -15,6 +15,10 @@ pkgbase = uvgl-skel-mate-ja
 	options = !strip
 	options = !emptydirs
 	source = uvgl-skel-23.03.tar.gz::https://github.com/jin-asanami/uvgl-skel/archive/refs/tags/v23.03.tar.gz
+	source = user
+	source = applications.list
 	sha256sums = 75f36f4c6f8a3707d3539561362815246bf310cc09166a47705d98ed1f6a3bdb
+	sha256sums = 4e1464255ae4906eba2c4cbc3af39451e5849578144c7a44ec4c8f107d4ad335
+	sha256sums = 70d930d69d2720b16d534f7eeae220ca3d5f57791f258bd21a4c88756baa0fc7
 
 pkgname = uvgl-skel-mate-ja
