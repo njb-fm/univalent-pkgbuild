@@ -1,7 +1,7 @@
 pkgbase = uvgl-skel-mate-ja
 	pkgdesc = Settings for Munivalent GNU/Linux
 	pkgver = 23.03
-	pkgrel = 3
+	pkgrel = 3.2
 	url = https://github.com/jin-asanami/uvgl-skel
 	arch = any
 	license = GPL3
@@ -18,7 +18,7 @@ pkgbase = uvgl-skel-mate-ja
 	source = user
 	source = applications.list
 	sha256sums = 75f36f4c6f8a3707d3539561362815246bf310cc09166a47705d98ed1f6a3bdb
-	sha256sums = d902ee2a4e8c88a419bdb1b429262547113cfd6b2332d5354c210062fa92636d
+	sha256sums = 8e8ef80f7d843e6182b7aa5b721fccfd5e69db575fc57770ac67fd1a90d20ede
 	sha256sums = 70d930d69d2720b16d534f7eeae220ca3d5f57791f258bd21a4c88756baa0fc7
 
 pkgname = uvgl-skel-mate-ja
