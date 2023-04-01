@@ -2,7 +2,7 @@
 pkgname=calamares-settings-univalent
 _pkgname=uvgl-calam-cfg
 destname="/etc"
-pkgver=23.03
+pkgver=23.04
 pkgrel=1
 pkgdesc="Univalent Calamares Settings anf Branding"
 arch=('any')
@@ -16,6 +16,6 @@ source=(${_pkgname}::"git+${url}.git")
 sha256sums=('SKIP')
 package() {
 	install -dm755 ${pkgdir}${destname}
-	cp -r ${srcdir}/${_pkgname}/lxqt${destname}/* ${pkgdir}${destname}
+	cp -r ${srcdir}/${_pkgname}${destname}/* ${pkgdir}${destname}
 	chmod 755 ${pkgdir}/etc/calamares/launch.sh
 }
