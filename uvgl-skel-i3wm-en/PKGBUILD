@@ -2,8 +2,8 @@
 pkgname=("uvgl-skel-i3wm-en")
 _pkgname=("uvgl-skel")
 destname="/etc"
-pkgver=23.03
-pkgrel=3
+pkgver=23.04
+pkgrel=1
 pkgdesc="Settings for Uni3valent GNU/Linux"
 arch=('any')
 url="https://github.com/jin-asanami/uvgl-skel"
@@ -19,17 +19,8 @@ conflicts=()
 provides=("${pkgname}")
 options=(!strip !emptydirs)
 source=("${_pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/v${pkgver}.tar.gz"
-	"00001-volumeicon.patch"
- "00002-polybar-panel.patch")
-sha256sums=('75f36f4c6f8a3707d3539561362815246bf310cc09166a47705d98ed1f6a3bdb'
-	'ab1aaab74ce180045127d3085f497d2839909af2d7ee9256898a34c77802b79e'
-	'539d91616f5b8044e81ceb5adcfc8d6b29193a962784749621f6166ff659579f')
-
-prepare() {
-	cd ${srcdir}/uvgl-skel-23.03
-	patch -p1 -i ../00001-volumeicon.patch
-	patch -p1 -i ../00002-polybar-panel.patch
-}
+)
+sha256sums=('81b2d249c19a494aa321d024475c1c22b199d07d1d187c6dfbf3f89aa16390e8')
 
 package() {
 	install -dm755 ${pkgdir}${destname}

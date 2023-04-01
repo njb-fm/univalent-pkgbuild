@@ -6,7 +6,7 @@
 
 pkgname=lsb-release
 epoch=1
-pkgver=2.0.r48.3cf5103.moevalent23.03
+pkgver=2.0.r48.3cf5103.univalent23.04
 _commit=3cf51039933d03ef15388b75d30baa5d5e09a1a0
 pkgrel=1
 pkgdesc="LSB version query program"
@@ -26,7 +26,7 @@ sha512sums=('SKIP'
 
 pkgver() {
 	cd lsb-samples/lsb_release/src
-	printf "%s.r%s.%s.moevalent23.03" "$(grep -Po 'SCRIPTVERSION="\K[^"]*' lsb_release)" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+	printf "%s.r%s.%s.univalent23.04" "$(grep -Po 'SCRIPTVERSION="\K[^"]*' lsb_release)" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
 }
 
 prepare() {
