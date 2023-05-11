@@ -1,0 +1,22 @@
+pkgbase = fcitx5-anthy-unicode-git
+	pkgdesc = Anthy input method for fcitx5
+	pkgver = 5.0.1.r3.gbf307c3
+	pkgrel = 3
+	url = https://github.com/fcitx/fcitx5-anthy
+	arch = x86_64
+	license = GPL
+	makedepends = cmake
+	makedepends = git
+	makedepends = extra-cmake-modules
+	depends = fcitx5-git
+	depends = anthy-unicode
+	depends = hicolor-icon-theme
+	provides = fcitx5-anthy-unicode
+	conflicts = fcitx-anthy
+	conflicts = fcitx5-anthy
+	conflicts = fcitx-anthy-unicode
+	conflicts = fcitx5-anthy-unicode
+	source = git+https://github.com/fcitx/fcitx5-anthy.git
+	sha512sums = SKIP
+
+pkgname = fcitx5-anthy-unicode-git

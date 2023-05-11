@@ -1,0 +1,15 @@
+pkgbase = univalent-logo
+	pkgdesc = UVGL's Logo
+	pkgver = 22.11
+	pkgrel = 3
+	url = https://github.com/njb-fm
+	arch = any
+	license = GPL3
+	makedepends = git
+	provides = univalent-logo
+	options = !strip
+	options = !emptydirs
+	source = univalent-logo::git+https://github.com/njb-fm/univalent-logo
+	sha256sums = SKIP
+
+pkgname = univalent-logo

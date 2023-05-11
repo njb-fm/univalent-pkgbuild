@@ -1,0 +1,18 @@
+pkgbase = fcitx5-anthy-unicode
+	pkgdesc = Anthy Unicode Wrapper for Fcitx5
+	pkgver = 5.0.13
+	pkgrel = 1
+	url = https://github.com/fcitx/fcitx5-anthy
+	arch = x86_64
+	license = GPL
+	makedepends = extra-cmake-modules
+	makedepends = ninja
+	depends = fcitx5
+	depends = anthy-unicode
+	conflicts = fcitx5-anthy
+	conflicts = fcitx-anthy
+	conflicts = fcitx-anthy-unicode
+	source = https://download.fcitx-im.org/fcitx5/fcitx5-anthy/fcitx5-anthy-5.0.13.tar.xz
+	sha512sums = b5968779ba62e069cf0354807caa0568d7312b15338541c9939d86f53cefa81159061f6a02cc906322794662f77d4aa19df35e277d1014447554aeef5a3f941b
+
+pkgname = fcitx5-anthy-unicode

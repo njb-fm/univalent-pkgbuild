@@ -1,0 +1,15 @@
+pkgbase = wine-desktop-entries
+	pkgdesc = Wine Installer for UVGL
+	pkgver = 22.08
+	pkgrel = 2
+	url = https://github.com/njb-fm
+	arch = x86_64
+	license = GPL3
+	makedepends = git
+	provides = wine-desktop-entries
+	options = !strip
+	options = !emptydirs
+	source = wine-desktop-entries::git+https://github.com/njb-fm/wine-desktop-entries
+	sha256sums = SKIP
+
+pkgname = wine-desktop-entries

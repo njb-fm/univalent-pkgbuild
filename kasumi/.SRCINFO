@@ -1,0 +1,16 @@
+pkgbase = kasumi
+	pkgdesc = A dictionary management tool for Anthy
+	pkgver = 2.5
+	pkgrel = 1
+	url = http://osdn.net/projects/kasumi
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = pkgconfig
+	makedepends = gcc11
+	depends = gtk2
+	depends = anthy
+	source = http://ftp.jaist.ac.jp/pub/sourceforge.jp/kasumi/41436/kasumi-2.5.tar.gz
+	md5sums = f49d010cf1fa5672b4515502b961b8c8
+
+pkgname = kasumi
