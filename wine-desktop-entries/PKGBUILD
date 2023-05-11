@@ -2,7 +2,7 @@
 pkgname=wine-desktop-entries
 destname="/usr"
 pkgver=22.08
-pkgrel=1
+pkgrel=2
 pkgdesc="Wine Installer for UVGL"
 arch=('x86_64')
 url="https://github.com/njb-fm"

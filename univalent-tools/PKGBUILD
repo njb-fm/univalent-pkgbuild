@@ -1,21 +1,19 @@
 # Maintainer: Hayate Nakamura <is01.njb at gmail dot com>
 
 pkgname=univalent-tools
-pkgver=1.3.1
-pkgrel=1
-pkgdesc='System setting tools written in bash, inspired by Alter Linux i3wm'
+pkgver=2.0.1
+pkgrel=2
+pkgdesc='System setting tools written in bash & whiptail'
 arch=('any')
 url='https://github.com/njb-fm/univalent-tools'
 license=('GPL3')
-depends=('arandr' 'networkmanager' 'ntp' 'alsa-utils')
-optdepends=('unifetch: show system info'
-            'univalent-logo: univalent icon'
-              )
+depends=('networkmanager' 'ntp' 'alsa-utils')
+optdepends=('univalent-logo: univalent icon')
 checkdepends=('shellcheck')
 
 conflicts=("${pkgname}")
 source=("${url}/archive/refs/tags/${pkgver}.tar.gz")
-sha512sums=('367b8877ace8f04dcdec9206a4a9bd6039656136597f081a5aa10a8c6349f0328e9f5f959ad451aa53a96466b1946f7b8320eeb1be0809b0332b52d05a24ef2a')
+md5sum=('4967df0e59f59f24455d65a765afcfac')
 
 package() {
   cd "${srcdir}/${pkgname}-${pkgver}/"
