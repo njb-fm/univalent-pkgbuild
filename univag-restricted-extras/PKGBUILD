@@ -5,14 +5,14 @@ pkgver=1.1
 pkgrel=1
 pkgdesc='Installer for restricted extra packages'
 arch=('any')
-url='https://github.com/Jin-Asanami/univag-restricted-extras'
+url='https://github.com/njb-fm/univag-restricted-extras'
 license=('GPL3')
 depends=('libdvdread' 'libdvdcss' 'libdvdnav' 'ttf-ms-fonts' 'gst-libav' "gst-plugins-ugly" "unrar")
 makedepends=('git')
 checkdepends=('shellcheck')
 
 conflicts=("${pkgname}")
-source=("git+https://github.com/Jin-Asanami/${pkgname}.git")
+source=("git+https://github.com/njb-fm/${pkgname}.git")
 sha512sums=('SKIP')
 
 

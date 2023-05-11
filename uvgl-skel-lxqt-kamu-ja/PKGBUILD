@@ -6,7 +6,7 @@ pkgver=23.03
 pkgrel=1
 pkgdesc="Settings for Kamuriki Linux Arch Edition"
 arch=('any')
-url="https://github.com/jin-asanami/uvgl-skel"
+url="https://github.com/njb-fm/uvgl-skel"
 license=('GPL3')
 
 depends=('qterminal' 'pcmanfm-qt')
