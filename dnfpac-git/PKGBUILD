@@ -1,0 +1,30 @@
+# Maintainer: Hayate Nakamura <is01.njb at gmail dot com>
+
+_gitname='dnfpac'
+pkgname="${_gitname}-git"
+pkgdesc="a pacman wrapper with syntax from fedora's dnf"
+pkgver="0.1.0"
+pkgrel="1"
+
+arch=('any')
+url="https://github.com/njb-fm/dnfpac"
+license=('WTFPL')
+conflicts=('dnf' 'yum' 'dnfpac')
+makedepends=('git')
+
+source=("git+${url}.git")
+md5sums=('SKIP')
+
+pkgver() {
+    cd "${_gitname}"
+    printf '%s.%s\n' "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+package() {
+    cd "${_gitname}"
+    install -m 755 -D dnfpac "${pkgdir}/usr/bin/dnfpac"
+    install -m 755 -D LICENSE "${pkgdir}/usr/share/licenses/dnfpac/LICENSE"
+    cd "${pkgdir}/usr/bin/"
+    ln -s "dnfpac" "dnf"
+    ln -s "dnfpac" "yum"
+}
