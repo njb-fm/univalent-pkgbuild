@@ -12,7 +12,7 @@ license=('WTFPL')
 conflicts=('dnf' 'yum')
 
 source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/${pkgver}.tar.gz")
-md5sums=('SKIP')
+md5sums=('edce6cf908719244f7ab9ff6101dd17f')
 
 package() {
     cd "${_gitname}-${pkgver}"
