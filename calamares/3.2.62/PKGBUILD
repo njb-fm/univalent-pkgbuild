@@ -1,8 +1,8 @@
 # Maintainer: Hayate Nakamura <is01.njb at gmail dot com>
 
 pkgname=calamares
-pkgver=3.2.61
-pkgrel=5.2
+pkgver=3.2.62
+pkgrel=1
 pkgdesc='Distribution-independent installer framework'
 arch=('i686' 'x86_64')
 license=(GPL)
@@ -22,7 +22,7 @@ source=("${pkgname}-${pkgver}::$url/download/v${pkgver}/${pkgname}-${pkgver}.tar
 	"calamares.desktop"
 	)
 
-sha256sums=('7591b9b60738bdba7b9de2b8da5462ab21006db06a006f0dd21ac5b832711dd2'
+sha256sums=('a0fbcec2a438693753fc174220356119ad7adb8a2b19c317518aa1cb025d6dd0'
             '2e30ef1d4c8999d7ff51b1f6ce5b80d10642a93ebbffc8c447685779e2ad795a')
 
 pkgver() {
