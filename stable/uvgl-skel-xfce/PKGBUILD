@@ -1,27 +1,27 @@
 # Maintainer: Hayate Nakamura (is01.njb at gmail dot com)
-pkgname=("uvgl-skel-gnome-en")
+pkgname=("uvgl-skel-xfce")
 _pkgname=("uvgl-skel")
 destname="/etc"
 pkgver=23.05
 pkgrel=1
-pkgdesc="Settings for Gunivalent GNU/Linux"
+pkgdesc="Settings for Xunivalent GNU/Linux"
 arch=('any')
 url="https://github.com/njb-fm/uvgl-skel"
 license=('GPL3')
+makedepends=('git')
 
-depends=('gnome-terminal' 'nautilus')
+depends=('xfce4-terminal' 'thunar')
 
 optdepends=('yay: an AUR helper'
             'unifetch: screenfetch utility'
             'cups: printing support'
             'system-config-printer: CUPS status applet')
-conflicts=()
-provides=("${pkgname}")
+replaces=("${pkgname}-en" "${pkgname}-ja")
 options=(!strip !emptydirs)
-source=("${_pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/v${pkgver}.tar.gz")
-sha256sums=('87a06113bb0b77e39bf42cd39d4faa4bd0329aefa52ee6d4560b8e089f6d17e5')
+source=(${_pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/v${pkgver}.tar.gz)
+sha256sums=('de3e71f75205081db2afe74b62736eaa11538a911cfaa5af118df7fe80150e7c')
 
 package() {
 	install -dm755 ${pkgdir}${destname}
-	cp -r ${srcdir}/${_pkgname}-${pkgver}/gnome/en${destname}/* ${pkgdir}${destname}
+	cp -r ${srcdir}/${_pkgname}-${pkgver}/xfce${destname}/* ${pkgdir}${destname}
 }

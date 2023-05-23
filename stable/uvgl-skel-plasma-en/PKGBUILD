@@ -2,8 +2,8 @@
 pkgname=("uvgl-skel-plasma-en")
 _pkgname=("uvgl-skel")
 destname="/etc"
-pkgver=23.03
-pkgrel=2
+pkgver=23.05
+pkgrel=1
 pkgdesc="Settings for Punivalent GNU/Linux"
 arch=('any')
 url="https://github.com/njb-fm/uvgl-skel"
@@ -15,11 +15,9 @@ optdepends=('yay: an AUR helper'
             'unifetch: screenfetch utility'
             'cups: printing support'
             'system-config-printer: CUPS status applet')
-conflicts=()
-provides=("${pkgname}")
 options=(!strip !emptydirs)
 source=(${_pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/v${pkgver}.tar.gz)
-sha256sums=('75f36f4c6f8a3707d3539561362815246bf310cc09166a47705d98ed1f6a3bdb')
+sha256sums=('de3e71f75205081db2afe74b62736eaa11538a911cfaa5af118df7fe80150e7c')
 
 package() {
 	install -dm755 ${pkgdir}${destname}
