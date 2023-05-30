@@ -1,20 +1,20 @@
-pkgbase = uvgl-skel-plasma-ja
-	pkgdesc = Settings for Punivalent GNU/Linux
+pkgbase = uvgl-skel-lxqt-en
+	pkgdesc = Settings for Univalent GNU/Linux
 	pkgver = 23.05
 	pkgrel = 1
 	url = https://github.com/njb-fm/uvgl-skel
 	arch = any
 	license = GPL3
-	depends = konsole
-	depends = dolphin
+	depends = qterminal
+	depends = pcmanfm-qt
 	optdepends = yay: an AUR helper
 	optdepends = unifetch: screenfetch utility
 	optdepends = cups: printing support
 	optdepends = system-config-printer: CUPS status applet
-	provides = uvgl-skel-plasma-ja
+	provides = uvgl-skel-lxqt-en
 	options = !strip
 	options = !emptydirs
 	source = uvgl-skel-23.05.tar.gz::https://github.com/njb-fm/uvgl-skel/archive/refs/tags/v23.05.tar.gz
 	sha256sums = 5ea5d14bb129a1cea8cfd5284d6dfe5986a5eb9c37cffdcc467a93552be2967f
 
-pkgname = uvgl-skel-plasma-ja
+pkgname = uvgl-skel-lxqt-en

@@ -15,9 +15,10 @@ optdepends=('yay: an AUR helper'
             'unifetch: screenfetch utility'
             'cups: printing support'
             'system-config-printer: CUPS status applet')
+provides=("${pkgname}")
 options=(!strip !emptydirs)
 source=(${_pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/v${pkgver}.tar.gz)
-sha256sums=('de3e71f75205081db2afe74b62736eaa11538a911cfaa5af118df7fe80150e7c')
+sha256sums=("5ea5d14bb129a1cea8cfd5284d6dfe5986a5eb9c37cffdcc467a93552be2967f")
 
 package() {
 	install -dm755 ${pkgdir}${destname}
