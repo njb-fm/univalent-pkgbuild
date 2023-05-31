@@ -1,7 +1,7 @@
 NAME="Univalent GNU/Linux"
-VERSION="23.05"
-VERSION_ID="23.05"
-PRETTY_NAME="Univalent GNU/Linux 23.05"
+VERSION="23.06"
+VERSION_ID="23.06"
+PRETTY_NAME="Univalent GNU/Linux 23.06"
 ID=univalent
 ID_LIKE=arch
 ANSI_COLOR="38;2;23;147;209"

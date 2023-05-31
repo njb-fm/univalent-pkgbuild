@@ -6,8 +6,9 @@
 
 pkgname=lsb-release
 epoch=1
-pkgver=2.0.r48.3cf5103.univalent23.05
+pkgver=2.0.r48.3cf5103.univalent23.06
 _commit=3cf51039933d03ef15388b75d30baa5d5e09a1a0
+_univer=23.06
 pkgrel=1
 pkgdesc="LSB version query program"
 arch=('any')
@@ -20,13 +21,13 @@ source=("git+https://github.com/LinuxStandardBase/lsb-samples.git#commit=$_commi
         'lsb_release_description.patch'
         'lsb_release_make_man_page_reproducible.patch')
 sha512sums=('SKIP'
-            'bc63df40c4e591873b64614cb2902cce488d23418fea8982b67f27eb5c84061ee8fde091313866669a8fef35a962ff6767f9499d8f2d392513fbde430a5edf46'
+            'e431047e6c781894936369242c2f5f8d019412bf3f03fa7891989fec694ecebd45c02521445d046ee917d70607295fd2deecadb576e89c7006d78cb2ef3b78f6'
             '145ef64f90f5e6cc59075679e640cf7c1ad02617c12eff17f10b05c1cc219591fdba1b27be2b2c8480742aed24ce81d6a7badcbaca6772faea4ebc6a55695b62'
             'ab64a1d236d00a30a48e3af2c5bdfa0aad0183ebe0df4f2b0c6af58530c2a1fdac1b0a5cdd8a1800d5f8405f44562603cddf28eb318b5badaabd49a82e0b7e83')
 
 pkgver() {
 	cd lsb-samples/lsb_release/src
-	printf "%s.r%s.%s.univalent23.05" "$(grep -Po 'SCRIPTVERSION="\K[^"]*' lsb_release)" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+	printf "%s.r%s.%s.univalent${_univer}" "$(grep -Po 'SCRIPTVERSION="\K[^"]*' lsb_release)" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
 }
 
 prepare() {
