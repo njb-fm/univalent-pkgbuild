@@ -1,7 +1,7 @@
 # Maintainer: Hayate Nakamura (is01.njb at gmail dot com)
 pkgname=calamares-settings-univalent
 destname="/etc"
-pkgver=23.05
+pkgver=23.06
 pkgrel=1
 pkgdesc="Univalent Calamares Settings anf Branding"
 arch=('any')
