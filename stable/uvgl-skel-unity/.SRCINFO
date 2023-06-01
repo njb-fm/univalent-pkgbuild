@@ -1,6 +1,6 @@
 pkgbase = uvgl-skel-unity
 	pkgdesc = Settings for Unitylent GNU/Linux
-	pkgver = 23.05
+	pkgver = 23.06
 	pkgrel = 1
 	url = https://github.com/njb-fm/uvgl-skel
 	arch = any
@@ -17,7 +17,7 @@ pkgbase = uvgl-skel-unity
 	replaces = uvgl-skel-unity-en
 	options = !strip
 	options = !emptydirs
-	source = uvgl-skel-23.05.tar.gz::https://github.com/njb-fm/uvgl-skel/archive/refs/tags/v23.05.tar.gz
+	source = uvgl-skel-23.06.tar.gz::https://github.com/njb-fm/uvgl-skel/archive/refs/tags/v23.06.tar.gz
 	md5sums = 906c857ff896b779690c41437a8b8ee2
 
 pkgname = uvgl-skel-unity

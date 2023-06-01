@@ -5,8 +5,8 @@
 #
 
 # OSDN
-Server = https://ftp.jaist.ac.jp/pub/sourceforge.jp/storage/g/u/un/univalentgnulinux/repo/$repo/$arch
 Server = https://osdn.dl.osdn.net/storage/g/u/un/univalentgnulinux/repo/$repo/$arch
+Server = https://ftp.jaist.ac.jp/pub/sourceforge.jp/storage/g/u/un/univalentgnulinux/repo/$repo/$arch
 Server = https://ftp.iij.ad.jp/pub/osdn.jp/storage/g/u/un/univalentgnulinux/repo/$repo/$arch
 Server = https://ftp.halifax.rwth-aachen.de/osdn/storage/g/u/un/univalentgnulinux/repo/$repo/$arch
 Server = https://mirror.gigenet.com/osdn/storage/g/u/un/univalentgnulinux/repo/$repo/$arch
@@ -15,8 +15,8 @@ Server = https://osdn.mirror.liquidtelecom.com/storage/g/u/un/univalentgnulinux/
 Server = https://mirrors.dotsrc.org/osdn/storage/g/u/un/univalentgnulinux/repo/$repo/$arch
 
 # OSDN
-Server = https://ftp.jaist.ac.jp/pub/sourceforge.jp/storage/g/k/ka/kamurikilinux/univa-repo/$repo/$arch
 Server = https://osdn.dl.osdn.net/storage/g/k/ka/kamurikilinux/univa-repo/$repo/$arch
+Server = https://ftp.jaist.ac.jp/pub/sourceforge.jp/storage/g/k/ka/kamurikilinux/univa-repo/$repo/$arch
 Server = https://ftp.iij.ad.jp/pub/osdn.jp/storage/g/k/ka/kamurikilinux/univa-repo/$repo/$arch
 Server = https://ftp.halifax.rwth-aachen.de/osdn/storage/g/k/ka/kamurikilinux/univa-repo/$repo/$arch
 Server = https://mirror.gigenet.com/osdn/storage/g/k/ka/kamurikilinux/univa-repo/$repo/$arch
