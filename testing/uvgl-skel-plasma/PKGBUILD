@@ -1,0 +1,25 @@
+# Maintainer: Hayate Nakamura (is01.njb at gmail dot com)
+pkgname=("uvgl-skel-plasma")
+_pkgname=("uvgl-skel")
+pkgver=23.06
+pkgrel=1
+pkgdesc="Settings for Punivalent GNU/Linux"
+arch=('any')
+url="https://github.com/njb-fm/uvgl-skel"
+license=('GPL3')
+provides=('uvgl-skel')
+conflicts=('uvgl-skel')
+replaces=('uvgl-skel-plasma-ja' 'uvgl-skel-plasma-en')
+depends=('konsole' 'dolphin')
+optdepends=('yay: an AUR helper'
+            'neofetch: screenfetch utility'
+            'cups: printing support'
+            'system-config-printer: CUPS status applet')
+options=(!strip !emptydirs)
+source=(${_pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/v${pkgver}.tar.gz)
+md5sums=('906c857ff896b779690c41437a8b8ee2')
+
+package() {
+	install -dm755 ${pkgdir}/etc
+	cp -r ${srcdir}/${_pkgname}-${pkgver}/plasma/etc/* ${pkgdir}/etc
+}

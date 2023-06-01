@@ -1,0 +1,25 @@
+# Maintainer: Hayate Nakamura (is01.njb at gmail dot com)
+pkgname=("uvgl-skel-mate")
+_pkgname=("uvgl-skel")
+pkgver=23.06
+pkgrel=1
+pkgdesc="Settings for Munivalent GNU/Linux"
+arch=('any')
+url="https://github.com/njb-fm/uvgl-skel"
+license=('GPL3')
+provides=('uvgl-skel')
+conflicts=('uvgl-skel')
+replaces=('uvgl-skel-mate-ja' 'uvgl-skel-mate-en')
+depends=('mate-terminal' 'caja')
+optdepends=('yay: an AUR helper'
+            'unifetch: screenfetch utility'
+            'cups: printing support'
+            'system-config-printer: CUPS status applet')
+options=(!strip !emptydirs)
+source=("${_pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/v${pkgver}.tar.gz")
+md5sums=('906c857ff896b779690c41437a8b8ee2')
+
+package() {
+	install -dm755 ${pkgdir}/etc
+	cp -r ${srcdir}/${_pkgname}-${pkgver}/mate/etc/* ${pkgdir}/etc
+}

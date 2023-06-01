@@ -1,0 +1,23 @@
+pkgbase = uvgl-skel-mate
+	pkgdesc = Settings for Munivalent GNU/Linux
+	pkgver = 23.06
+	pkgrel = 1
+	url = https://github.com/njb-fm/uvgl-skel
+	arch = any
+	license = GPL3
+	depends = mate-terminal
+	depends = caja
+	optdepends = yay: an AUR helper
+	optdepends = unifetch: screenfetch utility
+	optdepends = cups: printing support
+	optdepends = system-config-printer: CUPS status applet
+	provides = uvgl-skel
+	conflicts = uvgl-skel
+	replaces = uvgl-skel-mate-ja
+	replaces = uvgl-skel-mate-en
+	options = !strip
+	options = !emptydirs
+	source = uvgl-skel-23.06.tar.gz::https://github.com/njb-fm/uvgl-skel/archive/refs/tags/v23.06.tar.gz
+	md5sums = 906c857ff896b779690c41437a8b8ee2
+
+pkgname = uvgl-skel-mate

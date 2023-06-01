@@ -1,0 +1,23 @@
+pkgbase = uvgl-skel-plasma
+	pkgdesc = Settings for Punivalent GNU/Linux
+	pkgver = 23.06
+	pkgrel = 1
+	url = https://github.com/njb-fm/uvgl-skel
+	arch = any
+	license = GPL3
+	depends = konsole
+	depends = dolphin
+	optdepends = yay: an AUR helper
+	optdepends = neofetch: screenfetch utility
+	optdepends = cups: printing support
+	optdepends = system-config-printer: CUPS status applet
+	provides = uvgl-skel
+	conflicts = uvgl-skel
+	replaces = uvgl-skel-plasma-ja
+	replaces = uvgl-skel-plasma-en
+	options = !strip
+	options = !emptydirs
+	source = uvgl-skel-23.06.tar.gz::https://github.com/njb-fm/uvgl-skel/archive/refs/tags/v23.06.tar.gz
+	md5sums = 906c857ff896b779690c41437a8b8ee2
+
+pkgname = uvgl-skel-plasma
