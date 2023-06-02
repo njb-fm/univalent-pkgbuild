@@ -1,7 +1,7 @@
 pkgbase = uvgl-skel-plasma
 	pkgdesc = Settings for Punivalent GNU/Linux
 	pkgver = 23.06
-	pkgrel = 1
+	pkgrel = 2
 	url = https://github.com/njb-fm/uvgl-skel
 	arch = any
 	license = GPL3
