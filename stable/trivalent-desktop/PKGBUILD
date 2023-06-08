@@ -1,0 +1,106 @@
+pkgname=trivalent-desktop
+pkgver=14.1.0
+pkgrel=1
+pkgdesc="Trivalent (Trinity Univalent) Desktop Environment"
+arch=('any')
+url="https://www.trinitydesktop.org/"
+license=('GPL')
+provides=('tde-meta')
+conflicts=('tde-meta')
+depends=(
+    # tde-base
+    'tde-i18n'
+    'tde-polkit-agent-tde'
+    'tde-tdeadmin'
+    'tde-tdeartwork'
+    'tde-tdebindings'
+    'tde-tdegraphics'
+    'tde-tdeutils'
+
+    # tde-core
+    'tde-arts'
+    'tde-avahi-tqt'
+    'tde-cmake-trinity'
+    'tde-dbus-1-tqt'
+    'tde-dbus-tqt'
+    'tde-libart-lgpl'
+    'tde-polkit-tqt'
+    'tde-tdebase'
+    'tde-tdelibs'
+    'tde-tqca'
+    'tde-tqca-tls'
+    'tde-tqt3'
+    'tde-tqtinterface'
+
+    # tde-dev
+    'tde-tdesdk'
+    'tde-tdevelop'
+    'tde-tdewebdev'
+    'tde-kdbg'
+    'tde-kdiff3'
+    'tde-kscope'
+    'tde-kxmleditor'
+
+    # tde-libs
+    'tde-libcaldav'
+    'tde-libcarddav'
+    'tde-libkdcraw'
+    'tde-libkexiv2'
+    'tde-libkipi'
+
+    # tde-extra
+#    'tde-abakus'
+#    'tde-akode'
+#    'tde-amarok'
+#    'tde-basket'
+#    'tde-bibletime'
+#    'tde-filelight'
+#    'tde-gtk3-tqt-engine'
+#    'tde-gtk-qt-engine'
+#    'tde-kbarcode'
+#    'tde-kbiff'
+#    'tde-kchmviewer'
+#    'tde-kcpuload'
+#    'tde-kile'
+#    'tde-kmplayer'
+#    'tde-kmymoney'
+#    'tde-kompose'
+#    'tde-konversation'
+#    'tde-kooldock'
+#    'tde-krename'
+#    'tde-krusader'
+#    'tde-kshutdown'
+#    'tde-ksplash-engine-moodin'
+#    'tde-kvkbd'
+#    'tde-style-baghira'
+#    'tde-style-domino'
+#    'tde-style-lipstik'
+#    'tde-style-qtcurve'
+#    'tde-systemsettings'
+#    'tde-tdeaccessibility'
+#    'tde-tdeaddons'
+#    'tde-tdebluez'
+#    'tde-tdeedu'
+#    'tde-tdegames'
+#    'tde-tdeio-appinfo'
+#    'tde-tdeio-ftps'
+#    'tde-tdeio-locate'
+#    'tde-tdeio-sword'
+#    'tde-tdemultimedia'
+#    'tde-tdenetwork'
+#    'tde-tdenetworkmanager'
+#    'tde-tdepim'
+#    'tde-tdepowersave'
+#    'tde-tdesudo'
+#    'tde-tdetoys'
+#    'tde-tdmtheme'
+#    'tde-tellico'
+#    'tde-tork'
+#    'tde-twin-style-crystal'
+#    'tde-twin-style-dekorator'
+#    'tde-yakuake'
+)
+
+package() {
+  true
+}

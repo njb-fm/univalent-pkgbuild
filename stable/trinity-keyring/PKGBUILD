@@ -1,0 +1,26 @@
+# Maintainer : Hayate Nakamura <is01.njb at gmail dot com>
+
+pkgname=trinity-keyring
+pkgver=20230608
+pkgrel=1
+pkgdesc="Trinity PPA's PGP keyring"
+arch=('any')
+license=('GPL3')
+url=https://trinitydesktop.org/
+_url=https://mirror.ppa.trinitydesktop.org/
+license=('GPL')
+validgpgkeys=('D6D6FAA25E9A3E4ECD9FBDBEC93AF1698685AD8B')
+install="${pkgname}.install"
+source=("trinity.gpg"
+	"trinity-trusted"
+	"trinity-revoked"
+	"Makefile")
+sha256sums=('ab8b9186d393efa920f1182b20ab1cd040395dd9e5e4d96da5ac454abefecebd'
+	'44d6806cc0607e16eb4e5479a72446f1e254da1e17a6a25bc740cf98898f54bd'
+	'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
+	'763a8207c9736b3768573c0d876d5f8520cdf04643656cbeafa7f22d22e4fd68')
+
+package() {
+    cd "${srcdir}"
+    make PREFIX=/usr DESTDIR=${pkgdir} install
+}
