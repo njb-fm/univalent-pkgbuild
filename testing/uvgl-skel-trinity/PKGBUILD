@@ -1,0 +1,30 @@
+# Maintainer: Hayate Nakamura (is01.njb at gmail dot com)
+pkgname=("uvgl-skel-trinity-git")
+_pkgname=("uvgl-skel")
+pkgver=121.2fac4b7
+pkgrel=1
+pkgdesc="Settings for Trivalent GNU/Linux"
+arch=('any')
+url="https://github.com/njb-fm/uvgl-skel"
+license=('GPL3')
+provides=('uvgl-skel' 'uvgl-skel-trinity')
+conflicts=('uvgl-skel')
+depends=('xcape')
+makedepends=('git')
+optdepends=('yay: an AUR helper'
+            'neofetch: screenfetch utility'
+            'cups: printing support'
+            'system-config-printer: CUPS status applet')
+options=(!strip !emptydirs)
+source=(${_pkgname}::git+${url}.git)
+md5sums=('SKIP')
+
+pkgver() {
+    cd "${_pkgname}"
+    printf '%s.%s\n' "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+package() {
+	install -dm755 ${pkgdir}/etc
+	cp -r ${srcdir}/${_pkgname}/trinity/etc/* ${pkgdir}/etc
+}

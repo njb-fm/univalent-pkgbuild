@@ -1,0 +1,22 @@
+pkgbase = uvgl-skel-trinity-git
+	pkgdesc = Settings for Trivalent GNU/Linux
+	pkgver = 121.2fac4b7
+	pkgrel = 1
+	url = https://github.com/njb-fm/uvgl-skel
+	arch = any
+	license = GPL3
+	makedepends = git
+	depends = xcape
+	optdepends = yay: an AUR helper
+	optdepends = neofetch: screenfetch utility
+	optdepends = cups: printing support
+	optdepends = system-config-printer: CUPS status applet
+	provides = uvgl-skel
+	provides = uvgl-skel-trinity
+	conflicts = uvgl-skel
+	options = !strip
+	options = !emptydirs
+	source = uvgl-skel::git+https://github.com/njb-fm/uvgl-skel.git
+	md5sums = SKIP
+
+pkgname = uvgl-skel-trinity-git
