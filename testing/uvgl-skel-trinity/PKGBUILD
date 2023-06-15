@@ -1,7 +1,7 @@
 # Maintainer: Hayate Nakamura (is01.njb at gmail dot com)
 pkgname=("uvgl-skel-trinity-git")
 _pkgname=("uvgl-skel")
-pkgver=121.2fac4b7
+pkgver=122.e0ad4c2
 pkgrel=1
 pkgdesc="Settings for Trivalent GNU/Linux"
 arch=('any')
