@@ -14,7 +14,7 @@ makedepends=('emacs')
 provides=("anthy=${pkgver%_*}")
 conflicts=('anthy')
 options=('!libtool')
-source=(${_pkgname}-${_pkgver}.tar.bz2::http://ppa.launchpad.net/kakurasan/stable/ubuntu/pool/main/a/anthy/anthy_9100h-20110409ut.orig.tar.bz2)
+source=(${_pkgname}-${_pkgver}.tar.bz2::http://ppa.launchpad.net/kakurasan/stable/ubuntu/pool/main/a/anthy/${_pkgname}_${_pkgver}.orig.tar.bz2)
 md5sums=('edbdfb57dce92a072685737fe6478174')
 
 build() {

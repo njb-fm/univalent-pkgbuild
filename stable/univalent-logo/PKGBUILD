@@ -1,8 +1,7 @@
 # Maintainer: Hayate Nakamura <is01.njb at gmail dot com>
 pkgname=univalent-logo
-destname="/usr"
-pkgver=22.11
-pkgrel=3
+pkgver=23.06
+pkgrel=1
 pkgdesc="UVGL's Logo"
 arch=('any')
 url="https://github.com/njb-fm"
@@ -15,6 +14,7 @@ options=(!strip !emptydirs)
 source=(${pkgname}::"git+${url}/${pkgname}")
 sha256sums=('SKIP')
 package() {
-	install -dm755 ${pkgdir}${destname}
-	cp -r ${srcdir}/${pkgname}${destname}/* ${pkgdir}${destname}
+	cp -r ${srcdir}/${pkgname}/usr ${pkgdir}
+	mkdir -p ${pkgdir}/usr/share/licenses/${pkgname}
+	install -Dm644 ${srcdir}/${pkgname}/LICENSE.html ${pkgdir}/usr/share/licenses/
 }
