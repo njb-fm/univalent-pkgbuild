@@ -1,0 +1,11 @@
+[Trigger]
+Operation = Install
+Type = Package
+Target = plymouth-theme-uve-logo
+
+[Action]
+Description = Updating Plymouth boot splash...
+When = PostTransaction
+Depends = plymouth-theme-uve-logo
+Depends = plymouth
+Exec = /bin/sh -c "plymouth-set-default-theme -R uve-logo"

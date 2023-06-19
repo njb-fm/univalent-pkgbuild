@@ -1,0 +1,25 @@
+# Maintainer: Hayate Nakamura (is01.njb at gmail dot com)
+pkgname=("uve-skel-unity")
+_pkgname=("uve-skel")
+pkgver=23.07
+pkgrel=1
+pkgdesc="Settings for Unitylent GNU/Linux"
+arch=('any')
+url="https://github.com/njb-fm/uve-skel"
+license=('GPL3')
+provides=('uve-skel')
+conflicts=('uve-skel')
+replaces=('uvgl-skel-unity' 'uvgl-skel-unity-ja' 'uvgl-skel-unity-en')
+depends=('gnome-terminal' 'nemo')
+optdepends=('yay: an AUR helper'
+            'neofetch: screenfetch utility'
+            'cups: printing support'
+            'system-config-printer: CUPS status applet')
+options=(!strip !emptydirs)
+source=(${_pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/v${pkgver}.tar.gz)
+md5sums=('906c857ff896b779690c41437a8b8ee2')
+
+package() {
+	install -dm755 ${pkgdir}/etc
+	cp -r ${srcdir}/${_pkgname}-${pkgver}/unity/etc/* ${pkgdir}/etc
+}
