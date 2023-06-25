@@ -1,0 +1,20 @@
+# Maintainer: Hayate Nakamura (is01.njb at gmail dot com)
+pkgname=calamares-settings-univalent
+pkgver=23.08
+pkgrel=1
+pkgdesc="Univalent Calamares Settings anf Branding"
+arch=('any')
+url="https://github.com/njb-fm/calamares-settings-univalent"
+license=('GPL3')
+makedepends=('git')
+provides=("univabootmnt")
+options=(!strip !emptydirs)
+source=("${pkgname}-${pkgver}.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
+md5sums=('SKIP')
+
+package() {
+	cp -r ${srcdir}/${pkgname}-${pkgver}/etc/* ${pkgdir}/
+	cp -r ${srcdir}/${pkgname}-${pkgver}/usr/* ${pkgdir}/
+ install -Dm644 ${srcdir}/${pkgname}-${pkgver}/MEDIA_GUIDELINE.md ${pkgdir}/usr/share/licenses/calamares-settings-univalent/MEDIA_GUIDELINE.md
+	chmod 755 ${pkgdir}/etc/calamares/launch.sh
+}

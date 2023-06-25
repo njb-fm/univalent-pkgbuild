@@ -2,7 +2,7 @@
 
 pkgname=univalive
 pkgver=23.06
-pkgrel=1.3
+pkgrel=2
 pkgdesc='Copy calamares icon'
 arch=('any')
 license=(GPL)
@@ -10,22 +10,14 @@ url="https://w.atwiki.jp/univalent-ja/"
 license=('LGPL')
 depends=('calamares')
 source=("univalent-calamares-desktop"
-        "univalent-calamares-desktop.desktop"
-        "univabootmnt.sh"
-        "univabootmnt.service"
-        "univabootmnt.hook")
+        "univalent-calamares-desktop.desktop")
 
 sha256sums=('9f40d45517ff9898dca502372c9abdb3a2a8c4cb268547805b45c8fa6b8f2581'
-            '91ede66df0718d93449460e85f28d3804b1207a4ef41d7424cbce175cabe1598'
-            '059ff2e45ff6e93b710732f70814cba8253af83dbf68fc0d532ed6944ca1465d'
-            '5baa2f5bd492094d4bd88d1d58a61d08429558a8e79a22620b6edd48a6d77285'
-            '833a9e1729cb36c8a424225019804690516ebf1b0570cb2d758b2d71183de838')
+            '91ede66df0718d93449460e85f28d3804b1207a4ef41d7424cbce175cabe1598')
 
 package() {
 	cd ${srcdir}
 	install -Dm755 "${srcdir}/univalent-calamares-desktop" "${pkgdir}/usr/bin/univalent-calamares-desktop"
 	install -Dm755 "${srcdir}/univalent-calamares-desktop.desktop" "${pkgdir}/etc/xdg/autostart/univalent-calamares-desktop.desktop"
-	install -Dm755 "${srcdir}/univabootmnt.sh" "${pkgdir}/usr/local/bin/univabootmnt.sh"
-	install -Dm644 "${srcdir}/univabootmnt.service" "${pkgdir}/usr/lib/systemd/system/univabootmnt.service"
-	install -Dm644 "${srcdir}/univabootmnt.hook" "${pkgdir}/etc/pacman.d/hooks/univabootmnt.hook"
 }
+

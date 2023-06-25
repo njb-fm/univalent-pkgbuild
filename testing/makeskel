@@ -1,0 +1,54 @@
+#!/bin/sh
+
+PKGVER=23.07
+PKGREL=1
+
+cd uve-skel-lxqt
+makepkg --printsrcinfo > .SRCINFO
+sudo extra-x86_64-build
+rm *.log
+gpg --detach-sign uve-skel-lxqt-${PKGVER}-${PKGREL}-any.pkg.tar.zst
+cd ../uve-skel-xfce
+makepkg --printsrcinfo > .SRCINFO
+sudo extra-x86_64-build
+rm *.log
+gpg --detach-sign uve-skel-xfce-${PKGVER}-${PKGREL}-any.pkg.tar.zst
+cd ../uve-skel-plasma
+makepkg --printsrcinfo > .SRCINFO
+sudo extra-x86_64-build
+rm *.log
+gpg --detach-sign uve-skel-plasma-${PKGVER}-${PKGREL}-any.pkg.tar.zst
+cd ../uve-skel-i3wm
+makepkg --printsrcinfo > .SRCINFO
+sudo extra-x86_64-build
+rm *.log
+gpg --detach-sign uve-skel-i3wm-${PKGVER}-${PKGREL}-any.pkg.tar.zst
+cd ../uve-skel-cinnamon
+makepkg --printsrcinfo > .SRCINFO
+sudo extra-x86_64-build
+rm *.log
+gpg --detach-sign uve-skel-cinnamon-${PKGVER}-${PKGREL}-any.pkg.tar.zst
+cd ../uve-skel-gnome
+makepkg --printsrcinfo > .SRCINFO
+sudo extra-x86_64-build
+rm *.log
+gpg --detach-sign uve-skel-gnome-${PKGVER}-${PKGREL}-any.pkg.tar.zst
+cd ../uve-skel-mate
+makepkg --printsrcinfo > .SRCINFO
+sudo extra-x86_64-build
+rm *.log
+gpg --detach-sign uve-skel-mate-${PKGVER}-${PKGREL}-any.pkg.tar.zst
+cd ../uve-skel-unity
+makepkg --printsrcinfo > .SRCINFO
+sudo extra-x86_64-build
+rm *.log
+gpg --detach-sign uve-skel-unity-${PKGVER}-${PKGREL}-any.pkg.tar.zst
+#cd ../uve-skel-trinity
+makepkg --printsrcinfo > .SRCINFO
+#sudo extra-x86_64-build
+#rm *.log
+#gpg --detach-sign uve-skel-trinity-${PKGVER}-${PKGREL}-any.pkg.tar.zst
+cd ..
+mv uve-skel-*/*.zst{,.sig} zst/
+rm uve-skel-*/uve-skel-${PKGVER}.tar.gz
+

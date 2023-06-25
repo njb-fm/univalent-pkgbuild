@@ -1,0 +1,26 @@
+# Maintainer: Hayate Nakamura (is01.njb at gmail dot com)
+pkgname=uve-skel-xfce
+pkgbase=uve-skel
+pkgver=23.07
+pkgrel=1
+pkgdesc="Settings for Xunivalent Versatile Environment"
+arch=('any')
+url="https://github.com/njb-fm/uve-skel"
+license=('GPL3')
+makedepends=('git')
+provides=('uve-skel')
+conflicts=('uve-skel')
+replaces=('uvgl-skel-xfce' 'uvgl-skel-xfce-ja' 'uvgl-skel-xfce-en')
+depends=('xfce4-terminal' 'thunar')
+optdepends=('yay: an AUR helper'
+            'neofetch: screenfetch utility'
+            'cups: printing support'
+            'system-config-printer: CUPS status applet')
+options=(!strip !emptydirs)
+source=("${pkgbase}-${pkgver}.tar.gz::${url}/archive/refs/tags/v${pkgver}.tar.gz")
+md5sums=('1d87dece52da24122a350da973b57efa')
+
+package() {
+	install -dm755 ${pkgdir}/etc
+	cp -r ${srcdir}/${pkgbase}-${pkgver}/xfce/etc/* ${pkgdir}/etc
+}

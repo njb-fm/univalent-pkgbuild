@@ -1,0 +1,25 @@
+pkgbase = uve-skel
+	pkgdesc = Settings for Xunivalent Versatile Environment
+	pkgver = 23.07
+	pkgrel = 1
+	url = https://github.com/njb-fm/uve-skel
+	arch = any
+	license = GPL3
+	makedepends = git
+	depends = xfce4-terminal
+	depends = thunar
+	optdepends = yay: an AUR helper
+	optdepends = neofetch: screenfetch utility
+	optdepends = cups: printing support
+	optdepends = system-config-printer: CUPS status applet
+	provides = uve-skel
+	conflicts = uve-skel
+	replaces = uvgl-skel-xfce
+	replaces = uvgl-skel-xfce-ja
+	replaces = uvgl-skel-xfce-en
+	options = !strip
+	options = !emptydirs
+	source = uve-skel-23.07.tar.gz::https://github.com/njb-fm/uve-skel/archive/refs/tags/v23.07.tar.gz
+	md5sums = 1d87dece52da24122a350da973b57efa
+
+pkgname = uve-skel-xfce

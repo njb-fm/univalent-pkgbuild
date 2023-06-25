@@ -1,6 +1,6 @@
 # Maintainer: Hayate Nakamura (is01.njb at gmail dot com)
-pkgname=("uve-skel-trinity-git")
-_pkgname=("uve-skel")
+pkgname=uve-skel-trinity-git
+pkgbase=uve-skel
 pkgver=122.e0ad4c2
 pkgrel=1
 pkgdesc="Settings for Trivalent Versatile Environment"
@@ -16,15 +16,15 @@ optdepends=('yay: an AUR helper'
             'cups: printing support'
             'system-config-printer: CUPS status applet')
 options=(!strip !emptydirs)
-source=(${_pkgname}::git+${url}.git)
+source=(${pkgbase}::git+${url}.git)
 md5sums=('SKIP')
 
 pkgver() {
-    cd "${_pkgname}"
+    cd "${pkgbase}"
     printf '%s.%s\n' "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
 }
 
 package() {
 	install -dm755 ${pkgdir}/etc
-	cp -r ${srcdir}/${_pkgname}/trinity/etc/* ${pkgdir}/etc
+	cp -r ${srcdir}/${pkgbase}/trinity/etc/* ${pkgdir}/etc
 }

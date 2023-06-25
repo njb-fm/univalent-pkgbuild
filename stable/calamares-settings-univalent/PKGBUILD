@@ -2,7 +2,7 @@
 pkgname=calamares-settings-univalent
 destname="/etc"
 pkgver=23.06.1
-pkgrel=1
+pkgrel=2
 pkgdesc="Univalent Calamares Settings anf Branding"
 arch=('any')
 url="https://github.com/njb-fm/calamares-settings-univalent"
