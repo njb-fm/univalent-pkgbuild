@@ -1,12 +1,13 @@
 pkgbase = uve-skel
 	pkgdesc = Settings for Trivalent Versatile Environment
-	pkgver = 122.e0ad4c2
+	pkgver = 124.4fa5ae8
 	pkgrel = 1
 	url = https://github.com/njb-fm/uve-skel
 	arch = any
 	license = GPL3
 	makedepends = git
 	depends = xcape
+	depends = udiskie
 	optdepends = yay: an AUR helper
 	optdepends = neofetch: screenfetch utility
 	optdepends = cups: printing support
