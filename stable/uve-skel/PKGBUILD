@@ -1,0 +1,72 @@
+# Maintainer: Hayate Nakamura (is01.njb at gmail dot com)
+pkgbase=uve-skel
+pkgname=('uve-skel-cinnamon' 'uve-skel-gnome' 'uve-skel-i3wm' 'uve-skel-lxqt' 'uve-skel-mate' 'uve-skel-plasma' 'uve-skel-unity' 'uve-skel-xfce')
+pkgver=23.07
+pkgrel=1
+pkgdesc="Settings for Univalent Versatile Environment"
+arch=('any')
+url="https://github.com/njb-fm/uve-skel"
+license=('GPL3')
+optdepends=('yay: an AUR helper'
+            'neofetch: screenfetch utility'
+            'cups: printing support'
+            'system-config-printer: CUPS status applet')
+options=(!strip !emptydirs)
+source=("${pkgbase}-${pkgver}.tar.gz::${url}/archive/refs/tags/v${pkgver}.tar.gz")
+md5sums=('1d87dece52da24122a350da973b57efa')
+
+package_uve-skel-cinnamon() {
+	replaces=('uvgl-skel-cinnamon' 'uvgl-skel-cinnamon-ja' 'uvgl-skel-cinnamon-en')
+
+	install -dm755 ${pkgdir}/etc
+	cp -r ${srcdir}/${pkgbase}-${pkgver}/cinnamon/etc/* ${pkgdir}/etc
+}
+
+package_uve-skel-gnome() {
+	replaces=('uvgl-skel-gnome' 'uvgl-skel-gnome-ja' 'uvgl-skel-gnome-en')
+
+	install -dm755 ${pkgdir}/etc
+	cp -r ${srcdir}/${pkgbase}-${pkgver}/gnome/etc/* ${pkgdir}/etc
+}
+
+package_uve-skel-i3wm() {
+	replaces=('uvgl-skel-i3wm' 'uvgl-skel-i3wm-ja' 'uvgl-skel-i3wm-en')
+
+	install -dm755 ${pkgdir}/etc
+	cp -r ${srcdir}/${pkgbase}-${pkgver}/i3wm/etc/* ${pkgdir}/etc
+}
+
+package_uve-skel-lxqt() {
+	replaces=('uvgl-skel-lxqt' 'uvgl-skel-lxqt-ja' 'uvgl-skel-lxqt-en')
+
+	install -dm755 ${pkgdir}/etc
+	cp -r ${srcdir}/${pkgbase}-${pkgver}/lxqt/etc/* ${pkgdir}/etc
+}
+
+package_uve-skel-mate() {
+	replaces=('uvgl-skel-mate' 'uvgl-skel-mate-ja' 'uvgl-skel-mate-en')
+
+	install -dm755 ${pkgdir}/etc
+	cp -r ${srcdir}/${pkgbase}-${pkgver}/mate/etc/* ${pkgdir}/etc
+}
+
+package_uve-skel-plasma() {
+	replaces=('uvgl-skel-plasma' 'uvgl-skel-plasma-ja' 'uvgl-skel-plasma-en')
+
+	install -dm755 ${pkgdir}/etc
+	cp -r ${srcdir}/${pkgbase}-${pkgver}/plasma/etc/* ${pkgdir}/etc
+}
+
+package_uve-skel-unity() {
+	replaces=('uvgl-skel-unity' 'uvgl-skel-unity-ja' 'uvgl-skel-unity-en')
+
+	install -dm755 ${pkgdir}/etc
+	cp -r ${srcdir}/${pkgbase}-${pkgver}/unity/etc/* ${pkgdir}/etc
+}
+
+package_uve-skel-xfce() {
+	replaces=('uvgl-skel-xfce' 'uvgl-skel-xfce-ja' 'uvgl-skel-xfce-en')
+
+	install -dm755 ${pkgdir}/etc
+	cp -r ${srcdir}/${pkgbase}-${pkgver}/xfce/etc/* ${pkgdir}/etc
+}
