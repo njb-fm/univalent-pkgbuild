@@ -1,0 +1,29 @@
+# Maintainer: Hayate Nakamura (is01.njb at gmail dot com)
+pkgname=uve-skel-budgie-git
+pkgbase=uve-skel
+pkgver=132.da0b8f0
+pkgrel=1
+pkgdesc="Settings for Budgivalent Versatile Environment"
+arch=('any')
+url="https://github.com/njb-fm/uve-skel"
+license=('GPL3')
+provides=('uve-skel' 'uve-skel-budgie')
+conflicts=('uve-skel')
+makedepends=('git')
+optdepends=('yay: an AUR helper'
+            'neofetch: screenfetch utility'
+            'cups: printing support'
+            'system-config-printer: CUPS status applet')
+options=(!strip !emptydirs)
+source=(${pkgbase}::git+${url}.git)
+md5sums=('SKIP')
+
+pkgver() {
+    cd "${pkgbase}"
+    printf '%s.%s\n' "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+package() {
+	install -dm755 ${pkgdir}/etc
+	cp -r ${srcdir}/${pkgbase}/budgie/etc/* ${pkgdir}/etc
+}

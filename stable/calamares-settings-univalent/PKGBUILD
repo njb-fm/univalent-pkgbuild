@@ -1,19 +1,24 @@
 # Maintainer: Hayate Nakamura (is01.njb at gmail dot com)
 pkgname=calamares-settings-univalent
-destname="/etc"
-pkgver=23.06.1
-pkgrel=2
-pkgdesc="Univalent Calamares Settings anf Branding"
+pkgver=23.07
+pkgrel=1
+pkgdesc="UVE Calamares Settings anf Branding"
 arch=('any')
 url="https://github.com/njb-fm/calamares-settings-univalent"
-license=('GPL3')
+license=('GPL3' 'custom:njb-media')
 makedepends=('git')
 provides=("${pkgname}")
+replaces=("univabootmnt")
 options=(!strip !emptydirs)
-source=(${pkgname}::"git+${url}.git")
-sha256sums=('SKIP')
+source=(${pkgname}-${pkgver}.tar.gz::"${url}/archive/refs/tags/v${pkgver}.tar.gz")
+md5sums=('f4f854712b202fd4fcee98ca4dc5cc07')
+
 package() {
-	install -dm755 ${pkgdir}${destname}
-	cp -r ${srcdir}/${pkgname}${destname}/* ${pkgdir}${destname}
+	cd ${srcdir}/${pkgname}-${pkgver}
+	cp -r etc ${pkgdir}/etc
+	cp -r usr ${pkgdir}/usr
 	chmod 755 ${pkgdir}/etc/calamares/launch.sh
+	chmod 755 ${pkgdir}/usr/bin/boot-mount
+	mkdir -p ${pkgdir}/usr/share/licenses/${pkgname}
+	cp MEDIA_GUIDELINE.md ${pkgdir}/usr/share/licenses/${pkgname}/
 }

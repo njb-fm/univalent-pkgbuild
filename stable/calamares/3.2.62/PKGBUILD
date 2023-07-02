@@ -2,7 +2,7 @@
 
 pkgname=calamares
 pkgver=3.2.62
-pkgrel=1
+pkgrel=2.1
 pkgdesc='Distribution-independent installer framework'
 arch=('i686' 'x86_64')
 license=(GPL)
@@ -23,7 +23,7 @@ source=("${pkgname}-${pkgver}::$url/download/v${pkgver}/${pkgname}-${pkgver}.tar
 	)
 
 sha256sums=('a0fbcec2a438693753fc174220356119ad7adb8a2b19c317518aa1cb025d6dd0'
-            '2e30ef1d4c8999d7ff51b1f6ce5b80d10642a93ebbffc8c447685779e2ad795a')
+            '536d17352dd590ef5aaa02eac8bcde2d9b7fd2c2cc3db20bece6270e42fad329')
 
 pkgver() {
 	cd ${srcdir}/${pkgname}-${pkgver}

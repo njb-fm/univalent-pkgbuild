@@ -1,0 +1,30 @@
+# Maintainer: Hayate Nakamura (is01.njb at gmail dot com)
+pkgname=uve-skel-openbox-git
+pkgbase=uve-skel
+pkgver=131.1aafa72
+pkgrel=1
+pkgdesc="Settings for Dunivalent Versatile Environment"
+arch=('any')
+url="https://github.com/njb-fm/uve-skel"
+license=('GPL3')
+provides=('uve-skel' 'uve-skel-openbox')
+conflicts=('uve-skel')
+depends=('openbox' 'dunst' 'volumeicon')
+makedepends=('git')
+optdepends=('yay: an AUR helper'
+            'neofetch: screenfetch utility'
+            'cups: printing support'
+            'system-config-printer: CUPS status applet')
+options=(!strip !emptydirs)
+source=(${pkgbase}::git+${url}.git)
+md5sums=('SKIP')
+
+pkgver() {
+    cd "${pkgbase}"
+    printf '%s.%s\n' "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+package() {
+	install -dm755 ${pkgdir}/etc
+	cp -r ${srcdir}/${pkgbase}/openbox/etc/* ${pkgdir}/etc
+}

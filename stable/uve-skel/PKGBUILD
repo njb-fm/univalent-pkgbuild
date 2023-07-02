@@ -1,6 +1,6 @@
 # Maintainer: Hayate Nakamura (is01.njb at gmail dot com)
 pkgbase=uve-skel
-pkgname=('uve-skel-cinnamon' 'uve-skel-gnome' 'uve-skel-i3wm' 'uve-skel-lxqt' 'uve-skel-mate' 'uve-skel-plasma' 'uve-skel-unity' 'uve-skel-xfce')
+pkgname=('uve-skel-budgie' 'uve-skel-cinnamon' 'uve-skel-gnome' 'uve-skel-i3wm' 'uve-skel-lxqt' 'uve-skel-mate' 'uve-skel-plasma' 'uve-skel-unity' 'uve-skel-xfce')
 pkgver=23.07
 pkgrel=1
 pkgdesc="Settings for Univalent Versatile Environment"
@@ -13,7 +13,12 @@ optdepends=('yay: an AUR helper'
             'system-config-printer: CUPS status applet')
 options=(!strip !emptydirs)
 source=("${pkgbase}-${pkgver}.tar.gz::${url}/archive/refs/tags/v${pkgver}.tar.gz")
-md5sums=('1d87dece52da24122a350da973b57efa')
+md5sums=('432899fad3d3e482d2811b080f47871a')
+
+package_uve-skel-budgie() {
+	install -dm755 ${pkgdir}/etc
+	cp -r ${srcdir}/${pkgbase}-${pkgver}/budgie/etc/* ${pkgdir}/etc
+}
 
 package_uve-skel-cinnamon() {
 	replaces=('uvgl-skel-cinnamon' 'uvgl-skel-cinnamon-ja' 'uvgl-skel-cinnamon-en')
