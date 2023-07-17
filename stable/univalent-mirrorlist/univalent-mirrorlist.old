@@ -1,9 +1,0 @@
-#
-# Univalent GNU/Linux repository mirrorlist
-#
-# (c) 2022-2023 Radio New Japan Broadcasting Club
-#
-
-# OSDN
-Server = https://univalentgnulinux.osdn.jp/repo/$repo/$arch
-Server = https://kamurikilinux.osdn.jp/univa-repo/$repo/$arch

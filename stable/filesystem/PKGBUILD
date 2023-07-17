@@ -1,7 +1,7 @@
 # Maintainer: Hayate Nakamura <is01.njb@gmail.com>
 
 pkgname=filesystem
-pkgver=2023.05.31univalent23.08
+pkgver=2023.07.03univalent23.07
 pkgrel=1
 pkgdesc='Base Univalent GNU/Linux files'
 arch=('x86_64')
@@ -28,7 +28,7 @@ sha256sums=('e03bede3d258d680548696623d5979c6edf03272e801a813c81ba5a5c64f4f82'
             'dad04a370e488aa85fb0a813a5c83cf6fd981ce01883fc59685447b092de84b5'
             '8ca2d8eef6fb5143c9ef7e9174ccfef59ac7ad2deee243574cd10c763156cc10'
             'c8ee7a9faf798caab178ec51afae4146f1efd8a716b7acedf28345b6c75f9697'
-            '57872d4f187d9a333ede216314d0f141b50d8c87af3659ef3078a152cbb0d627'
+            'e4d889d37903b7ef589229a169a330baf865ba364c119a189320574b7c2cfc18'
             '5e4088ad8d0853d390fa303f6be8c3f69c33834200cba9e90f7849f1993ca8d0'
             '5e06477834f51abf42ea4e8dc199632afc6afbfd8c44354685a271e9a48d2c0a'
             '5557d8e601b17a80d1ea7de78a9869be69637cb6a02fbfe334e22fdf64e61d4c'

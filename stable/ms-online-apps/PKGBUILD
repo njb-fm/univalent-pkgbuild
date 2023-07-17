@@ -4,9 +4,9 @@ pkgver=1.0
 pkgrel=2
 pkgdesc="Quick access to Microsoft Online Apps"
 arch=('any')
-url="https://osdn.net/projects/univalentgnulinux"
+url="https://sourceforge.net/projects/univalentgnulinux"
 license=('GPL3' 'CC')
-source=("${url}/storage/aur/ms-online-apps/microsoft_online_apps.deb")
+source=("${url}/files/aur/ms-online-apps/microsoft_online_apps.deb")
 sha1sums=('8e770d3ce395332b330740a795fe104b4f78544b')
 
 package() {

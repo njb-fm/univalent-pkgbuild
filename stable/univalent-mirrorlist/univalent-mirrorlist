@@ -4,6 +4,40 @@
 # (c) 2022-2023 Radio New Japan Broadcasting Club
 #
 
+# SourceForge
+Server = https://sourceforge.net/projects/univalentgnulinux/files/repo/$repo/$arch
+Server = https://jaist.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
+Server = https://altushost-swe.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
+Server = https://cfhtable.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
+Server = https://cytranet.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
+Server = https://deac-ams.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
+Server = https://deac-fra.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
+Server = https://deac-riga.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
+Server = https://freefr.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
+Server = https://gigenet.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
+Server = https://gox.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
+Server = https://ixpeering.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
+Server = https://kumisystems.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
+Server = https://liquidtelecom.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
+Server = https://nav.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
+Server = https://nchc.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
+Server = https://netactuate.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
+Server = https://netcologne.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
+Server = https://netix.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
+Server = https://sba.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
+Server = https://onboardcloud.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
+Server = https://phoenixnap.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
+Server = https://razaoinfo.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
+Server = https://sinalbr.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
+Server = https://sitsa.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
+Server = https://sonik.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
+Server = https://tenet.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
+Server = https://udomain.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
+Server = https://ufpr.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
+Server = https://versaweb.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
+Server = https://webwerks.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
+Server = https://yer.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
+
 # OSDN
 Server = https://osdn.dl.osdn.net/storage/g/u/un/univalentgnulinux/repo/$repo/$arch
 Server = https://ftp.jaist.ac.jp/pub/sourceforge.jp/storage/g/u/un/univalentgnulinux/repo/$repo/$arch
