@@ -3,27 +3,29 @@
 pkgname=plymouth-theme-uve-logo
 _themename=uve-logo
 
-pkgver=1.3
-pkgrel=1
+pkgver=2.0
+pkgrel=2
 pkgdesc="A plymouth theme for Univalent Versatile Environment"
 arch=('any')
 url=https://sourceforge.net/projects/univalentgnulinux
-_url=https://sourceforge.net/projects/univalentgnulinux/files/aur/plymouth-theme-uve-logo
-license=('custom')
+_url=https://sourceforge.net/projects/univalentgnulinux/files/sources/plymouth-theme-uve-logo
+license=('custom:njb-media')
 depends=('plymouth')
 optdepends=()
 replaces=('plymouth-theme-uvgl-logo')
 source=("${_url}/${pkgname}-${pkgver}.tar.gz"
+        "license.md"
         "plymouth-theme-uve-logo.hook")
-md5sums=('3f366c6717443dfd3897453257c087b7'
-         '28758e91379b7ededa51678d916be288')
+md5sums=('c436ae01fad3cead94de8e39920cd5eb'
+         '37e17d6474bdffa8a1c1c86bdf9cad1b'
+         '481b86e5ba6ab1828abc9007f9d6f814')
 
 package() {
     cd ${srcdir}
     mkdir -p ${pkgdir}/usr/share/plymouth/themes/${_themename}/
     mkdir -p ${pkgdir}/usr/share/licenses/${pkgname}
     mkdir -p ${pkgdir}/etc/pacman.d/hooks
-    cp -r ${pkgname}/${_themename}/* ${pkgdir}/usr/share/plymouth/themes/${_themename}/
-    cp ${pkgname}/LICENSE.md ${pkgdir}/usr/share/licenses/${pkgname}
-    cp plymouth-theme-uve-logo.hook ${pkgdir}/etc/pacman.d/hooks/
+    cp -r ${pkgname}/* ${pkgdir}/usr/share/plymouth/themes/${_themename}/
+    install -Dm644 license.md ${pkgdir}/usr/share/licenses/${pkgname}
+    install -Dm644 plymouth-theme-uve-logo.hook ${pkgdir}/etc/pacman.d/hooks/
 }

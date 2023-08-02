@@ -1,7 +1,7 @@
 # Maintainer: Hayate Nakamura (is01.njb at gmail dot com)
 pkgbase=uve-skel
-pkgname=('uve-skel-budgie' 'uve-skel-cinnamon' 'uve-skel-gnome' 'uve-skel-i3wm' 'uve-skel-lxqt' 'uve-skel-mate' 'uve-skel-plasma' 'uve-skel-unity' 'uve-skel-xfce')
-pkgver=23.07
+pkgname=('uve-skel-budgie' 'uve-skel-cinnamon' 'uve-skel-gnome' 'uve-skel-i3wm' 'uve-skel-lxqt' 'uve-skel-mate' 'uve-skel-plasma' 'uve-skel-xfce')
+pkgver=23.08
 pkgrel=1
 pkgdesc="Settings for Univalent Versatile Environment"
 arch=('any')
@@ -13,7 +13,7 @@ optdepends=('yay: an AUR helper'
             'system-config-printer: CUPS status applet')
 options=(!strip !emptydirs)
 source=("${pkgbase}-${pkgver}.tar.gz::${url}/archive/refs/tags/v${pkgver}.tar.gz")
-md5sums=('432899fad3d3e482d2811b080f47871a')
+md5sums=('dc33facffc582c480daad8e49e6e3e7c')
 
 package_uve-skel-budgie() {
 	install -dm755 ${pkgdir}/etc
@@ -60,13 +60,6 @@ package_uve-skel-plasma() {
 
 	install -dm755 ${pkgdir}/etc
 	cp -r ${srcdir}/${pkgbase}-${pkgver}/plasma/etc/* ${pkgdir}/etc
-}
-
-package_uve-skel-unity() {
-	replaces=('uvgl-skel-unity' 'uvgl-skel-unity-ja' 'uvgl-skel-unity-en')
-
-	install -dm755 ${pkgdir}/etc
-	cp -r ${srcdir}/${pkgbase}-${pkgver}/unity/etc/* ${pkgdir}/etc
 }
 
 package_uve-skel-xfce() {

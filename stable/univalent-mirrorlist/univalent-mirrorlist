@@ -5,8 +5,12 @@
 #
 
 # SourceForge
-Server = https://sourceforge.net/projects/univalentgnulinux/files/repo/$repo/$arch
-Server = https://jaist.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
+
+# Global Mirror Server.
+# There is no need to uncomment unless there are considerable circumstances.
+# Server = https://sourceforge.net/projects/univalentgnulinux/files/repo/$repo/$arch
+
+Server = https://master.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
 Server = https://altushost-swe.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
 Server = https://cfhtable.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
 Server = https://cytranet.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
@@ -17,6 +21,7 @@ Server = https://freefr.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/
 Server = https://gigenet.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
 Server = https://gox.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
 Server = https://ixpeering.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
+Server = https://jaist.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
 Server = https://kumisystems.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
 Server = https://liquidtelecom.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
 Server = https://nav.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
@@ -24,10 +29,10 @@ Server = https://nchc.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$a
 Server = https://netactuate.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
 Server = https://netcologne.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
 Server = https://netix.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
-Server = https://sba.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
 Server = https://onboardcloud.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
 Server = https://phoenixnap.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
 Server = https://razaoinfo.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
+Server = https://sba.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
 Server = https://sinalbr.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
 Server = https://sitsa.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
 Server = https://sonik.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
@@ -37,23 +42,3 @@ Server = https://ufpr.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$a
 Server = https://versaweb.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
 Server = https://webwerks.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
 Server = https://yer.dl.sourceforge.net/project/univalentgnulinux/repo/$repo/$arch
-
-# OSDN
-Server = https://osdn.dl.osdn.net/storage/g/u/un/univalentgnulinux/repo/$repo/$arch
-Server = https://ftp.jaist.ac.jp/pub/sourceforge.jp/storage/g/u/un/univalentgnulinux/repo/$repo/$arch
-Server = https://ftp.iij.ad.jp/pub/osdn.jp/storage/g/u/un/univalentgnulinux/repo/$repo/$arch
-Server = https://ftp.halifax.rwth-aachen.de/osdn/storage/g/u/un/univalentgnulinux/repo/$repo/$arch
-Server = https://mirror.gigenet.com/osdn/storage/g/u/un/univalentgnulinux/repo/$repo/$arch
-Server = https://acc.dl.osdn.jp/storage/g/u/un/univalentgnulinux/repo/$repo/$arch
-Server = https://osdn.mirror.liquidtelecom.com/storage/g/u/un/univalentgnulinux/repo/$repo/$arch
-Server = https://mirrors.dotsrc.org/osdn/storage/g/u/un/univalentgnulinux/repo/$repo/$arch
-
-# OSDN
-Server = https://osdn.dl.osdn.net/storage/g/k/ka/kamurikilinux/univa-repo/$repo/$arch
-Server = https://ftp.jaist.ac.jp/pub/sourceforge.jp/storage/g/k/ka/kamurikilinux/univa-repo/$repo/$arch
-Server = https://ftp.iij.ad.jp/pub/osdn.jp/storage/g/k/ka/kamurikilinux/univa-repo/$repo/$arch
-Server = https://ftp.halifax.rwth-aachen.de/osdn/storage/g/k/ka/kamurikilinux/univa-repo/$repo/$arch
-Server = https://mirror.gigenet.com/osdn/storage/g/k/ka/kamurikilinux/univa-repo/$repo/$arch
-Server = https://acc.dl.osdn.jp/storage/g/k/ka/kamurikilinux/univa-repo/$repo/$arch
-Server = https://osdn.mirror.liquidtelecom.com/storage/g/k/ka/kamurikilinux/univa-repo/$repo/$arch
-Server = https://mirrors.dotsrc.org/osdn/storage/g/k/ka/kamurikilinux/univa-repo/$repo/$arch
