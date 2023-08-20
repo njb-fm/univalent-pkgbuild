@@ -2,10 +2,10 @@
 pkgname=calamares-settings-univalent
 pkgver=23.08
 pkgrel=1
-pkgdesc="UVE Calamares Settings anf Branding"
+pkgdesc="UVE Calamares Settings and Branding"
 arch=('any')
 url="https://github.com/njb-fm/calamares-settings-univalent"
-license=('GPL3' 'custom:njb-media')
+license=('BSD' 'custom:njb-media')
 makedepends=('git')
 provides=("${pkgname}")
 replaces=("univabootmnt")
@@ -20,5 +20,6 @@ package() {
 	chmod 755 ${pkgdir}/etc/calamares/launch.sh
 	chmod 755 ${pkgdir}/usr/bin/boot-mount
 	mkdir -p ${pkgdir}/usr/share/licenses/${pkgname}
+	cp LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/
 	cp MEDIA_GUIDELINE.md ${pkgdir}/usr/share/licenses/${pkgname}/
 }

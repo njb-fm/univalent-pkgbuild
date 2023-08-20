@@ -1,0 +1,20 @@
+pkgbase = lsb-release
+	pkgdesc = LSB version query program
+	pkgver = 2.0.r48.3cf5103.univalent23.07
+	pkgrel = 1
+	epoch = 1
+	url = https://refspecs.linuxfoundation.org/lsb.shtml
+	arch = any
+	license = GPL
+	makedepends = git
+	depends = sh
+	source = git+https://github.com/LinuxStandardBase/lsb-samples.git#commit=3cf51039933d03ef15388b75d30baa5d5e09a1a0
+	source = lsb-release
+	source = lsb_release_description.patch
+	source = lsb_release_make_man_page_reproducible.patch
+	sha512sums = SKIP
+	sha512sums = 3ffa4f1cd113ff5e92a29a1086464a92b4c238674d0cf41d773041136de6cd218dc1eaa560887a25acbe96b1357146f538573c70fccda1d15e6f0c0b2aac28b2
+	sha512sums = 145ef64f90f5e6cc59075679e640cf7c1ad02617c12eff17f10b05c1cc219591fdba1b27be2b2c8480742aed24ce81d6a7badcbaca6772faea4ebc6a55695b62
+	sha512sums = ab64a1d236d00a30a48e3af2c5bdfa0aad0183ebe0df4f2b0c6af58530c2a1fdac1b0a5cdd8a1800d5f8405f44562603cddf28eb318b5badaabd49a82e0b7e83
+
+pkgname = lsb-release
