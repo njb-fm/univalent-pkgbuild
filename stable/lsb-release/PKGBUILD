@@ -4,9 +4,9 @@
 # Contributor: John Gerritse <reaphsharc@gmail.com>
 
 pkgname=lsb-release
-pkgver=2.0.r53.a86f885univalent23.08
+pkgver=2.0.r53.a86f885univalent23.09
 _commit=a86f885597a91cd41837d706bf6a08d4c239a54b
-_uvever=23.08
+_uvever=23.09
 pkgrel=1
 pkgdesc="LSB version query program"
 arch=('any')
@@ -19,7 +19,7 @@ source=("git+https://github.com/LinuxStandardBase/lsb-samples.git#commit=$_commi
         'lsb_release_description.patch'
         'lsb_release_make_man_page_reproducible.patch')
 sha512sums=('SKIP'
-            'a89ede9767c028c69e3b3e2220b558a5d96628217456d7eec29fb0622491dd76a4b4e98d26ee34e2d83a33f08d0768a8ea2ee453df990335c0f99a03ece93dac'
+            '246bb5f4bfff4fa59c1002ec12cee36ae4ec3554057e188cdbf26f519fb07cd4c8fd28c3bf762a949bcc3cbd679b26d0c384c4a3a7a62e6311c75b6979edf028'
             '145ef64f90f5e6cc59075679e640cf7c1ad02617c12eff17f10b05c1cc219591fdba1b27be2b2c8480742aed24ce81d6a7badcbaca6772faea4ebc6a55695b62'
             'ab64a1d236d00a30a48e3af2c5bdfa0aad0183ebe0df4f2b0c6af58530c2a1fdac1b0a5cdd8a1800d5f8405f44562603cddf28eb318b5badaabd49a82e0b7e83')
 

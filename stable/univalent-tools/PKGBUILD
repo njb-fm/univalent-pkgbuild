@@ -1,19 +1,19 @@
 # Maintainer: Hayate Nakamura <is01.njb at gmail dot com>
 
 pkgname=univalent-tools
-pkgver=2.0.1
-pkgrel=2
+pkgver=2.1
+pkgrel=1
 pkgdesc='System setting tools written in bash & whiptail'
 arch=('any')
 url='https://github.com/njb-fm/univalent-tools'
-license=('GPL3')
+license=('BSD')
 depends=('networkmanager' 'ntp' 'alsa-utils')
 optdepends=('univalent-logo: univalent icon')
 checkdepends=('shellcheck')
 
 conflicts=("${pkgname}")
-source=("${url}/archive/refs/tags/${pkgver}.tar.gz")
-md5sum=('4967df0e59f59f24455d65a765afcfac')
+source=(${pkgname}-${pkgver}.tar.gz::"${url}/archive/refs/tags/${pkgver}.tar.gz")
+md5sums=('04e1959996509a5516a228ed204516c0')
 
 package() {
   cd "${srcdir}/${pkgname}-${pkgver}/"

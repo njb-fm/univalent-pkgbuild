@@ -1,19 +1,19 @@
 # Maintainer: Hayate Nakamura (is01.njb at gmail dot com)
 pkgbase=uve-skel
 pkgname=('uve-skel-budgie' 'uve-skel-cinnamon' 'uve-skel-gnome' 'uve-skel-i3wm' 'uve-skel-lxqt' 'uve-skel-mate' 'uve-skel-plasma' 'uve-skel-xfce')
-pkgver=23.08
-pkgrel=1
+pkgver=23.09
+pkgrel=3
 pkgdesc="Settings for Univalent Versatile Environment"
 arch=('any')
 url="https://github.com/njb-fm/uve-skel"
-license=('GPL3')
-optdepends=('yay: an AUR helper'
+license=('BSD')
+optdepends=('nako: an AUR helper'
             'neofetch: screenfetch utility'
             'cups: printing support'
             'system-config-printer: CUPS status applet')
 options=(!strip !emptydirs)
 source=("${pkgbase}-${pkgver}.tar.gz::${url}/archive/refs/tags/v${pkgver}.tar.gz")
-md5sums=('dc33facffc582c480daad8e49e6e3e7c')
+md5sums=('ee6d58c0757d08d0dd938479fe3913b8')
 
 package_uve-skel-budgie() {
 	install -dm755 ${pkgdir}/etc
