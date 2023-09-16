@@ -6,7 +6,7 @@ pkgrel=1
 pkgdesc="FM Stereo encoder with RDS support"
 arch=('x86_64')
 url="https://github.com/jontio/JMPX"
-license=('GPL3')
+license=('MIT' 'BSD' 'Apache')
 depends=('qt5-base' 'opus' 'jack')
 makedepends=('git')
 provides=("${_pkgname}")
@@ -42,6 +42,8 @@ package() {
   mkdir -p ${pkgdir}/usr/lib
   mkdir -p ${pkgdir}/usr/share/applications
   mkdir -p ${pkgdir}/usr/share/pixmaps
+  mkdir -p ${pkgdir}/usr/share/licenses/${_pkgname}
+
   install -D -m644 ${srcdir}/jmpx.desktop ${pkgdir}/usr/share/applications/
   install -D -m644 ${srcdir}/jmpx.png ${pkgdir}/usr/share/pixmaps/jmpx.png
   install -D -m755 ${srcdir}/${_pkgname}/build/JMPX ${pkgdir}/usr/bin/JMPX
@@ -51,4 +53,7 @@ package() {
   ln -sf liblibJMPX.so.1.0.0 liblibJMPX.so
   ln -sf liblibJMPX.so.1.0.0 liblibJMPX.so.1
   ln -sf liblibJMPX.so.1.0.0 liblibJMPX.so.1.0
+
+  cp ${srcdir}/${_pkgname}/JMPX/LICENSE ${pkgdir}/usr/share/licenses/${_pkgname}LICENSE
 }
+
