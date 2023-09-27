@@ -1,7 +1,7 @@
 # Maintainer: Hayate Nakamura (is01.njb at gmail dot com)
 pkgname=calamares-settings-univalent
-pkgver=23.09
-pkgrel=2
+pkgver=23.10
+pkgrel=1
 pkgdesc="UVE Calamares Settings and Branding"
 arch=('any')
 url="https://github.com/njb-fm/calamares-settings-univalent"

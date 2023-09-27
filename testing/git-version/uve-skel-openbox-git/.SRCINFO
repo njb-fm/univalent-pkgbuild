@@ -1,0 +1,24 @@
+pkgbase = uve-skel
+	pkgdesc = Settings for Dunivalent Versatile Environment
+	pkgver = 131.1aafa72
+	pkgrel = 1
+	url = https://github.com/njb-fm/uve-skel
+	arch = any
+	license = GPL3
+	makedepends = git
+	depends = openbox
+	depends = dunst
+	depends = volumeicon
+	optdepends = yay: an AUR helper
+	optdepends = neofetch: screenfetch utility
+	optdepends = cups: printing support
+	optdepends = system-config-printer: CUPS status applet
+	provides = uve-skel
+	provides = uve-skel-openbox
+	conflicts = uve-skel
+	options = !strip
+	options = !emptydirs
+	source = uve-skel::git+https://github.com/njb-fm/uve-skel.git
+	md5sums = SKIP
+
+pkgname = uve-skel-openbox-git

@@ -19,7 +19,7 @@ source=("git+https://github.com/LinuxStandardBase/lsb-samples.git#commit=$_commi
         'lsb_release_description.patch'
         'lsb_release_make_man_page_reproducible.patch')
 sha512sums=('SKIP'
-            '883ebed0158a574c6753fa9ae4518e1f61f14979696c8166ee605a753c35fe29e2f7085f3a534f8530ac0bd6aa80857c3541fed526b3c8217cca88fa55a9af1c'
+            '58f41f37e716fb0b354ef59263808f35c6fa8bb8ebc1bf1ac38b356499a4ee6a2a954387d92dc3b92a87df5f723c89a57b3a3f1bc2d5d0ebf2d42ac7d2626115'
             '145ef64f90f5e6cc59075679e640cf7c1ad02617c12eff17f10b05c1cc219591fdba1b27be2b2c8480742aed24ce81d6a7badcbaca6772faea4ebc6a55695b62'
             'ab64a1d236d00a30a48e3af2c5bdfa0aad0183ebe0df4f2b0c6af58530c2a1fdac1b0a5cdd8a1800d5f8405f44562603cddf28eb318b5badaabd49a82e0b7e83')
 
