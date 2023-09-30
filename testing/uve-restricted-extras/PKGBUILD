@@ -1,0 +1,21 @@
+# Maintainer: Hayyate Nakamura <is01.njb at gmail dot com>
+
+pkgname=uve-restricted-extras
+pkgver=23.10
+pkgrel=1
+pkgdesc='Installer for restricted extra packages'
+arch=('any')
+url='https://github.com/njb-fm/uve-restricted-extras'
+license=('BSD')
+depends=('ttf-ms-fonts' 'gst-libav' 'gst-plugins-ugly' 'gstreamer-vaapi' 'ffmpeg' 'unrar')
+makedepends=('git')
+replaces=("univag-restricted-extras")
+conflicts=("univag-restricted-extras")
+provides=("univag-restricted-extras")
+source=("git+https://github.com/njb-fm/${pkgname}.git")
+md5sums=('SKIP')
+
+package() {
+  cd "${pkgname}"
+  make DESTDIR="${pkgdir}/" PREFIX='/usr' install
+}
