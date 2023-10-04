@@ -1,14 +1,17 @@
 # Maintainer : Hayate Nakamura <is01.njb at gmail dot com>
 pkgname=univalent-mirrorlist
-pkgver=20230802
-pkgrel=2
+pkgver=20231004
+pkgrel=1
 pkgdesc='UVE repository mirrorlists'
-license=('GPL3')
+license=('BSD-3-Clause')
 arch=('any')
 url='https://sourceforge.net/projects/univalentgnulinux/'
-source=("univalent-mirrorlist")
-md5sums=('ef431e136b71e6f8385673ced5e4e7f9')
+source=("univalent-mirrorlist"
+        "LICENSE")
+md5sums=('ef431e136b71e6f8385673ced5e4e7f9'
+         'fc67ef63e51464540f973f6161fcac3e')
 package() {
     cd "${srcdir}"
     install -Dm644 "${srcdir}/univalent-mirrorlist" "${pkgdir}/etc/pacman.d/univalent-mirrorlist"
+    install -Dm644 "${srcdir}/LICENSE" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
 }

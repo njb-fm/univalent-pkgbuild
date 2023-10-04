@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name=Univalent Calamares Icon
-Icon=calamares
-Exec=sh -c "/usr/bin/univalent-calamares-desktop"
-Terminal=false
-Type=Application
-StartupNotify=false
