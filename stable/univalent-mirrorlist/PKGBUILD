@@ -8,7 +8,7 @@ arch=('any')
 url='https://sourceforge.net/projects/univalentgnulinux/'
 source=("univalent-mirrorlist"
         "LICENSE")
-md5sums=('ef431e136b71e6f8385673ced5e4e7f9'
+md5sums=('954903a947620f89ff72bad2061b65be'
          'fc67ef63e51464540f973f6161fcac3e')
 package() {
     cd "${srcdir}"

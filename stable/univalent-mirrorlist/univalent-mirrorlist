@@ -1,8 +1,12 @@
 #
-# Univalent GNU/Linux repository mirrorlist
+# UVE repository mirrorlist
 #
 # (c) 2022-2023 Radio New Japan Broadcasting Club
 #
+
+# GitHub
+
+Server = https://njb-fm.github.io/uve-repo/$repo/$arch
 
 # SourceForge
 

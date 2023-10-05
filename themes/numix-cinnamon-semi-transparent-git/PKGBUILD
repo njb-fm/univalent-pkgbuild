@@ -1,0 +1,23 @@
+pkgname=numix-cinnamon-semi-transparent-git
+_pkgname=numix-cinnamon-semi-transparent
+_themename="Numix-Cinnamon-Semi-Transparent"
+pkgver=r86.d037d08
+pkgrel=1
+pkgdesc="Numix Theme for cinnamon; semi transparent and compact version"
+arch=('any')
+url="https://github.com/bomdia/numix-cinnamon-semi-transparent"
+license=('AGPL3')
+source=("git+$url.git")
+depends=("python")
+sha256sums=('SKIP')
+makedepends=("git")
+
+pkgver() {
+	cd $_pkgname
+	printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+package() {
+	mkdir -p $pkgdir/usr/share/themes/
+	cp -r $srcdir/$_pkgname/files/$_themename $pkgdir/usr/share/themes/
+}

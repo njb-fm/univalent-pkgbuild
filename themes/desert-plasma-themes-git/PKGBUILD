@@ -1,0 +1,22 @@
+pkgname=desert-plasma-theme-git
+pkgver=r1101.ca26d65
+pkgrel=1
+pkgdesc="Desert Themes For Plasma Desktop "
+arch=("any")
+license=("AGPL3")
+url="https://github.com/L4ki/Desert-Plasma-Themes"
+source=("git+$url.git")
+makedepends=("git")
+sha256sums=("SKIP")
+
+pkgver()  {
+  cd $srcdir/Desert-Plasma-Themes
+  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+package() {
+	mkdir -p $pkgdir/usr/share/plasma/desktoptheme/
+	cp -r "$srcdir/Desert-Plasma-Themes/Desert Plasma Themes/Desert-Color-Plasma" $pkgdir/usr/share/plasma/desktoptheme/
+	cp -r "$srcdir/Desert-Plasma-Themes/Desert Plasma Themes/Desert-Light-Plasma" $pkgdir/usr/share/plasma/desktoptheme/
+	cp -r "$srcdir/Desert-Plasma-Themes/Desert Plasma Themes/Desert-Plasma" $pkgdir/usr/share/plasma/desktoptheme/
+}

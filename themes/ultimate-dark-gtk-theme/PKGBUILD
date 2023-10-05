@@ -1,0 +1,14 @@
+pkgname=ultimate-dark-gtk-theme
+pkgver=1.0
+pkgrel=1
+pkgdesc="Ultimate Dark theme for GTK-2 and 3"
+arch=('any')
+url="https://sourceforge.net/projects/univalentgnulinux/files/aur/ultimate-dark"
+license=('GPL3')
+source=("$url/ultimate-dark.tar.gz")
+sha256sums=('d3db7c29b246d576011e6de6babf937098c695580861086235c050966885487b')
+
+package() {
+	mkdir -p $pkgdir/usr/share/themes/
+	cp -r $srcdir/Ultimate-Dark-* $pkgdir/usr/share/themes/
+}

@@ -1,0 +1,15 @@
+pkgname=viewglass-lxqt-theme
+pkgver=1.0
+pkgrel=1
+pkgdesc="A theme that adds the glass effect without being too transparent"
+arch=('any')
+url="https://www.pling.com/p/1637500"
+_url="https://sourceforge.net/projects/univalentgnulinux/files/aur/viewglass"
+license=('GPL3')
+source=("$_url/ViewGlass.tar.xz")
+sha256sums=('b2ac9d25613c35d8bdb1ab396091aabea883f353185e584e34f593d1909e6558')
+
+package() {
+	mkdir -p $pkgdir/usr/share/lxqt/themes/
+	cp -r $srcdir/ViewGlass/ $pkgdir/usr/share/lxqt/themes/
+}

@@ -1,0 +1,21 @@
+pkgname=shadows-plasma-theme-git
+pkgver=r1315.b2f7d551
+pkgrel=1
+pkgdesc="Shadows Themes For Plasma Desktop "
+arch=("any")
+license=("GPL3")
+url="https://github.com/L4ki/Shadows-Plasma-Themes"
+source=("git+$url.git")
+makedepends=("git")
+sha256sums=("SKIP")
+
+pkgver()  {
+  cd $srcdir/Shadows-Plasma-Themes
+  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+package() {
+	mkdir -p $pkgdir/usr/share/plasma/desktoptheme/
+	cp -r "$srcdir/Shadows-Plasma-Themes/Shadows Plasma Themes/Shadows-Light-Plasma" $pkgdir/usr/share/plasma/desktoptheme/
+	cp -r "$srcdir/Shadows-Plasma-Themes/Shadows Plasma Themes/Shadows-Plasma" $pkgdir/usr/share/plasma/desktoptheme/
+}

@@ -1,0 +1,22 @@
+pkgname=infinity-plasma-theme-git
+pkgver=r2445.1b9c61e8
+pkgrel=1
+pkgdesc="Infinity Themes For Plasma Desktop"
+arch=("any")
+license=("GPL3")
+url="https://github.com/L4ki/Infinity-Plasma-Themes"
+source=("git+$url.git")
+makedepends=("git")
+sha256sums=("SKIP")
+
+pkgver()  {
+  cd $srcdir/Infinity-Plasma-Themes
+  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+package() {
+	mkdir -p $pkgdir/usr/share/plasma/desktoptheme/
+	cp -r "$srcdir/Infinity-Plasma-Themes/Infinity-Plasma-Themes/Infinity-Light-Plasma" $pkgdir/usr/share/plasma/desktoptheme/
+	cp -r "$srcdir/Infinity-Plasma-Themes/Infinity-Plasma-Themes/Infinity-Plasma" $pkgdir/usr/share/plasma/desktoptheme/
+	cp -r "$srcdir/Infinity-Plasma-Themes/Infinity-Plasma-Themes/Infinity-Solid-Plasma" $pkgdir/usr/share/plasma/desktoptheme/
+}

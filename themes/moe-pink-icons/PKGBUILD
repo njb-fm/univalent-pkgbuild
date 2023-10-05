@@ -1,0 +1,28 @@
+# Maintainer: Hayate Naka-mura <is01.njb at gmail dot com>
+pkgname=moe-pink-icons
+_themename="MoePinkIcons"
+_moebuntuver="22.04Lts"
+pkgver=201117
+pkgrel=1
+pkgdesc="default moebuntu icon theme"
+arch=('any')
+url="https://moebuntu.web.fc2.com"
+license=('GPL3')
+source=("https://github.com/mifjpn/Moebuntu-kawaiiUbuntu-ToysOriginal/releases/download/Moe(Kawaii)-MoeBUNTU${_moebuntuver}/${_themename}_${pkgver}.tar.xz")
+sha256sums=('5d35d7a6bc7aa0c1aa708fc71f58a1ee8d358f51ceef5da6eab935a4c6c42e5d')
+
+prepare() {
+	cd ${srcdir}/${_themename}/apps
+	mv "16/gnome-sound-properties (copia).png" "16/gnome-sound-properties_(copia).png"
+	mv "22/gnome-sound-properties (copia).png" "22/gnome-sound-properties_(copia).png"
+	mv "24/gnome-sound-properties (copia).png" "24/gnome-sound-properties_(copia).png"
+	mv "32/gnome-sound-properties (copia).png" "32/gnome-sound-properties_(copia).png"
+	mv "48/gnome-sound-properties (copia).png" "48/gnome-sound-properties_(copia).png"
+	mv "64/gnome-sound-properties (copia).png" "64/gnome-sound-properties_(copia).png"
+	mv "128/gnome-sound-properties (copia).png" "128/gnome-sound-properties_(copia).png"
+}
+
+package() {
+	mkdir -p ${pkgdir}/usr/share/icons
+	cp -r ${srcdir}/${_themename} ${pkgdir}/usr/share/icons/
+}
