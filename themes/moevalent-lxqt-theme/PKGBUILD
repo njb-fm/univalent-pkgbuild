@@ -4,7 +4,7 @@ pkgrel=1
 pkgdesc="default moevalent theme"
 arch=('any')
 url="https://sourceforge.net/projects/univalentgnulinux/files/aur/moevalent"
-license=('GPL3')
+license=('LGPL2.1')
 source=("${url}/moevalent-lxqt-${pkgver}.tar.gz")
 sha256sums=('e99eccec2d216a64eb8e2ca6861cc1d65c6c6008f09647e1f572328bd649b6e7')
 
