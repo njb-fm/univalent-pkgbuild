@@ -1,0 +1,25 @@
+# Maintainer: Hayate Nakamura (is01.njb at gmail dot com)
+pkgbase=mve-skel
+pkgname=('mve-skel-lxqt')
+pkgver=23.10
+pkgrel=1
+pkgdesc="Settings for Moevalent Versatile Environment"
+arch=('any')
+url="https://github.com/njb-fm/mve-skel"
+license=('BSD-3-Clause')
+optdepends=('nako: an AUR helper'
+            'neofetch: screenfetch utility'
+            'cups: printing support'
+            'system-config-printer: CUPS status applet')
+options=(!strip !emptydirs)
+source=("${pkgbase}-${pkgver}.tar.gz::${url}/archive/refs/tags/${pkgver}.tar.gz")
+md5sums=('d498eef4f7d0e76160a97e362cfb3de1')
+
+package_mve-skel-lxqt() {
+	replaces=('uvgl-skel-lxqt-moe' 'uvgl-skel-lxqt-moe-ja' 'uvgl-skel-lxqt-moe-en')
+
+	mkdir -p ${pkgdir}/etc
+	mkdir -p ${pkgdir}/usr/share/licenses/${pkgname}/
+	cp -r ${srcdir}/${pkgbase}-${pkgver}/lxqt/etc/* ${pkgdir}/etc
+	cp -r ${srcdir}/${pkgbase}-${pkgver}/LICENSE ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
+}
