@@ -1,0 +1,25 @@
+# Maintainer: Hayate Naka-mura <is01.njb at gmail dot com>
+pkgname=moe-blue-gtk-theme
+_themename="Moe-Blue"
+_moebuntuver="22.04Lts"
+pkgver=16
+pkgrel=1
+pkgdesc="Package of a Moe-Blue GTK theme"
+groups=("moe-gtk-theme")
+arch=("any")
+license=("GPL3")
+url="https://moebuntu.web.fc2.com"
+source=("https://github.com/mifjpn/Moebuntu-kawaiiUbuntu-ToysOriginal/releases/download/Moe(Kawaii)-MoeBUNTU${_moebuntuver}/${_themename}${pkgver}.tar.xz"
+        "index-theme.patch")
+sha256sums=("edfbc8e141d7196a2c98dce88b1ea6744e389a672e3cd8b5384f9fada96f8b80"
+            "cc3a057090ad673058a33a4159d63f415d2766326cfe02371e719bfdea7a1401")
+
+prepare() {
+	cd ${srcdir}
+	patch -p0 -i index-theme.patch
+}
+
+package() {
+	mkdir -p ${pkgdir}/usr/share/themes/
+	cp -r ${srcdir}/${_themename}${pkgver} ${pkgdir}/usr/share/themes/${_themename}
+}

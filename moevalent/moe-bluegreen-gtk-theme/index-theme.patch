@@ -1,0 +1,18 @@
+--- Moe-BlueGreen16/index.theme	2022-08-06 11:24:54.000000000 +0900
++++ Moe-BlueGreen16-patch/index.theme	2023-10-06 08:03:43.890972707 +0900
+@@ -1,12 +1,12 @@
+ [Desktop Entry]
+-Name=Moe-BlueGreen16
++Name=Moe-BlueGreen
+ Type=X-GNOME-Metatheme
+ Comment=Moebuntu theme that modified Ubuntu Yaru theme.
+ Encoding=UTF-8
+ 
+ [X-GNOME-Metatheme]
+-GtkTheme=Moe-BlueGreen16
+-MetacityTheme=Moe-BlueGreen16
++GtkTheme=Moe-BlueGreen
++MetacityTheme=Moe-BlueGreen
+ IconTheme=MoePinkIcons
+ CursorTheme=Yaru, DMZ-White
+ CursorSize=24

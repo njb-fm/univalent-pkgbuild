@@ -1,0 +1,25 @@
+# Maintainer: Hayate Naka-mura <is01.njb at gmail dot com>
+pkgname=moe-yellow-gtk-theme
+_themename="Moe-Yellow"
+_moebuntuver="22.04Lts"
+pkgver=16
+pkgrel=1
+pkgdesc="Package of a Moe-Yellow GTK theme"
+groups=("moe-gtk-theme")
+arch=("any")
+license=("GPL3")
+url="https://moebuntu.web.fc2.com"
+source=("https://github.com/mifjpn/Moebuntu-kawaiiUbuntu-ToysOriginal/releases/download/Moe(Kawaii)-MoeBUNTU${_moebuntuver}/${_themename}${pkgver}.tar.xz"
+        "index-theme.patch")
+sha256sums=("313812089e718e4790877049f998bb318eabfdfac1b0838bb81d0cdc1ca3e2ff"
+            "764355a1ac734fb47acdf3568d587ea6669647079211afb4ff7d420b7dbf15b0")
+
+prepare() {
+	cd ${srcdir}
+	patch -p0 -i index-theme.patch
+}
+
+package() {
+	mkdir -p ${pkgdir}/usr/share/themes/
+	cp -r ${srcdir}/${_themename}${pkgver} ${pkgdir}/usr/share/themes/${_themename}
+}

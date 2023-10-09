@@ -1,17 +1,18 @@
 # Maintainer: Hayate Naka-mura <is01.njb at gmail dot com>
-pkgname=moe-pink-gtk-theme
-_themename="Moe-Pink"
+pkgname=moe-orange-gtk-theme
+_themename="Moe-Orange"
 _moebuntuver="22.04Lts"
 pkgver=16
 pkgrel=1
-pkgdesc="Package of a Moe-Pink GTK theme"
+pkgdesc="Package of a Moe-Orange GTK theme"
+groups=("moe-gtk-theme")
 arch=("any")
 license=("GPL3")
 url="https://moebuntu.web.fc2.com"
 source=("https://github.com/mifjpn/Moebuntu-kawaiiUbuntu-ToysOriginal/releases/download/Moe(Kawaii)-MoeBUNTU${_moebuntuver}/${_themename}${pkgver}.tar.xz"
         "index-theme.patch")
-sha256sums=("da5c43bb1549003b6214f5f5bfe71bd8e941615ed7dd33458012c31a5fc59f81"
-            "7d957c948b81612557783535d65a494bbc695b5c0a99e2a5379c10f18717b310")
+sha256sums=("1ea2975ddde85e71cfe2f0a7125be21d43e0b242ef10cfe1d897294ed1885d35"
+            "d91fa54bc70ab97c397e03c84da9b13ce2a6ee9fb5fe426883d68b19ba642e19")
 
 prepare() {
 	cd ${srcdir}

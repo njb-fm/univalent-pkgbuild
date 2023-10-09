@@ -1,0 +1,25 @@
+# Maintainer: Hayate Naka-mura <is01.njb at gmail dot com>
+pkgname=moe-red-gtk-theme
+_themename="Moe-Red"
+_moebuntuver="22.04Lts"
+pkgver=16
+pkgrel=1
+pkgdesc="Package of a Moe-Red GTK theme"
+groups=("moe-gtk-theme")
+arch=("any")
+license=("GPL3")
+url="https://moebuntu.web.fc2.com"
+source=("https://github.com/mifjpn/Moebuntu-kawaiiUbuntu-ToysOriginal/releases/download/Moe(Kawaii)-MoeBUNTU${_moebuntuver}/${_themename}${pkgver}.tar.xz"
+        "index-theme.patch")
+sha256sums=("d33a997c30af92802cd81a11f8d44b999ff89a5c633cfb630f7c9c131b132a5b"
+            "339be7054d38e30be02092a0cafde6337ae76668b4bc8a8b74d35ae3f867ab80")
+
+prepare() {
+	cd ${srcdir}
+	patch -p0 -i index-theme.patch
+}
+
+package() {
+	mkdir -p ${pkgdir}/usr/share/themes/
+	cp -r ${srcdir}/${_themename}${pkgver} ${pkgdir}/usr/share/themes/${_themename}
+}

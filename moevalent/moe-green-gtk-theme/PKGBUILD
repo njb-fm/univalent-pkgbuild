@@ -1,0 +1,25 @@
+# Maintainer: Hayate Naka-mura <is01.njb at gmail dot com>
+pkgname=moe-green-gtk-theme
+_themename="Moe-Green"
+_moebuntuver="22.04Lts"
+pkgver=16
+pkgrel=1
+pkgdesc="Package of a Moe-Green GTK theme"
+groups=("moe-gtk-theme")
+arch=("any")
+license=("GPL3")
+url="https://moebuntu.web.fc2.com"
+source=("https://github.com/mifjpn/Moebuntu-kawaiiUbuntu-ToysOriginal/releases/download/Moe(Kawaii)-MoeBUNTU${_moebuntuver}/${_themename}${pkgver}.tar.xz"
+        "index-theme.patch")
+sha256sums=("193563758ba2e64dfc8389238f7d2253549dc1cb3da1df8bff53d5486e6a861c"
+            "ff1b3d48fc5b897780186cc3ae29de17729a13eaa22c60c52620a470a9be46b1")
+
+prepare() {
+	cd ${srcdir}
+	patch -p0 -i index-theme.patch
+}
+
+package() {
+	mkdir -p ${pkgdir}/usr/share/themes/
+	cp -r ${srcdir}/${_themename}${pkgver} ${pkgdir}/usr/share/themes/${_themename}
+}

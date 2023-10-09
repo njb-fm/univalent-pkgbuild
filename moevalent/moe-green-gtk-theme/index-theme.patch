@@ -1,0 +1,18 @@
+--- Moe-Green16/index.theme	2022-08-06 11:24:54.000000000 +0900
++++ Moe-Green16-patch/index.theme	2023-10-06 08:03:43.890972707 +0900
+@@ -1,12 +1,12 @@
+ [Desktop Entry]
+-Name=Moe-Green16
++Name=Moe-Green
+ Type=X-GNOME-Metatheme
+ Comment=Moebuntu theme that modified Ubuntu Yaru theme.
+ Encoding=UTF-8
+ 
+ [X-GNOME-Metatheme]
+-GtkTheme=Moe-Green16
+-MetacityTheme=Moe-Green16
++GtkTheme=Moe-Green
++MetacityTheme=Moe-Green
+ IconTheme=MoePinkIcons
+ CursorTheme=Yaru, DMZ-White
+ CursorSize=24

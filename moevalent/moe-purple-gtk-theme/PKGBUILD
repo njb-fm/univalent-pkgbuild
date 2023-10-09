@@ -1,0 +1,25 @@
+# Maintainer: Hayate Naka-mura <is01.njb at gmail dot com>
+pkgname=moe-purple-gtk-theme
+_themename="Moe-Purple"
+_moebuntuver="22.04Lts"
+pkgver=16
+pkgrel=1
+pkgdesc="Package of a Moe-Purple GTK theme"
+groups=("moe-gtk-theme")
+arch=("any")
+license=("GPL3")
+url="https://moebuntu.web.fc2.com"
+source=("https://github.com/mifjpn/Moebuntu-kawaiiUbuntu-ToysOriginal/releases/download/Moe(Kawaii)-MoeBUNTU${_moebuntuver}/${_themename}${pkgver}.tar.xz"
+        "index-theme.patch")
+sha256sums=("8306e237bc8e36e8d5265940ff70d45559c5cb0bd96f99010a1a91226203a875"
+            "34ef27cf1cdf251f886c7bf9bd6345019a3eb9082ccaa3a6f2cf5e63bba7f495")
+
+prepare() {
+	cd ${srcdir}
+	patch -p0 -i index-theme.patch
+}
+
+package() {
+	mkdir -p ${pkgdir}/usr/share/themes/
+	cp -r ${srcdir}/${_themename}${pkgver} ${pkgdir}/usr/share/themes/${_themename}
+}
