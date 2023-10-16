@@ -1,0 +1,20 @@
+# Maintainer: Hayate Nakamura <is01.njb at gmail dot com>
+
+pkgname=univalent-tools
+pkgver=3.0
+pkgrel=1
+pkgdesc='System setting tools written in zenity'
+arch=('any')
+url='https://github.com/njb-fm/univalent-tools'
+license=('BSD-3-clause')
+depends=('nm-connection-editor' 'pamac' 'arandr')
+optdepends=('univalent-logo: univalent icon'
+            'pavucontrol: volume control'
+            'pavucontrol-qt: volume control')
+source=(${pkgname}-${pkgver}.tar.gz::"${url}/archive/refs/tags/${pkgver}.tar.gz")
+md5sums=('182606a1fe4ce21036a9abfe24e91d28')
+
+package() {
+  cd "${srcdir}/${pkgname}-${pkgver}/"
+  make DESTDIR="$pkgdir" PREFIX=/usr install
+}
