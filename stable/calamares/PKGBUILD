@@ -1,0 +1,72 @@
+# Maintainer: Hayate Nakamura <is01.njb at gmail dot com>
+
+pkgname=calamares
+pkgver=3.2.62
+pkgrel=3
+pkgdesc='Distribution-independent installer framework'
+arch=('i686' 'x86_64')
+license=(GPL)
+url="https://github.com/calamares/calamares/releases"
+depends=('kconfig5' 'kcoreaddons5' 'kiconthemes5' 'ki18n5' 'kio5' 'solid5' 'yaml-cpp' 'kpmcore>=4.2.0' 'mkinitcpio-openswap'
+         'boost-libs' 'ckbcomp' 'hwinfo' 'qt5-svg' 'polkit-qt5' 'gtk-update-icon-cache' 'plasma-framework5'
+         'qt5-xmlpatterns' 'squashfs-tools' 'libpwquality' 'efibootmgr' 'icu')
+conflicts=()
+makedepends=('extra-cmake-modules' 'qt5-tools' 'qt5-translations' 'git' 'boost')
+backup=('usr/share/calamares/modules/bootloader.conf'
+        'usr/share/calamares/modules/displaymanager.conf'
+        'usr/share/calamares/modules/initcpio.conf'
+        'usr/share/calamares/modules/unpackfs.conf')
+
+source=("${pkgname}-${pkgver}::$url/download/v${pkgver}/${pkgname}-${pkgver}.tar.gz"
+	"calamares.desktop"
+	)
+
+sha256sums=('a0fbcec2a438693753fc174220356119ad7adb8a2b19c317518aa1cb025d6dd0'
+            '536d17352dd590ef5aaa02eac8bcde2d9b7fd2c2cc3db20bece6270e42fad329')
+
+pkgver() {
+	cd ${srcdir}/${pkgname}-${pkgver}
+	_ver="$(cat CMakeLists.txt | grep -m3 -e "  VERSION" | grep -o "[[:digit:]]*" | xargs | sed s'/ /./g')"
+	_git=".r$(git rev-list --count HEAD).$(git rev-parse --short HEAD)"
+	printf '%s%s' "${_ver}" #"${_git}"
+}
+
+prepare() {
+
+	sed -i -e 's/"Install configuration files" OFF/"Install configuration files" ON/' "$srcdir/${pkgname}-${pkgver}/CMakeLists.txt"
+	sed -i -e 's/# DEBUG_FILESYSTEMS/DEBUG_FILESYSTEMS/' "$srcdir/${pkgname}-${pkgver}/CMakeLists.txt"
+	sed -i -e 's/etc\/sddm.conf/etc\/sddm.conf.d\/kde_settings.conf/' "$srcdir/${pkgname}-${pkgver}/src/modules/displaymanager/main.py"
+
+	# add pkgrelease to patch-version
+	cd ${pkgname}-${pkgver}
+	_patchver="$(cat CMakeLists.txt | grep -m3 -e CALAMARES_VERSION_PATCH | grep -o "[[:digit:]]*" | xargs)"
+	sed -i -e "s|CALAMARES_VERSION_PATCH $_patchver|CALAMARES_VERSION_PATCH $_patchver-$pkgrel|g" CMakeLists.txt
+
+}
+
+build() {
+	cd ${pkgname}-${pkgver}
+
+	mkdir -p build
+	cd build
+	cmake .. \
+	-DCMAKE_BUILD_TYPE=Release \
+	-DCMAKE_INSTALL_PREFIX=/usr \
+	-DCMAKE_INSTALL_LIBDIR=lib \
+	-DWITH_PYTHONQT=OFF \
+	-DWITH_KF5DBus=OFF \
+	-DBoost_NO_BOOST_CMAKE=ON \
+	-DWEBVIEW_FORCE_WEBKIT=OFF \
+	-DSKIP_MODULES="webview tracking interactiveterminal initramfs \
+	initramfscfg dracut dracutlukscfg \
+	dummyprocess dummypython dummycpp \
+	dummypythonqt services-openrc \
+	keyboardq localeq welcomeq"
+	make
+}
+
+package() {
+	cd ${pkgname}-${pkgver}/build
+	make DESTDIR="$pkgdir" install
+	install -Dm755 "${srcdir}/calamares.desktop" "$pkgdir/usr/share/applications/calamares.desktop"
+}

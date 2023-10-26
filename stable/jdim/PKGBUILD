@@ -1,0 +1,25 @@
+# Maintainer: Hayate Naka-mura <is01.njb at gmail dot com>
+
+pkgname=jdim
+pkgver=0.10.1
+pkgrel=1
+pkgdesc="A 2channel browser written in C++ using gtkmm3."
+arch=('i686' 'x86_64')
+url="https://github.com/JDimproved/JDim"
+license=('GPL2')
+makedepends=('meson')
+depends=('gnutls' 'libsm' 'gtkmm3')
+conflicts=('jd' 'jd-svn' 'jd-gtk3' )
+source=("${url}/archive/refs/tags/JDim-v${pkgver}.tar.gz")
+sha256sums=('884fef563c0ff314426d3b35887ad5dafe9456e1ace6792f5772794937cf7a17')
+
+build() {
+  cd "${srcdir}/JDim-JDim-v${pkgver}"
+  meson setup -Dunity=on builddir --prefix=/usr
+  ninja -C builddir
+}
+
+package() {
+  cd "${srcdir}/JDim-JDim-v${pkgver}"
+  meson install -C builddir --destdir $pkgdir
+} 
