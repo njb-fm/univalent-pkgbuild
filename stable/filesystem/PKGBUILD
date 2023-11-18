@@ -1,11 +1,11 @@
 # Maintainer: Hayate Nakamura <is01.njb@gmail.com>
 
 pkgname=filesystem
-pkgver=2023.10.21univalent23.10.1
+pkgver=2023.11.18univalent23.10.1
 pkgrel=1
 pkgdesc='Base Univalent Versatile Environment files'
 arch=('x86_64')
-license=('BSD-3-Clause' 'custom:njb-media')
+license=('GPL-3.0-or-later' 'BSD-3-Clause' 'custom:njb-media')
 url='https://njb-fm.github.io/'
 depends=('iana-etc')
 backup=('etc/crypttab' 'etc/fstab' 'etc/group' 'etc/gshadow' 'etc/host.conf'
@@ -16,7 +16,8 @@ source=('crypttab' 'env-generator' 'fstab' 'group' 'gshadow' 'host.conf' 'hosts'
         'issue' 'ld.so.conf' 'locale.sh' 'nsswitch.conf' 'os-release' 'profile'
         'passwd' 'resolv.conf' 'securetty' 'shadow' 'shells' 'sysctl' 'sysusers'
         'tmpfiles' 'subuid' 'subgid' 'archlinux-logo.png' 'archlinux-logo.svg'
-        'archlinux-logo-text.svg' 'archlinux-logo-text-dark.svg' 'LICENSE')
+        'archlinux-logo-text.svg' 'archlinux-logo-text-dark.svg'
+        'LICENSE.BSD3' 'MEDIA_GUIDELINE.md')
 sha256sums=('e03bede3d258d680548696623d5979c6edf03272e801a813c81ba5a5c64f4f82'
             'ed0cb4f1db4021f8c3b5ce78fdf91d2c0624708f58f36c9cf867f4d93c3bc6da'
             'e54626e74ed8fee4173b62a545ab1c3a3a069e4217a0ee8fc398d9933e9c1696'
@@ -29,7 +30,7 @@ sha256sums=('e03bede3d258d680548696623d5979c6edf03272e801a813c81ba5a5c64f4f82'
             '8ca2d8eef6fb5143c9ef7e9174ccfef59ac7ad2deee243574cd10c763156cc10'
             'c8ee7a9faf798caab178ec51afae4146f1efd8a716b7acedf28345b6c75f9697'
             '43e5e1f2d24cb0ea36a0a902f538cc0416302fe4efc021c7a1c8d204d7205f78'
-            '5e4088ad8d0853d390fa303f6be8c3f69c33834200cba9e90f7849f1993ca8d0'
+            '8f08231922fe185d3132f9aedded5cd688fb7c482a6f6f272402ded82fa4849a'
             '5e06477834f51abf42ea4e8dc199632afc6afbfd8c44354685a271e9a48d2c0a'
             '5557d8e601b17a80d1ea7de78a9869be69637cb6a02fbfe334e22fdf64e61d4c'
             'd88be2b45b43605ff31dd83d6a138069b6c2e92bc8989b7b9ab9eba8da5f8c7b'
@@ -44,8 +45,8 @@ sha256sums=('e03bede3d258d680548696623d5979c6edf03272e801a813c81ba5a5c64f4f82'
             '0dd9d0c4b0892719e129bc5c2fca3e491107475b41efbcae90d0c77980b87fc3'
             'b5eb63f59ba1eddb9ecc7f59f8717ab679b3176854b0eeece00b5901f8ba6cf5'
             'ce57ebf0b75b166d18eef6225e32f13b32f075fd17048e19743b3038d50cb149'
-            '9f88706fd7e02e84097d062a9399599b448debedb9e48530c69094620eb5f59c'
-)
+            '4febbbbd4f3006d9c5802ffdc9fd6a1c4f3a6ded241b940f46f00356d98de3e4'
+            '130c6a60603fb769ed5d488bf213ce292fc5fb3558d89d179961d979bb83314c')
 
 package() {
   cd "$pkgdir"
@@ -132,7 +133,8 @@ package() {
   install -D -m644 "$srcdir"/archlinux-logo{.png,.svg,-text.svg,-text-dark.svg} usr/share/pixmaps
 
   # add license
-  install -D -m644 "$srcdir"/LICENSE usr/share/licenses/${pkgname}/LICENSE
+  install -D -m644 "$srcdir"/LICENSE.BSD3 usr/share/licenses/${pkgname}/LICENSE.BSD3
+  install -D -m644 "$srcdir"/MEDIA_GUIDELINE.md usr/share/licenses/${pkgname}/MEDIA_GUIDELINE.md
 }
 
 # vim:set ts=2 sw=2 et:
