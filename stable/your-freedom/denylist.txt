@@ -1,0 +1,37 @@
+# U.V.E. Denied Packages List
+
+# syntax
+# original-package:[replacement]:[ref]:[id]:short description
+
+archfetch::njb:1:[branding] Includes Arch's branding
+archinstall::njb:1:[branding] Includes Arch's branding
+archlinux-artwork::njb:1:[branding] Includes Arch's branding
+archlinux-lxdm-theme-full::njb:1:[branding] Includes Arch's branding
+archlinux-lxdm-theme::njb:1:[branding] Includes Arch's branding
+archlinux-lxqt-theme::njb:1:[branding] Includes Arch's branding
+archlinux-themes-balou::njb:1:[branding] Includes Arch's branding
+archlinux-themes-sddm::njb:1:[branding] Includes Arch's branding
+archlinux-themes-slim::njb:1:[branding] Includes Arch's branding
+archlinux-wallpaper::njb:1:[branding] Includes Arch's branding
+fbsplash-theme-arch-black-extras::njb:1:[branding] Includes Arch's branding
+fbsplash-theme-arch-black::njb:1:[branding] Includes Arch's branding
+fox-neat-wallpaper::njb:1:[branding] Includes Arch's branding
+keycloak-archlinux-theme::njb:1:[branding] Includes Arch's branding
+lightdm-webkit-archsingle-theme-git::njb:1:[branding] Includes Arch's branding
+lightdm-webkit-theme-aether-git::njb:1:[branding] Includes Arch's branding
+lightdm-webkit-theme-aether::njb:1:[branding] Includes Arch's branding
+lightdm-webkit-theme-archlinux::njb:1:[branding] Includes Arch's branding
+lxdm-themes::njb:1:[branding] Includes Arch's branding
+plasma-theme-archlinux::njb:1:[branding] Includes Arch's branding
+plymouth-theme-arch-charge-big::njb:1:[branding] Includes Arch's branding
+plymouth-theme-arch-charge-gdm-spinner::njb:1:[branding] Includes Arch's branding
+plymouth-theme-arch-charge-gdm::njb:1:[branding] Includes Arch's branding
+plymouth-theme-arch-charge::njb:1:[branding] Includes Arch's branding
+plymouth-theme-arch-gnomish::njb:1:[branding] Includes Arch's branding
+plymouth-theme-arch10::njb:1:[branding] Includes Arch's branding
+plymouth-theme-archlinux::njb:1:[branding] Includes Arch's branding
+plymouth-theme-dark-arch::njb:1:[branding] Includes Arch's branding
+sddm-archlinux-theme-git::njb:1:[branding] Includes Arch's branding
+slim-theme-burning-arch.git::njb:1:[branding] Includes Arch's branding
+slim-theme-rainbowdash-archlinux::njb:1:[branding] Includes Arch's branding
+xde-theme-archlinux::njb:1:[branding] Includes Arch's branding

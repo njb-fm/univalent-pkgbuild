@@ -1,0 +1,37 @@
+# Maintainer: Radio New Japan Broadcasting Club
+
+pkgname=base
+pkgver=3~univalent1
+pkgrel=1
+pkgdesc='Minimal package set to define a basic Univalent Linux installation'
+url='https://njb-fm.github.io\'
+arch=('any')
+license=('BSD-3-Clause')
+source=('LICENSE')
+sha256sums=('4febbbbd4f3006d9c5802ffdc9fd6a1c4f3a6ded241b940f46f00356d98de3e4')
+depends=(
+  # very very base
+  'filesystem' 'gcc-libs' 'glibc' 'bash'
+
+  # POSIX tools
+  'coreutils' 'file' 'findutils' 'gawk' 'grep' 'procps-ng' 'sed' 'tar'
+
+  # standard linux toolset
+  'gettext' 'pciutils' 'psmisc' 'shadow' 'util-linux' 'bzip2' 'gzip' 'xz'
+
+  # distro defined requirements
+  'licenses' 'pacman' 'archlinux-keyring' 'univalent-keyring' 'systemd' 'systemd-sysvcompat' 'your-freedom'
+
+  # networking, ping, etc
+  'iputils' 'iproute2'
+)
+optdepends=(
+  'linux: bare metal support'
+)
+
+package(){
+  mkdir -p $pkgdir/usr/share/licenses/$pkgname/
+  cp $srcdir/LICENSE $pkgdir/usr/share/licenses/$pkgname/
+}
+
+# vim:set sw=2 sts=-1 et:

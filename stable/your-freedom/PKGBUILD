@@ -1,0 +1,51 @@
+# Maintainer: Radio New Japan Broadcasting Club
+
+pkgname=your-freedom
+pkgver=20231120
+pkgrel=1
+pkgdesc='This meta-package conflicts with all known Arch packages that are incompatible with NJB'
+url='https://njb-fm.github.io/'
+arch=('any')
+license=('BSD-3-Clause')
+source=('denylist.txt' 'LICENSE')
+sha256sums=('bd91fd94b062cfcbf6f71f8623df79abc419043addc9f9657318f2f35572fd2e'
+           '4febbbbd4f3006d9c5802ffdc9fd6a1c4f3a6ded241b940f46f00356d98de3e4')
+conflicts=('archfetch'
+           'archinstall'
+           'archlinux-artwork'
+           'archlinux-lxdm-theme-full'
+           'archlinux-lxdm-theme'
+           'archlinux-lxqt-theme'
+           'archlinux-themes-balou'
+           'archlinux-themes-sddm'
+           'archlinux-themes-slim'
+           'archlinux-wallpaper'
+           'fbsplash-theme-arch-black-extras'
+           'fbsplash-theme-arch-black'
+           'fox-neat-wallpaper'
+           'keycloak-archlinux-theme'
+           'lightdm-webkit-archsingle-theme-git'
+           'lightdm-webkit-theme-aether-git'
+           'lightdm-webkit-theme-aether'
+           'lightdm-webkit-theme-archlinux'
+           'lxdm-themes'
+           'plasma-theme-archlinux'
+           'plymouth-theme-arch-charge-big'
+           'plymouth-theme-arch-charge-gdm-spinner'
+           'plymouth-theme-arch-charge-gdm'
+           'plymouth-theme-arch-charge'
+           'plymouth-theme-arch-gnomish'
+           'plymouth-theme-arch10'
+           'plymouth-theme-archlinux'
+           'plymouth-theme-dark-arch'
+           'sddm-archlinux-theme-git'
+           'slim-theme-burning-arch-git'
+           'slim-theme-rainbowdash-archlinux'
+           'xde-theme-archlinux')
+
+package(){
+  mkdir -p $pkgdir/usr/share/doc/$pkgname
+  cp $srcdir/denylist.txt $pkgdir/usr/share/doc/$pkgname
+  mkdir -p $pkgdir/usr/share/licenses/$pkgname
+  cp $srcdir/LICENSE $pkgdir/usr/share/licenses/$pkgname
+}
