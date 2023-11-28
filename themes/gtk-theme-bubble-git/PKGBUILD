@@ -1,4 +1,4 @@
-# Maintainer: Luis Martinez <luis dot martinez at tuta dot io>
+# Maintainer: Hayate Naka-mura <hayatehay.njb at gmail dot com>
 pkgbase=gtk-theme-bubble-git
 pkgname=('gtk-theme-bubble-dark-blue-git'
          'gtk-theme-bubble-dark-red-git'

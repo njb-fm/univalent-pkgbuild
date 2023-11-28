@@ -1,4 +1,4 @@
-# Maintainer: Hayate Nakamura (is01.njb at gmail dot com)
+# Maintainer: Hayate Nakamura (hayatehay.njb at gmail dot com)
 pkgbase=uve-skel
 pkgname=('uve-skel-budgie' 'uve-skel-cinnamon' 'uve-skel-gnome' 'uve-skel-i3wm' 'uve-skel-lxqt' 'uve-skel-mate' 'uve-skel-plasma' 'uve-skel-xfce')
 pkgver=23.09

@@ -1,4 +1,4 @@
-# Maintainer: Hayate Nakamura (is01.njb at gmail dot com)
+# Maintainer: Hayate Nakamura (hayatehay.njb at gmail dot com)
 pkgbase=mve-skel
 pkgname=('mve-skel-lxqt')
 pkgver=23.10

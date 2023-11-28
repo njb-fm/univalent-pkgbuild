@@ -1,15 +1,16 @@
-# Maintainer: Hayate Nakamura (is01.njb at gmail dot com)
-pkgname=uve-skel-deepin-git
+# Maintainer: Hayate Nakamura (hayatehay.njb at gmail dot com)
+pkgname=uve-skel-trinity-git
 pkgbase=uve-skel
-pkgver=123.c47caa4
+pkgver=124.4fa5ae8
 pkgrel=1
-pkgdesc="Settings for Dunivalent Versatile Environment"
+pkgdesc="Settings for Trivalent Versatile Environment"
 arch=('any')
 url="https://github.com/njb-fm/uve-skel"
 license=('GPL3')
-provides=('uve-skel' 'uve-skel-deepin')
+replaces=('uvgl-skel-trinity-git')
+provides=('uve-skel' 'uve-skel-trinity')
 conflicts=('uve-skel')
-depends=('deepin-desktop-base')
+depends=('xcape' 'udiskie')
 makedepends=('git')
 optdepends=('yay: an AUR helper'
             'neofetch: screenfetch utility'
@@ -26,5 +27,5 @@ pkgver() {
 
 package() {
 	install -dm755 ${pkgdir}/etc
-	cp -r ${srcdir}/${pkgbase}/deepin/etc/* ${pkgdir}/etc
+	cp -r ${srcdir}/${pkgbase}/trinity/etc/* ${pkgdir}/etc
 }

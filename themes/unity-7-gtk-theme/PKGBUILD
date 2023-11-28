@@ -1,3 +1,4 @@
+# Maintainer: Hayate Naka-mura <hayatehay.njb at gmail dot com>
 pkgname=unity-7-gtk-theme
 _themename="Unity-7"
 pkgver=1.0
