@@ -1,14 +1,13 @@
 # Maintainer : Hayate Nakamura <hayatehay.njb at gmail dot com>
 
 pkgname=trinity-keyring
-pkgver=20230608
+pkgver=20231211
 pkgrel=1
 pkgdesc="Trinity PPA's PGP keyring"
 arch=('any')
-license=('GPL3')
+license=('GPL2')
 url=https://trinitydesktop.org/
 _url=https://mirror.ppa.trinitydesktop.org/
-license=('GPL')
 validgpgkeys=('D6D6FAA25E9A3E4ECD9FBDBEC93AF1698685AD8B')
 install="${pkgname}.install"
 source=("trinity.gpg"

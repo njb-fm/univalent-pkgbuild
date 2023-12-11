@@ -1,0 +1,17 @@
+# HTTPS Servers
+Server = https://mirror.ppa.trinitydesktop.org/$repo/archlinux/$arch
+Server = https://tde-mirror.yosemite.net/$repo/archlinux/$arch
+Server = https://cassini.mirrorservice.org/sites/trinitydesktop.org/$repo/archlinux/$arch
+Server = https://galileo.mirrorservice.org/sites/trinitydesktop.org/$repo/archlinux/$arch
+Server = https://ftp.fau.de/$repo/archlinux/$arch
+Server = https://tde-mirror-01.inet-design.com//$repo/archlinux/$arch
+Server = https://mirror.nasutek.com//$repo/archlinux/$arch
+
+# HTTP Servers
+Server = http://mirror.ppa.trinitydesktop.org/$repo/archlinux/$arch
+Server = http://tde-mirror.yosemite.net/$repo/archlinux/$arch
+Server = http://cassini.mirrorservice.org/sites/trinitydesktop.org/$repo/archlinux/$arch
+Server = http://galileo.mirrorservice.org/sites/trinitydesktop.org/$repo/archlinux/$arch
+Server = http://ftp.fau.de/$repo/archlinux/$arch
+Server = http://tde-mirror-01.inet-design.com//$repo/archlinux/$arch
+Server = http://mirror.nasutek.com//$repo/archlinux/$arch

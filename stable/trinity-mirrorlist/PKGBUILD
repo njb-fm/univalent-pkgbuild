@@ -1,0 +1,17 @@
+# Maintainer : Hayate Nakamura <hayatehay.njb at gmail dot com>
+pkgname=trinity-mirrorlist
+pkgver=20231221
+pkgrel=1
+pkgdesc='UVE repository mirrorlists'
+license=('BSD-3-Clause')
+arch=('any')
+url='https://mirror.ppa.trinitydesktop.org/'
+source=("trinity-mirrorlist"
+        "LICENSE")
+md5sums=('d8cd52cd73acf677631d41d9ab4096b8'
+         '7a009c7c289fc5bd662664370b264183')
+
+package() {
+    install -Dm644 "${srcdir}/trinity-mirrorlist" "${pkgdir}/etc/pacman.d/trinity-mirrorlist"
+    install -Dm644 "${srcdir}/LICENSE" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+}

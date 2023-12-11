@@ -1,19 +1,25 @@
 # Maintainer : Hayate Nakamura <hayatehay.njb at gmail dot com>
 
 pkgname=univalent-keyring
-pkgver=20230722
-pkgrel=2
+pkgver=20231211
+pkgrel=1
 pkgdesc='Univalent PGP keyring'
 arch=('any')
-license=('GPL3')
+license=('BSD-3-Clause')
 url="https://github.com/njb-fm/univalent-keyring/"
 validgpgkeys=('5C8720CE812E2704B85683483D9979F036F612F2')
 install="${pkgname}.install"
 source=("https://sourceforge.net/projects/univalentgnulinux/files/sources/${pkgname}/${pkgname}.tar.gz"
-        "https://sourceforge.net/projects/univalentgnulinux/files/sources/${pkgname}/${pkgname}.tar.gz.sig")
+        "https://sourceforge.net/projects/univalentgnulinux/files/sources/${pkgname}/${pkgname}.tar.gz.sig"
+	"LICENSE")
 sha512sums=('20bdd6e45ac038b501311dede232ec3c1c61fec306f8f6abd3d57b5c7566cfa772b3d800588a57cd078622e08ae600a07dfe507470a63dcec492b244ee3e3954'
-            'ebc1888552786c72efdfaa50f21007649762244571daf5de6574479a444c0350a05c6a630668e5a85f8c65b417c65361c8224ac10ed5e5ef80a612c576844763')
+            'ebc1888552786c72efdfaa50f21007649762244571daf5de6574479a444c0350a05c6a630668e5a85f8c65b417c65361c8224ac10ed5e5ef80a612c576844763'
+            '3dd64ddddd8ea9fe76e84fb30ad4bfe90cc811be2e66bbfea45f2fcae496dbc51ad8c3e764d120048f34b25e97b99dea18a1521b639a097b770657574dcedc52')
 package() {
     cd "${srcdir}/${pkgname}"
     make PREFIX=/usr DESTDIR=${pkgdir} install
+
+    # add license
+    mkdir -p ${pkgdir}/usr/share/licenses/${pkgname}
+    cp "${srcdir}/LICENSE" ${pkgdir}/usr/share/licenses/${pkgname}/LICENSE
 }
