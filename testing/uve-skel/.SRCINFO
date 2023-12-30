@@ -1,0 +1,55 @@
+pkgbase = uve-skel
+	pkgdesc = Settings for Univalent Versatile Environment
+	pkgver = 23.07
+	pkgrel = 1
+	url = https://github.com/njb-fm/uve-skel
+	arch = any
+	license = GPL3
+	optdepends = yay: an AUR helper
+	optdepends = neofetch: screenfetch utility
+	optdepends = cups: printing support
+	optdepends = system-config-printer: CUPS status applet
+	options = !strip
+	options = !emptydirs
+	source = uve-skel-23.07.tar.gz::https://github.com/njb-fm/uve-skel/archive/refs/tags/v23.07.tar.gz
+	md5sums = 1d87dece52da24122a350da973b57efa
+
+pkgname = uve-skel-cinnamon
+	replaces = uvgl-skel-cinnamon
+	replaces = uvgl-skel-cinnamon-ja
+	replaces = uvgl-skel-cinnamon-en
+
+pkgname = uve-skel-gnome
+	replaces = uvgl-skel-gnome
+	replaces = uvgl-skel-gnome-ja
+	replaces = uvgl-skel-gnome-en
+
+pkgname = uve-skel-i3wm
+	replaces = uvgl-skel-i3wm
+	replaces = uvgl-skel-i3wm-ja
+	replaces = uvgl-skel-i3wm-en
+
+pkgname = uve-skel-lxqt
+	replaces = uvgl-skel-lxqt
+	replaces = uvgl-skel-lxqt-ja
+	replaces = uvgl-skel-lxqt-en
+
+pkgname = uve-skel-mate
+	replaces = uvgl-skel-mate
+	replaces = uvgl-skel-mate-ja
+	replaces = uvgl-skel-mate-en
+
+pkgname = uve-skel-plasma
+	replaces = uvgl-skel-plasma
+	replaces = uvgl-skel-plasma-ja
+	replaces = uvgl-skel-plasma-en
+
+pkgname = uve-skel-unity
+	replaces = uvgl-skel-unity
+	replaces = uvgl-skel-unity-ja
+	replaces = uvgl-skel-unity-en
+
+pkgname = uve-skel-xfce
+	replaces = uvgl-skel-xfce
+	replaces = uvgl-skel-xfce-ja
+	replaces = uvgl-skel-xfce-en
