@@ -1,16 +1,16 @@
-# Maintainer: Hayate Nakamura <hayatehay.njb at gmail dot com>
+# Maintainer: Hayate Naka-mura <hayatehay.njb at gmail dot com>
 
 pkgname=univalent-tools
-pkgver=3.1
+pkgver=3.2
 pkgrel=1
-pkgdesc='System setting tools written in bash & whiptail'
+pkgdesc='System setting tools written in bash & zenity'
 arch=('any')
 url='https://github.com/njb-fm/univalent-tools'
 license=('BSD-3-Clause')
-depends=('networkmanager' 'pamac' 'univalent-logo' 'zenity' 'gksu')
+depends=('networkmanager' 'tkpacman' 'univalent-logo' 'zenity')
 opedepends=('pavucontrol' 'pavucontrol-qt')
 source=(${pkgname}-${pkgver}.tar.gz::"${url}/archive/refs/tags/${pkgver}.tar.gz")
-md5sums=('bc431c0b0063268913839e0fc9ad92fd')
+md5sums=('cee2e2a88059a3134d1dfcb7777bf90d')
 
 package() {
   cd "${srcdir}/${pkgname}-${pkgver}/"

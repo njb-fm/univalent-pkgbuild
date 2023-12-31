@@ -1,6 +1,6 @@
 # Maintainer: Hayate Nakamura (hayatehay.njb at gmail dot com)
 pkgname=calamares-settings-univalent
-pkgver=23.10.1
+pkgver=24.01
 pkgrel=1
 pkgdesc="UVE Calamares Settings and Branding"
 arch=('any')
@@ -11,7 +11,7 @@ provides=("${pkgname}")
 replaces=("univabootmnt")
 options=(!strip !emptydirs)
 source=(${pkgname}-${pkgver}.tar.gz::"${url}/archive/refs/tags/${pkgver}.tar.gz")
-md5sums=('b37dfbfdb1d361851e5edc81a6fad435')
+md5sums=('51e831332f5ff6bf949bea093452e45b')
 
 package() {
 	cd ${srcdir}/${pkgname}-${pkgver}

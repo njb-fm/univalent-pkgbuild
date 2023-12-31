@@ -4,9 +4,9 @@
 # Contributor: John Gerritse <reaphsharc@gmail.com>
 
 pkgname=lsb-release
-pkgver=2.0.r53.a86f885univalent23.10.1
+pkgver=2.0.r53.a86f885+univalent24.01
 _commit=a86f885597a91cd41837d706bf6a08d4c239a54b
-_uvever=23.10.1
+_uvever=24.01
 pkgrel=1
 pkgdesc="LSB version query program"
 arch=('any')
@@ -19,13 +19,13 @@ source=("git+https://github.com/LinuxStandardBase/lsb-samples.git#commit=$_commi
         'lsb_release_description.patch'
         'lsb_release_make_man_page_reproducible.patch')
 sha512sums=('SKIP'
-            'ac2ea055e06ffd7d023f5f1a33e0880eb55a09ac0503785032d132e7c38f3e795f77ca89d6e94e33a750275782072bc6b084e4159213e95a8b46718bb3d4ae01'
+            '9de8240a2229cca74001c9583d4db31d16dcdf5e2202db29712052f36a55e83f8b522477dafa9d41438ad8d21c478cfeef20cba790b2bf847312dcafefa0541c'
             '145ef64f90f5e6cc59075679e640cf7c1ad02617c12eff17f10b05c1cc219591fdba1b27be2b2c8480742aed24ce81d6a7badcbaca6772faea4ebc6a55695b62'
             'ab64a1d236d00a30a48e3af2c5bdfa0aad0183ebe0df4f2b0c6af58530c2a1fdac1b0a5cdd8a1800d5f8405f44562603cddf28eb318b5badaabd49a82e0b7e83')
 
 pkgver() {
 	cd lsb-samples/lsb_release/src
-	printf "%s.r%s.%sunivalent${_uvever}" "$(grep -Po 'SCRIPTVERSION="\K[^"]*' lsb_release)" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+	printf "%s.r%s.%s+univalent${_uvever}" "$(grep -Po 'SCRIPTVERSION="\K[^"]*' lsb_release)" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
 }
 
 prepare() {
