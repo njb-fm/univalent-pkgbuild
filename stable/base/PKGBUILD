@@ -2,9 +2,9 @@
 
 pkgname=base
 pkgver=3~univalent1
-pkgrel=1
+pkgrel=2
 pkgdesc='Minimal package set to define a basic Univalent Linux installation'
-url='https://njb-fm.github.io\'
+url='https://njb-fm.github.io/'
 arch=('any')
 license=('BSD-3-Clause')
 source=('LICENSE')

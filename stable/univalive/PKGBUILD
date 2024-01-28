@@ -1,21 +1,24 @@
-# Maintainer: Hayate Nakamura <hayatehay.njb at gmail dot com>
+# Maintainer: Hayate Naka-mura <hayatehay.njb at gmail dot com>
 
 pkgname=univalive
-pkgver=23.06
-pkgrel=2
+pkgver=24.01
+pkgrel=1
 pkgdesc='Copy calamares icon'
 arch=('any')
 url="https://w.atwiki.jp/univalent-ja/"
-license=('LGPL')
-depends=('calamares')
+license=('BSD-3-Clause')
+optdepends=('calamares')
 source=("univalent-calamares-desktop"
-        "univalent-calamares-desktop.desktop")
+        "univalent-calamares-desktop.desktop"
+	"LICENSE")
 
 sha256sums=('9f40d45517ff9898dca502372c9abdb3a2a8c4cb268547805b45c8fa6b8f2581'
-            '91ede66df0718d93449460e85f28d3804b1207a4ef41d7424cbce175cabe1598')
+            '91ede66df0718d93449460e85f28d3804b1207a4ef41d7424cbce175cabe1598'
+            'd3f85f177f833e10b85f6903315edd32d3b558a22069cff4795425b888b00510')
 
 package() {
 	cd ${srcdir}
 	install -Dm755 "${srcdir}/univalent-calamares-desktop" "${pkgdir}/usr/bin/univalent-calamares-desktop"
 	install -Dm755 "${srcdir}/univalent-calamares-desktop.desktop" "${pkgdir}/etc/xdg/autostart/univalent-calamares-desktop.desktop"
+	install -Dm755 "${srcdir}/LICENSE" "${pkgdir}/usr/licenses/${pkgname}/LICENSE"
 }

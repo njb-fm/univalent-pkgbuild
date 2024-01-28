@@ -1,11 +1,11 @@
-# Maintainer: Hayate Nakamura <hayatehay.njb@gmail.com>
+# Maintainer: Hayate Naka-mura <hayatehay.njb at gmail.com>
 
 pkgname=filesystem
-pkgver=2023.12.30univalent24.01
+pkgver=2024.01.28+univalent24.01
 pkgrel=1
-pkgdesc='Base Univalent Versatile Environment files'
-arch=('x86_64')
-license=('GPL-3.0-or-later' 'BSD-3-Clause' 'custom:njb-media')
+pkgdesc='Base Univalent files'
+arch=('any')
+license=('BSD-3-Clause' 'custom:njb-trademark')
 url='https://njb-fm.github.io/'
 depends=('iana-etc')
 backup=('etc/crypttab' 'etc/fstab' 'etc/group' 'etc/gshadow' 'etc/host.conf'
@@ -15,9 +15,9 @@ backup=('etc/crypttab' 'etc/fstab' 'etc/group' 'etc/gshadow' 'etc/host.conf'
 source=('crypttab' 'env-generator' 'fstab' 'group' 'gshadow' 'host.conf' 'hosts'
         'issue' 'ld.so.conf' 'locale.sh' 'nsswitch.conf' 'os-release' 'profile'
         'passwd' 'resolv.conf' 'securetty' 'shadow' 'shells' 'sysctl' 'sysusers'
-        'tmpfiles' 'subuid' 'subgid' 'archlinux-logo.png' 'archlinux-logo.svg'
+        'tmpfiles' 'subuid' 'subgid' 'archlinux-logo.svg' 'archlinux-logo.png'
         'archlinux-logo-text.svg' 'archlinux-logo-text-dark.svg'
-        'LICENSE.BSD3' 'MEDIA_GUIDELINE.md')
+        'EULA' 'LICENSE' 'trademark_guideline.md')
 sha256sums=('e03bede3d258d680548696623d5979c6edf03272e801a813c81ba5a5c64f4f82'
             'ed0cb4f1db4021f8c3b5ce78fdf91d2c0624708f58f36c9cf867f4d93c3bc6da'
             'e54626e74ed8fee4173b62a545ab1c3a3a069e4217a0ee8fc398d9933e9c1696'
@@ -25,28 +25,29 @@ sha256sums=('e03bede3d258d680548696623d5979c6edf03272e801a813c81ba5a5c64f4f82'
             '90d879374f77bac47f132164c1e7fc4892e994ff1d1ac376efa0c1c26ea37273'
             '4d7b647169063dfedbff5e1e22cee77bd1a4183dbcfd5e802e68939da4bbf733'
             'd9cd8a77d9e0aa5e90d7f4ed74c8745c17b525e720e28e4c44364150003c35f9'
-            '890fd7a89787629eadab7b61d905eea8ab9e7d5c75ba3c6bfe2d76ff9c483d1f'
-            'dad04a370e488aa85fb0a813a5c83cf6fd981ce01883fc59685447b092de84b5'
+            'c774dbbcaea38ee1c1141d0daf82aa8177bfb26aca896d6f0c4ccdc902f6ac42'
+            '785c6c3614a27ae6115a27c1ca55bbf333654780997c4ba7e181172b021d1bf3'
             '8ca2d8eef6fb5143c9ef7e9174ccfef59ac7ad2deee243574cd10c763156cc10'
             'c8ee7a9faf798caab178ec51afae4146f1efd8a716b7acedf28345b6c75f9697'
             '4c18531ca254244db81a5a6d68c7821d6e2b3b9551fb17ebba9b2bb0f3a05ddf'
             '8f08231922fe185d3132f9aedded5cd688fb7c482a6f6f272402ded82fa4849a'
-            '5e06477834f51abf42ea4e8dc199632afc6afbfd8c44354685a271e9a48d2c0a'
+            '13e2783884783ef46b8345fbcdf7880f0414c0a9c42e2b2fc6a2b048cbc2d86e'
             '5557d8e601b17a80d1ea7de78a9869be69637cb6a02fbfe334e22fdf64e61d4c'
             'd88be2b45b43605ff31dd83d6a138069b6c2e92bc8989b7b9ab9eba8da5f8c7b'
             '6e13705ac4d6f69cdba118c6b70c722346fd3c45224133e6bbfe28aca719563c'
-            'c390b31fffc4a2b5d78ae8c89f5317aadef1f71baac09cfb467b675db1406d61'
+            'ec289c03aa0d150e90e8287f001c8e6552ab9dd54f450bdb5c2d2254e477965b'
             '89e43a0b7028f52d5c8e7fb961d962c4b4f4e9595880a6157274ddb2c7c0b6b4'
             '30b97e8f5965744138f7a394e04454db6d509fb89e0a9b615bcd9037df3d6f2a'
             '5d8e61479f0093852365090e84d8d95b1e7fccfab068274ee25863bde6ff3e07'
             'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
             'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
-            '9f046f79cfb0e6cbcae1db34fe0653f61f7d7b48875ee1b9e8a1aed2e0300dc7'
             '0dd9d0c4b0892719e129bc5c2fca3e491107475b41efbcae90d0c77980b87fc3'
+            '9f046f79cfb0e6cbcae1db34fe0653f61f7d7b48875ee1b9e8a1aed2e0300dc7'
             'b5eb63f59ba1eddb9ecc7f59f8717ab679b3176854b0eeece00b5901f8ba6cf5'
             'ce57ebf0b75b166d18eef6225e32f13b32f075fd17048e19743b3038d50cb149'
+            'e900c2c316272df3083b95eecf0682b3d30464527b47457478ca807a420fab29'
             '4febbbbd4f3006d9c5802ffdc9fd6a1c4f3a6ded241b940f46f00356d98de3e4'
-            '130c6a60603fb769ed5d488bf213ce292fc5fb3558d89d179961d979bb83314c')
+            '5f495c71d408f626551c0a2ece72a741d01cf4ee8352db7239f7769f073d9b47')
 
 package() {
   cd "$pkgdir"
@@ -98,6 +99,7 @@ package() {
   for d in {1..8}; do
     install -d -m755 usr/share/man/man$d
   done
+  install -d usr/lib/ld.so.conf.d
 
   # add lib symlinks
   ln -s usr/lib lib
@@ -133,8 +135,9 @@ package() {
   install -D -m644 "$srcdir"/archlinux-logo{.png,.svg,-text.svg,-text-dark.svg} usr/share/pixmaps
 
   # add license
-  install -D -m644 "$srcdir"/LICENSE.BSD3 usr/share/licenses/${pkgname}/LICENSE.BSD3
-  install -D -m644 "$srcdir"/MEDIA_GUIDELINE.md usr/share/licenses/${pkgname}/MEDIA_GUIDELINE.md
+  install -D -m644 "$srcdir"/EULA usr/share/${pkgname}/EULA
+  install -D -m644 "$srcdir"/LICENSE usr/share/licenses/${pkgname}/LICENSE
+  install -D -m644 "$srcdir"/trademark_guideline.md usr/share/licenses/${pkgname}/trademark_guideline.md
 }
 
 # vim:set ts=2 sw=2 et:
